@@ -10,25 +10,18 @@
     <link rel="stylesheet" type="text/css" href="../../main.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    window.onload = (async () => {
-        const response = await fetch('https://api.github.com/repos/chris102994/chris102994.github.io/contents/containers/docker-base-image');
-        const data = await response.json();
-        let htmlString = '';
-        for (let file of data) {
-          if (`${file.type}` == "dir") {
-            htmlString += `<a href="${file.name}" class="w3-bar-item w3-button">${file.name}</a>`;
-          }
-        }
-        $('#links').append(htmlString);
-    });
-</script>
+    <script src="../../_js/custom.js"></script>
+    <script>
+        window.onload = get_folders("docker-base-image");
+        window.onload = load_md("docker-base-image", "README.md");
+    </script>
 </head>
 
 <body>
 
 <!-- Initial page's sidebar.-->
 <div id="links" class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:25%">
+    <h3 class="w3-bar-item">Versions</h3>
 </div>
 
 <div id="CI Index 2"></div>
@@ -41,9 +34,7 @@
 
     <!-- Text portion under the header on the first page.-->
     <div class="w3-container">
-        <p>
-            This is an index of my github projects builds.
-        </p>
+        <div id="markdown"></div>
     </div>
 </div>
 
