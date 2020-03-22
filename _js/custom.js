@@ -1,5 +1,6 @@
 async function get_folders(container) {
-        var url = `https://api.github.com/repos/chris102994/chris102994.github.io/contents/containers/${container}`;
+        var user = 'chris102994';
+        var url = `https://api.github.com/repos/${user}/${user}.github.io/contents/containers/${container}`;
         const response = await fetch(url);
         const data = await response.json();
         let htmlString = '';
@@ -12,7 +13,9 @@ async function get_folders(container) {
 };
 
 function load_md(container, file_name) {
-    var url = `https://raw.githubusercontent.com/chris102994/${container}/master/${file_name}`
+    var user = 'chris102994';
+    var branch = 'master';
+    var url = `https://raw.githubusercontent.com/${user}/${container}/${branch}/${file_name}`
     $.get(url).done(function (data) {
         var converter = new showdown.Converter({parseImgDimensions: true,tables: true,ghCodeBlocks: true});
         $('#markdown').append(converter.makeHtml(data))
