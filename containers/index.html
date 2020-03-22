@@ -10,21 +10,25 @@
     <link rel="stylesheet" type="text/css" href="../main.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    window.onload = (async () => {
+        const response = await fetch('https://api.github.com/repos/chris102994/chris102994.github.io/contents/containers/');
+        const data = await response.json();
+        let htmlString = '';
+        for (let file of data) {
+          if (`${file.type}` == "dir") {
+            htmlString += `<a href="${file.name}" class="w3-bar-item w3-button">${file.name}</a>`;
+          }
+        }
+        $('#links').append(htmlString);
+    });
+</script>
 </head>
 
 <body>
 
 <!-- Initial page's sidebar.-->
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:25%">
-    <a href="/containers/docker-arconaitv" class="w3-bar-item w3-button">Docker Arconaitv</a>
-    <a href="/containers/docker-base-image" class="w3-bar-item w3-button">Docker Base Image</a>
-    <a href="/containers/docker-base-image-gui" class="w3-bar-item w3-button">Docker Base Image GUI</a>
-    <a href="/containers/docker-filezilla" class="w3-bar-item w3-button">Docker Filezilla</a>
-    <a href="/containers/docker-hakuneko" class="w3-bar-item w3-button">Docker Hakuneko</a>
-    <a href="/containers/docker-musicbrainzpicard" class="w3-bar-item w3-button">Docker MusicBrainz Picard</a>
-    <a href="/containers/docker-openssh-sftp-server" class="w3-bar-item w3-button">Docker Openssh SFTP Server</a>
-    <a href="/containers/docker-tinymediamanager" class="w3-bar-item w3-button">Docker Tiny Media Manager</a>
-    <a href="/containers/docker-xteve" class="w3-bar-item w3-button">Docker Xteve</a>
+<div id="links" class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:25%">
 </div>
 
 <div id="CI Index 2"></div>
