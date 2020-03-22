@@ -20,4 +20,11 @@ function load_md(container, file_name) {
         var converter = new showdown.Converter({parseImgDimensions: true,tables: true,ghCodeBlocks: true});
         $('#markdown').append(converter.makeHtml(data))
     });
-}
+};
+
+function load_report(file_name) {
+    $.get(file_name).done(function (data) {
+        var converter = new showdown.Converter({parseImgDimensions: true,tables: true,ghCodeBlocks: true});
+        $('#markdown').append(converter.makeHtml(data))
+    });
+};
