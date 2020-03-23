@@ -57,7 +57,7 @@ GID: 900
 # FOLDER PERMISSIONS:
 -------------------------
 drwxr-xr-x 1 user user 4096 Mar 23 01:40 /app
-drwxr-xr-x 4 user user 4096 Mar 23 14:46 /config
+drwxr-xr-x 4 user user 4096 Mar 23 14:51 /config
 drwxr-xr-x 1 user user 4096 Mar 22 18:38 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -70,8 +70,8 @@ drwxr-xr-x 1 user user 4096 Mar 22 18:38 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
