@@ -1,10 +1,9 @@
 ## Test Results docker-filezilla
 
-## Test's: 3/4 Passed
+## Test's: 3/3 Passed
 
 | Test | Result |
 | ----------------------- | --- |
-| Selenium alpine-3.10-v1.0.0 | FAIL DRIVER ERROR |
 | Screenshot alpine-3.10-v1.0.0 | PASSED |
 | Test Init Scripts for: alpine-3.10-v1.0.0 | PASSED |
 | Test Service Scripts for: alpine-3.10-v1.0.0 | PASSED |
@@ -58,7 +57,7 @@ GID: 900
 # FOLDER PERMISSIONS:
 -------------------------
 drwxr-xr-x 1 user user 4096 Mar 23 15:07 /app
-drwxr-xr-x 4 user user 4096 Mar 23 18:08 /config
+drwxr-xr-x 4 user user 4096 Mar 23 18:11 /config
 drwxr-xr-x 1 user user 4096 Mar 22 18:38 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -72,8 +71,8 @@ drwxr-xr-x 1 user user 4096 Mar 22 18:38 /defaults
 [cont-init.d] done.
 [services.d] starting services
 [run]: The Package Manager is apk
-[xvfb]: Starting . . .
 [services.d] done.
+[xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
 [nginx]: Starting . . .
