@@ -57,7 +57,7 @@ GID: 900
 # FOLDER PERMISSIONS:
 -------------------------
 drwxr-xr-x 1 user user 4096 Mar 23 15:07 /app
-drwxr-xr-x 4 user user 4096 Mar 23 16:46 /config
+drwxr-xr-x 4 user user 4096 Mar 23 17:05 /config
 drwxr-xr-x 1 user user 4096 Mar 22 18:38 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
