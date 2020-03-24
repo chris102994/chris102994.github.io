@@ -55,15 +55,15 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 16:12 /app
-drwxr-xr-x 4 user user 4096 Mar 24 16:16 /config
+drwxr-xr-x 1 user user 4096 Mar 24 16:42 /app
+drwxr-xr-x 4 user user 4096 Mar 24 16:47 /config
 drwxr-xr-x 1 user user 4096 Mar 23 22:40 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
@@ -76,8 +76,6 @@ Starting xteve . . .
 <p>
 
 ```
-apk: unrecognized option: |
-apk: unrecognized option: o
 WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
 WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
@@ -333,8 +331,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 16:14 /app
-drwxr-xr-x 4 user user 4096 Mar 24 16:18 /config
+drwxr-xr-x 1 user user 4096 Mar 24 16:44 /app
+drwxr-xr-x 4 user user 4096 Mar 24 16:49 /config
 drwxr-xr-x 1 user user 4096 Mar 23 22:42 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
