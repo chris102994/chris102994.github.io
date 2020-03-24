@@ -12,7 +12,7 @@
 <section markdown="1">
 ## christopher102994/docker-openssh-sftp-server:alpine-3.10-v1.0.0
 
-### Build Version: 
+### Build Version: alpine-3.10-v1.0.0
 
 ### Logs
 
@@ -53,9 +53,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 23 22:40 /app
-drwxr-xr-x 4 user user 4096 Mar 23 22:48 /config
-drwxr-xr-x 1 user user 4096 Mar 23 22:40 /defaults
+drwxr-xr-x 1 user user 4096 Mar 24 20:21 /app
+drwxr-xr-x 4 user user 4096 Mar 24 22:02 /config
+drwxr-xr-x 1 user user 4096 Mar 24 20:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 50-setup-user-from-env: executing... 
@@ -69,43 +69,43 @@ Generating public/private ed25519 key pair.
 Your identification has been saved in /config/.ssh/ssh_host_ed25519_key.
 Your public key has been saved in /config/.ssh/ssh_host_ed25519_key.pub.
 The key fingerprint is:
-SHA256:+gT3wqeBH/k5xOiYpDMR2ef83pZ3gvsJeEiJhttEGYg root@c937b936e4f6
+SHA256:dj3Ui1qn4u9Szf0LqGVObZ7/wz+aHJU0+IIo9OaR35k root@224bdfbf4b26
 The key's randomart image is:
 +--[ED25519 256]--+
-|     . ..        |
-|    E .  o       |
-|     o  o        |
-|    o .o.. .     |
-|     .o+Soo      |
-|    . .@++oo     |
-|     +++Oo= oo   |
-|    + o+.Bo++.o..|
-|     o  +.+oo+oo |
+|                 |
+|             ..  |
+|       .    ...o |
+|      . . oo..o.o|
+|       .S*..=+o= |
+|       .+.oo=+B .|
+|         .oB.E. .|
+|         .B.+ =+.|
+|         ..=o*ooO|
 +----[SHA256]-----+
 Generating public/private rsa key pair.
 Your identification has been saved in /config/.ssh/ssh_host_rsa_key.
 Your public key has been saved in /config/.ssh/ssh_host_rsa_key.pub.
 The key fingerprint is:
-SHA256:iSBDZJt2rc/oi1IldYOC4NsmqoA3eUuxYca7r80Qstg root@c937b936e4f6
+SHA256:ja+/Hxxzj4OSnMr4qAlrk6K2cvhg2aStXxAc/ul+nHA root@224bdfbf4b26
 The key's randomart image is:
 +---[RSA 4096]----+
-|oo+  .           |
-|oo.oo.o          |
-| .*oo...         |
-| .+=.o . .       |
-| o.=O . S        |
-|oo+* X           |
-|=.E B o          |
-|+. * *           |
-|... *++          |
+|   .             |
+|  o .            |
+|   +             |
+|    o .  o       |
+|   o o  S . o .  |
+|  * o. E o + = o |
+|.=.+ o+ . * + o .|
+|=o*oo. B o . . . |
+|=B=ooo+.=.oo.    |
 +----[SHA256]-----+
 Successfully Generated SSH keys.
 [cont-init.d] 70-generate-ssh-keys: exited 0.
 [cont-init.d] done.
 [services.d] starting services
 [run]: The Package Manager is apk
-[services.d] done.
 Starting openssh-server
+[services.d] done.
 Server listening on 0.0.0.0 port 22.
 Server listening on :: port 22.
 
@@ -119,6 +119,38 @@ Server listening on :: port 22.
 <p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
+musl-1.1.22-r3
+busybox-1.30.1-r3
+alpine-baselayout-3.1.2-r0
+alpine-keys-2.1-r2
+libcrypto1.1-1.1.1d-r2
+libssl1.1-1.1.1d-r2
+ca-certificates-cacert-20190108-r0
+libtls-standalone-2.9.1-r0
+ssl_client-1.30.1-r3
+zlib-1.2.11-r1
+apk-tools-2.10.4-r2
+scanelf-1.2.3-r0
+musl-utils-1.1.22-r3
+libc-utils-0.7.1-r0
+xz-libs-5.2.4-r0
+xz-5.2.4-r0
+ncurses-terminfo-base-6.1_p20190518-r2
+ncurses-libs-6.1_p20190518-r2
+readline-8.0.0-r0
+bash-5.0.0-r0
+ca-certificates-20190108-r0
+libacl-2.2.52-r6
+libattr-2.4.48-r0
+coreutils-8.31-r0
+linux-pam-1.3.0-r1
+shadow-4.6-r2
+tzdata-2019c-r0
+openssh-keygen-8.1_p1-r0
+openssh-server-common-8.1_p1-r0
+openssh-server-8.1_p1-r0
 
 ```
 
