@@ -56,8 +56,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 22:38 /app
-drwxr-xr-x 4 user user 4096 Mar 24 22:40 /config
+drwxr-xr-x 1 user user 4096 Mar 24 22:47 /app
+drwxr-xr-x 4 user user 4096 Mar 24 22:49 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -127,7 +127,7 @@ grep/now 3.3-1 amd64 [installed,local]
 gsettings-desktop-schemas/now 3.28.1-1 all [installed,local]
 gtk-update-icon-cache/now 3.24.5-1 amd64 [installed,local]
 gzip/now 1.9-3 amd64 [installed,local]
-hakuneko-desktop/now 5.0.8 amd64 [installed,local]
+hakuneko-desktop/now 6.1.7 amd64 [installed,local]
 hicolor-icon-theme/now 0.17-2 all [installed,local]
 hostname/now 3.21 amd64 [installed,local]
 init-system-helpers/now 1.56+nmu1 all [installed,local]
