@@ -61,8 +61,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 21:25 /app
-drwxr-xr-x 4 user user 4096 Mar 24 21:35 /config
+drwxr-xr-x 1 user user 4096 Mar 24 21:45 /app
+drwxr-xr-x 4 user user 4096 Mar 24 21:55 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -75,12 +75,12 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:21 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apk
 [services.d] done.
+[run]: The Package Manager is apk
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
-[x11vnc]: Starting . . .
 [nginx]: Starting . . .
+[x11vnc]: Starting . . .
 
 ```
 </p>
@@ -257,8 +257,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 21:28 /app
-drwxr-xr-x 4 user user 4096 Mar 24 21:38 /config
+drwxr-xr-x 1 user user 4096 Mar 24 21:48 /app
+drwxr-xr-x 4 user user 4096 Mar 24 21:57 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -271,8 +271,8 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
 [x11vnc]: Starting . . .
 [openbox]: Starting . . .
@@ -558,8 +558,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 21:32 /app
-drwxr-xr-x 4 user user 4096 Mar 24 21:40 /config
+drwxr-xr-x 1 user user 4096 Mar 24 21:51 /app
+drwxr-xr-x 4 user user 4096 Mar 24 21:59 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -575,8 +575,8 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:23 /defaults
 [run]: The Package Manager is apt-get
 [services.d] done.
 [xvfb]: Starting . . .
-[openbox]: Starting . . .
 [x11vnc]: Starting . . .
+[openbox]: Starting . . .
 [nginx]: Starting . . .
 
 ```
