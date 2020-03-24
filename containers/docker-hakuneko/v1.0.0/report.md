@@ -56,8 +56,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 22:13 /app
-drwxr-xr-x 4 user user 4096 Mar 24 22:15 /config
+drwxr-xr-x 1 user user 4096 Mar 24 22:38 /app
+drwxr-xr-x 4 user user 4096 Mar 24 22:40 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -331,6 +331,7 @@ libxrandr2/now 2:1.5.1-1 amd64 [installed,local]
 libxrender1/now 1:0.9.10-1 amd64 [installed,local]
 libxshmfence1/now 1.3-1 amd64 [installed,local]
 libxslt1.1/now 1.1.32-2.2~deb10u1 amd64 [installed,local]
+libxss1/now 1:1.2.3-1 amd64 [installed,local]
 libxt6/now 1:1.1.5-1+b3 amd64 [installed,local]
 libxtst6/now 2:1.2.3-1 amd64 [installed,local]
 libxv1/now 2:1.0.11-1 amd64 [installed,local]
