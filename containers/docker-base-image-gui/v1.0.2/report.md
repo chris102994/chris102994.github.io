@@ -1,6 +1,6 @@
 ## Test Results docker-base-image-gui
 
-## Test's: 7/9 Passed
+## Test's: 9/9 Passed
 
 | Test | Result |
 | ----------------------- | --- |
@@ -9,10 +9,10 @@
 | Test Service Scripts for: alpine-3.10-v1.0.2 | PASSED |
 | Screenshot debian-10-v1.0.2 | PASSED |
 | Test Init Scripts for: debian-10-v1.0.2 | PASSED |
-| Test Service Scripts for: debian-10-v1.0.2 | FAILED |
+| Test Service Scripts for: debian-10-v1.0.2 | PASSED |
 | Screenshot ubuntu-18-v1.0.2 | PASSED |
 | Test Init Scripts for: ubuntu-18-v1.0.2 | PASSED |
-| Test Service Scripts for: ubuntu-18-v1.0.2 | FAILED |
+| Test Service Scripts for: ubuntu-18-v1.0.2 | PASSED |
 
 <main>
 
@@ -61,8 +61,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 20:31 /app
-drwxr-xr-x 4 user user 4096 Mar 24 20:41 /config
+drwxr-xr-x 1 user user 4096 Mar 24 21:25 /app
+drwxr-xr-x 4 user user 4096 Mar 24 21:35 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -92,8 +92,6 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:21 /defaults
 <p>
 
 ```
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -205,6 +203,8 @@ libxshmfence-1.3-r0
 mesa-gl-19.0.6-r0
 libxfont2-2.0.3-r2
 xvfb-1.20.5-r0
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
@@ -257,8 +257,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 20:34 /app
-drwxr-xr-x 4 user user 4096 Mar 24 20:43 /config
+drwxr-xr-x 1 user user 4096 Mar 24 21:28 /app
+drwxr-xr-x 4 user user 4096 Mar 24 21:38 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -271,113 +271,12 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 [xvfb]: Starting . . .
+[x11vnc]: Starting . . .
 [openbox]: Starting . . .
-[x11vnc]: Starting . . .
 [nginx]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
 
 ```
 </p>
@@ -659,8 +558,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 20:37 /app
-drwxr-xr-x 4 user user 4096 Mar 24 20:45 /config
+drwxr-xr-x 1 user user 4096 Mar 24 21:32 /app
+drwxr-xr-x 4 user user 4096 Mar 24 21:40 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -679,62 +578,6 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:23 /defaults
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
 [nginx]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
 
 ```
 </p>
