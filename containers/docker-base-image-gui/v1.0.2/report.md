@@ -61,8 +61,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 01:13 /app
-drwxr-xr-x 4 user user 4096 Mar 25 01:22 /config
+drwxr-xr-x 1 user user 4096 Mar 25 02:49 /app
+drwxr-xr-x 4 user user 4096 Mar 25 02:59 /config
 drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -257,8 +257,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 01:16 /app
-drwxr-xr-x 4 user user 4096 Mar 25 01:25 /config
+drwxr-xr-x 1 user user 4096 Mar 25 02:52 /app
+drwxr-xr-x 4 user user 4096 Mar 25 03:01 /config
 drwxr-xr-x 1 user user 4096 Mar 25 01:12 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -565,8 +565,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 01:19 /app
-drwxr-xr-x 4 user user 4096 Mar 25 01:27 /config
+drwxr-xr-x 1 user user 4096 Mar 25 02:55 /app
+drwxr-xr-x 4 user user 4096 Mar 25 03:03 /config
 drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -582,8 +582,8 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
 [services.d] done.
 [run]: The Package Manager is apt-get
 [xvfb]: Starting . . .
-[openbox]: Starting . . .
 [x11vnc]: Starting . . .
+[openbox]: Starting . . .
 [nginx]: Starting . . .
 
 ```
