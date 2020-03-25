@@ -61,8 +61,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 02:49 /app
-drwxr-xr-x 4 user user 4096 Mar 25 02:59 /config
+drwxr-xr-x 1 user user 4096 Mar 25 21:41 /app
+drwxr-xr-x 4 user user 4096 Mar 25 21:51 /config
 drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -78,8 +78,8 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
 [run]: The Package Manager is apk
 [services.d] done.
 [xvfb]: Starting . . .
-[openbox]: Starting . . .
 [x11vnc]: Starting . . .
+[openbox]: Starting . . .
 [nginx]: Starting . . .
 
 ```
@@ -257,8 +257,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 02:52 /app
-drwxr-xr-x 4 user user 4096 Mar 25 03:01 /config
+drwxr-xr-x 1 user user 4096 Mar 25 21:44 /app
+drwxr-xr-x 4 user user 4096 Mar 25 21:53 /config
 drwxr-xr-x 1 user user 4096 Mar 25 01:12 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -565,8 +565,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 02:55 /app
-drwxr-xr-x 4 user user 4096 Mar 25 03:03 /config
+drwxr-xr-x 1 user user 4096 Mar 25 21:47 /app
+drwxr-xr-x 4 user user 4096 Mar 25 21:55 /config
 drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -579,11 +579,11 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
