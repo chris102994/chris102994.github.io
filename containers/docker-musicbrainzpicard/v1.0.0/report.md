@@ -56,8 +56,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 22:13 /app
-drwxr-xr-x 4 user user 4096 Mar 24 22:14 /config
+drwxr-xr-x 1 user user 4096 Mar 25 01:19 /app
+drwxr-xr-x 4 user user 4096 Mar 25 01:21 /config
 drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -70,8 +70,10 @@ drwxr-xr-x 1 user user 4096 Mar 24 20:22 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+s6-svwait: fatal: unable to s6_svstatus_read: No such file or directory
+s6-svwait: fatal: unable to s6_svstatus_read: No such file or directory
+[run]: The Package Manager is apt-get
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
