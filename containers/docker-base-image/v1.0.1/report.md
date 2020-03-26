@@ -53,9 +53,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 01:10 /app
-drwxr-xr-x 4 user user 4096 Mar 25 01:14 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:20 /app
+drwxr-xr-x 4 user user 4096 Mar 26 00:24 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
@@ -74,6 +74,8 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
 
 ```
 musl-1.1.22-r3
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
 alpine-keys-2.1-r2
@@ -100,8 +102,6 @@ coreutils-8.31-r0
 linux-pam-1.3.0-r1
 shadow-4.6-r2
 tzdata-2019c-r0
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
@@ -149,9 +149,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 01:12 /app
-drwxr-xr-x 4 user user 4096 Mar 25 01:15 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:12 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:21 /app
+drwxr-xr-x 4 user user 4096 Mar 26 00:25 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
@@ -318,15 +318,15 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 01:13 /app
-drwxr-xr-x 4 user user 4096 Mar 25 01:16 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:23 /app
+drwxr-xr-x 4 user user 4096 Mar 26 00:26 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 
 ```
 </p>
