@@ -53,9 +53,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 24 20:21 /app
-drwxr-xr-x 4 user user 4096 Mar 24 22:02 /config
-drwxr-xr-x 1 user user 4096 Mar 24 20:21 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:20 /app
+drwxr-xr-x 4 user user 4096 Mar 26 01:42 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 50-setup-user-from-env: executing... 
@@ -69,43 +69,43 @@ Generating public/private ed25519 key pair.
 Your identification has been saved in /config/.ssh/ssh_host_ed25519_key.
 Your public key has been saved in /config/.ssh/ssh_host_ed25519_key.pub.
 The key fingerprint is:
-SHA256:dj3Ui1qn4u9Szf0LqGVObZ7/wz+aHJU0+IIo9OaR35k root@224bdfbf4b26
+SHA256:TZ8RAGG9xLFqKLs0JiaqoxSP1ji71eF/iVUMPoHPVf4 root@e9e03b83f470
 The key's randomart image is:
 +--[ED25519 256]--+
-|                 |
-|             ..  |
-|       .    ...o |
-|      . . oo..o.o|
-|       .S*..=+o= |
-|       .+.oo=+B .|
-|         .oB.E. .|
-|         .B.+ =+.|
-|         ..=o*ooO|
+|        ==ooo.   |
+|       o o+o..   |
+|        +.B...   |
+|       . O.+ o.  |
+| .  ... S + o  E |
+|  * oo.. .       |
+|.*o+=o  o .      |
+|=o++ o.. o       |
+|*+. .  ..        |
 +----[SHA256]-----+
 Generating public/private rsa key pair.
 Your identification has been saved in /config/.ssh/ssh_host_rsa_key.
 Your public key has been saved in /config/.ssh/ssh_host_rsa_key.pub.
 The key fingerprint is:
-SHA256:ja+/Hxxzj4OSnMr4qAlrk6K2cvhg2aStXxAc/ul+nHA root@224bdfbf4b26
+SHA256:MNPshCoHdqAdwE0uKRlbeqCt7Qw60DUdUsGVg7atRhY root@e9e03b83f470
 The key's randomart image is:
 +---[RSA 4096]----+
-|   .             |
-|  o .            |
-|   +             |
-|    o .  o       |
-|   o o  S . o .  |
-|  * o. E o + = o |
-|.=.+ o+ . * + o .|
-|=o*oo. B o . . . |
-|=B=ooo+.=.oo.    |
+|=.*..o++..       |
+|.%o+ oE=o        |
+|Bo*.+.*++.       |
+|.*.+ o+*.        |
+|+ + oo .S        |
+|o+ o  o          |
+|o o  .           |
+| .               |
+|                 |
 +----[SHA256]-----+
 Successfully Generated SSH keys.
 [cont-init.d] 70-generate-ssh-keys: exited 0.
 [cont-init.d] done.
 [services.d] starting services
+[services.d] done.
 [run]: The Package Manager is apk
 Starting openssh-server
-[services.d] done.
 Server listening on 0.0.0.0 port 22.
 Server listening on :: port 22.
 
