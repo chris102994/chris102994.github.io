@@ -61,9 +61,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 21:41 /app
-drwxr-xr-x 4 user user 4096 Mar 25 21:51 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:23 /app
+drwxr-xr-x 4 user user 4096 Mar 26 00:34 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -78,8 +78,8 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:10 /defaults
 [run]: The Package Manager is apk
 [services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
@@ -257,9 +257,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 21:44 /app
-drwxr-xr-x 4 user user 4096 Mar 25 21:53 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:12 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:26 /app
+drwxr-xr-x 4 user user 4096 Mar 26 00:36 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -565,9 +565,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 21:47 /app
-drwxr-xr-x 4 user user 4096 Mar 25 21:55 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
+drwxr-xr-x 1 user user 4096 Mar 26 00:30 /app
+drwxr-xr-x 4 user user 4096 Mar 26 00:38 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
