@@ -16,6 +16,8 @@
 | Run shell check for: docker-base-image-gui | PASSED |
 
 
+
+<main>
 <section markdown="1"> 
 
 ## ShellCheck Results
@@ -39,6 +41,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: rootfs/etc/services.d/openbox/data/check</summary><p>
 
@@ -70,6 +73,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: rootfs/etc/services.d/x11vnc/run</summary><p>
 
@@ -96,6 +100,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: rootfs/etc/services.d/x11vnc/data/check</summary><p>
 
@@ -127,6 +132,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: rootfs/etc/services.d/xvfb/run</summary><p>
 
@@ -163,6 +169,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: rootfs/etc/services.d/nginx/data/check</summary><p>
 
@@ -194,6 +201,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: rootfs/etc/cont-init.d/20-certs</summary><p>
 
@@ -267,6 +275,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: tools/build/build_container.sh</summary><p>
 
@@ -336,6 +345,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
 
@@ -377,6 +387,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
 
@@ -424,6 +435,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: tools/scripts/load_env_files.sh</summary><p>
 
@@ -449,6 +461,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: tools/scripts/docker_test.sh</summary><p>
 
@@ -487,6 +500,7 @@ For more information:
 
 ```
 
+</p></details>
 
 <details><summary>File: tools/scripts/versioning.sh</summary><p>
 
@@ -547,10 +561,10 @@ For more information:
 
 ```
 
-
 </p></details>
 
-<main>
+
+
 
 
 ## christopher102994/docker-base-image-gui:alpine-3.10-v1.0.2
@@ -598,8 +612,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 03:38 /app
-drwxr-xr-x 4 user user 4096 Mar 27 03:48 /config
+drwxr-xr-x 1 user user 4096 Mar 27 17:53 /app
+drwxr-xr-x 4 user user 4096 Mar 27 18:05 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -615,8 +629,8 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 [run]: The Package Manager is apk
 [services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
@@ -628,6 +642,8 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 <details><summary>Expand</summary><p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -739,8 +755,6 @@ libxshmfence-1.3-r0
 mesa-gl-19.0.6-r0
 libxfont2-2.0.3-r2
 xvfb-1.20.5-r0
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
@@ -793,8 +807,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 03:41 /app
-drwxr-xr-x 4 user user 4096 Mar 27 03:50 /config
+drwxr-xr-x 1 user user 4096 Mar 27 17:56 /app
+drwxr-xr-x 4 user user 4096 Mar 27 18:07 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -1100,8 +1114,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 03:44 /app
-drwxr-xr-x 4 user user 4096 Mar 27 03:52 /config
+drwxr-xr-x 1 user user 4096 Mar 27 18:00 /app
+drwxr-xr-x 4 user user 4096 Mar 27 18:09 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
