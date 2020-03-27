@@ -1,7 +1,9 @@
 async function get_folders(container) {
         var user = 'chris102994';
         var url = `https://api.github.com/repos/${user}/${user}.github.io/contents/containers/${container}`;
-        const response = await fetch(url);
+        var proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const response = await fetch(proxyurl + url)
+                .catch(() => console.log("Can't access " + url + " response. Blocked by browser?"));
         const data = await response.json();
         let htmlString = '';
         for (let file of data) {
