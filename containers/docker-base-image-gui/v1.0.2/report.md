@@ -1,18 +1,18 @@
 ## Test Results docker-base-image-gui
 
-## Test's: 10/10 Passed
+## Test's: 7/10 Passed
 
 | Test | Result |
 | ----------------------- | --- |
 | Screenshot alpine-3.10-v1.0.2 | PASSED |
 | Test Init Scripts for: alpine-3.10-v1.0.2 | PASSED |
-| Test Service Scripts for: alpine-3.10-v1.0.2 | PASSED |
+| Test Service Scripts for: alpine-3.10-v1.0.2 | FAILED |
 | Screenshot debian-11-v1.0.2 | PASSED |
 | Test Init Scripts for: debian-11-v1.0.2 | PASSED |
-| Test Service Scripts for: debian-11-v1.0.2 | PASSED |
+| Test Service Scripts for: debian-11-v1.0.2 | FAILED |
 | Screenshot ubuntu-18-v1.0.2 | PASSED |
 | Test Init Scripts for: ubuntu-18-v1.0.2 | PASSED |
-| Test Service Scripts for: ubuntu-18-v1.0.2 | PASSED |
+| Test Service Scripts for: ubuntu-18-v1.0.2 | FAILED |
 | Run shell check for: docker-base-image-gui | PASSED |
 
 
@@ -22,253 +22,34 @@
 
 <details><summary>Expand</summary><p>
 
-<details><summary>File: rootfs/etc/services.d/openbox/run</summary><p>
-
-```
-
-In /workspace/rootfs/etc/services.d/openbox/run line 20:
-			s6-setuidgid $PUID:$PGID \
-                                     ^---^ SC2086: Double quote to prevent globbing and word splitting.
-                                           ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-			s6-setuidgid "$PUID":"$PGID" \
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
-
-<details><summary>File: rootfs/etc/services.d/openbox/data/check</summary><p>
-
-```
-
-In /workspace/rootfs/etc/services.d/openbox/data/check line 6:
-        mapfile -t PIDS < <( pgrep $1 )
-                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        mapfile -t PIDS < <( pgrep "$1" )
-
-
-In /workspace/rootfs/etc/services.d/openbox/data/check line 8:
-        echo $LENGTH
-             ^-----^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        echo "$LENGTH"
-
-
-In /workspace/rootfs/etc/services.d/openbox/data/check line 15:
-if [ $(get_number_of_processes $PROCESS_NAME) -ne 0 ]; then
-     ^-- SC2046: Quote this to prevent word splitting.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
-
-<details><summary>File: rootfs/etc/services.d/x11vnc/run</summary><p>
-
-```
-
-In /workspace/rootfs/etc/services.d/x11vnc/run line 27:
-chown -R $PUID:$PGID /config/log/x11vnc
-         ^---^ SC2086: Double quote to prevent globbing and word splitting.
-               ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-chown -R "$PUID":"$PGID" /config/log/x11vnc
-
-
-In /workspace/rootfs/etc/services.d/x11vnc/run line 37:
-			-display $DISPLAY \
-                                 ^------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-			-display "$DISPLAY" \
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
-
-<details><summary>File: rootfs/etc/services.d/x11vnc/data/check</summary><p>
-
-```
-
-In /workspace/rootfs/etc/services.d/x11vnc/data/check line 6:
-        mapfile -t PIDS < <( pgrep $1 )
-                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        mapfile -t PIDS < <( pgrep "$1" )
-
-
-In /workspace/rootfs/etc/services.d/x11vnc/data/check line 8:
-        echo $LENGTH
-             ^-----^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        echo "$LENGTH"
-
-
-In /workspace/rootfs/etc/services.d/x11vnc/data/check line 15:
-if [ $(get_number_of_processes $PROCESS_NAME) -ne 0 ]; then
-     ^-- SC2046: Quote this to prevent word splitting.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
-
-<details><summary>File: rootfs/etc/services.d/xvfb/run</summary><p>
-
-```
-
-In /workspace/rootfs/etc/services.d/xvfb/run line 15:
-rm -rf /tmp/.X$(echo $DISPLAY | cut -d':' -f2)-lock
-              ^-- SC2046: Quote this to prevent word splitting.
-                     ^------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-rm -rf /tmp/.X$(echo "$DISPLAY" | cut -d':' -f2)-lock
-
-
-In /workspace/rootfs/etc/services.d/xvfb/run line 21:
-		 ${DISPLAY} \
-                 ^--------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-		 "${DISPLAY}" \
-
-
-In /workspace/rootfs/etc/services.d/xvfb/run line 22:
-		 -screen 0 ${DISPLAY_WIDTH}x${DISPLAY_HEIGHT}x24 \
-                           ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
-                                            ^---------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-		 -screen 0 "${DISPLAY_WIDTH}"x"${DISPLAY_HEIGHT}"x24 \
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
-
-<details><summary>File: rootfs/etc/services.d/nginx/data/check</summary><p>
-
-```
-
-In /workspace/rootfs/etc/services.d/nginx/data/check line 6:
-        mapfile -t PIDS < <( pgrep $1 )
-                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        mapfile -t PIDS < <( pgrep "$1" )
-
-
-In /workspace/rootfs/etc/services.d/nginx/data/check line 8:
-        echo $LENGTH
-             ^-----^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        echo "$LENGTH"
-
-
-In /workspace/rootfs/etc/services.d/nginx/data/check line 15:
-if [ $(get_number_of_processes $PROCESS_NAME) -ne 0 ]; then
-     ^-- SC2046: Quote this to prevent word splitting.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
-
 <details><summary>File: rootfs/etc/cont-init.d/20-certs</summary><p>
 
 ```
 
-In /workspace/rootfs/etc/cont-init.d/20-certs line 14:
-chown -R $PUID:$PGID $CERT_DIR
-         ^---^ SC2086: Double quote to prevent globbing and word splitting.
-               ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-chown -R "$PUID":"$PGID" $CERT_DIR
-
-
 In /workspace/rootfs/etc/cont-init.d/20-certs line 19:
-	log $(basename $0) "Generating DH Parameters (2048), this will take a while. . ."
-            ^------------^ SC2046: Quote this to prevent word splitting.
-                       ^-- SC2086: Double quote to prevent globbing and word splitting.
+	log "$(basename $0)" "Generating DH Parameters (2048), this will take a while. . ."
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean: 
-	log $(basename "$0") "Generating DH Parameters (2048), this will take a while. . ."
-
-
-In /workspace/rootfs/etc/cont-init.d/20-certs line 20:
-	env HOME=/tmp s6-setuidgid $PUID:$PGID openssl dhparam \
-                                   ^---^ SC2086: Double quote to prevent globbing and word splitting.
-                                         ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	env HOME=/tmp s6-setuidgid "$PUID":"$PGID" openssl dhparam \
+	log "$(basename "$0")" "Generating DH Parameters (2048), this will take a while. . ."
 
 
 In /workspace/rootfs/etc/cont-init.d/20-certs line 31:
-	log $(basename $0) "Generating self-signed certificate for NGINX, this will take a while. . ."
-            ^------------^ SC2046: Quote this to prevent word splitting.
-                       ^-- SC2086: Double quote to prevent globbing and word splitting.
+	log "$(basename $0)" "Generating self-signed certificate for NGINX, this will take a while. . ."
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean: 
-	log $(basename "$0") "Generating self-signed certificate for NGINX, this will take a while. . ."
-
-
-In /workspace/rootfs/etc/cont-init.d/20-certs line 32:
-	env HOME=/tmp s6-setuidgid $PUID:$PGID openssl req \
-                                   ^---^ SC2086: Double quote to prevent globbing and word splitting.
-                                         ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	env HOME=/tmp s6-setuidgid "$PUID":"$PGID" openssl req \
+	log "$(basename "$0")" "Generating self-signed certificate for NGINX, this will take a while. . ."
 
 
 In /workspace/rootfs/etc/cont-init.d/20-certs line 47:
-	log $(basename $0) "Generating self-signed certificate for VNC server, this will take a while. . ."
-            ^------------^ SC2046: Quote this to prevent word splitting.
-                       ^-- SC2086: Double quote to prevent globbing and word splitting.
+	log "$(basename $0) Generating self-signed certificate for VNC server, this will take a while. . ."
+                        ^-- SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean: 
-	log $(basename "$0") "Generating self-signed certificate for VNC server, this will take a while. . ."
-
-
-In /workspace/rootfs/etc/cont-init.d/20-certs line 66:
-chown $PUID:$PGID "$CERT_DIR/vnc-server.pem"
-      ^---^ SC2086: Double quote to prevent globbing and word splitting.
-            ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-chown "$PUID":"$PGID" "$CERT_DIR/vnc-server.pem"
+	log "$(basename "$0") Generating self-signed certificate for VNC server, this will take a while. . ."
 
 For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
   https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
@@ -280,62 +61,17 @@ For more information:
 ```
 
 In /workspace/tools/build/build_container.sh line 77:
-source $SCRIPTS_DIR/load_env_files.sh $ENV
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-       ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-                                      ^--^ SC2086: Double quote to prevent globbing and word splitting.
+source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
+       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
+                                          ^--^ SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean: 
-source "$SCRIPTS_DIR"/load_env_files.sh "$ENV"
+source "${SCRIPTS_DIR}"/load_env_files.sh "$ENV"
 
 
 In /workspace/tools/build/build_container.sh line 80:
-source $SCRIPTS_DIR/versioning.sh || true
-       ^------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-       ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-source "$SCRIPTS_DIR"/versioning.sh || true
-
-
-In /workspace/tools/build/build_container.sh line 84:
-	$SCRIPTS_DIR/make_container.sh
-        ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	"$SCRIPTS_DIR"/make_container.sh
-
-
-In /workspace/tools/build/build_container.sh line 89:
-	$SCRIPTS_DIR/push_to_registry.sh
-        ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	"$SCRIPTS_DIR"/push_to_registry.sh
-
-
-In /workspace/tools/build/build_container.sh line 94:
-	$SCRIPTS_DIR/push_readme_to_dockerhub.sh
-        ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	"$SCRIPTS_DIR"/push_readme_to_dockerhub.sh
-
-
-In /workspace/tools/build/build_container.sh line 99:
-	$SCRIPTS_DIR/push_git_tag.sh
-        ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	"$SCRIPTS_DIR"/push_git_tag.sh
-
-
-In /workspace/tools/build/build_container.sh line 104:
-	$SCRIPTS_DIR/docker_test.sh
-        ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	"$SCRIPTS_DIR"/docker_test.sh
+source "${SCRIPTS_DIR}"/versioning.sh || true
+       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
 
 For more information:
   https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
@@ -350,34 +86,18 @@ For more information:
 ```
 
 In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 13:
-		--data '{ "username" : "'$DOCKER_USERNAME'", "password" : "'$DOCKER_PASSWORD'" }' \
-                                         ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
-                                                                            ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
+		--data '{ "username" : "'${DOCKER_USERNAME}'", "password" : "'${DOCKER_PASSWORD}'" }' \
+                                         ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
+                                                                              ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean: 
-		--data '{ "username" : "'"$DOCKER_USERNAME"'", "password" : "'"$DOCKER_PASSWORD"'" }' \
+		--data '{ "username" : "'"${DOCKER_USERNAME}"'", "password" : "'"${DOCKER_PASSWORD}"'" }' \
 
 
 In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 				--write-out %{response_code} \
                                              ^-- SC1083: This { is literal. Check expression (missing ;/\n?) or quote it.
                                                            ^-- SC1083: This } is literal. Check expression (missing ;/\n?) or quote it.
-
-
-In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 25:
-				$DOCKER_REPO_URL)
-                                ^--------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-				"$DOCKER_REPO_URL")
-
-
-In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 27:
-if [ $RESPONSE_CODE -eq 200 ]; then
-     ^------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-if [ "$RESPONSE_CODE" -eq 200 ]; then
 
 For more information:
   https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
@@ -392,44 +112,11 @@ For more information:
 ```
 
 In /workspace/tools/scripts/push_git_tag.sh line 12:
-		--data '{ "user" : { "email" : "$GIT_EMAIL", "password" : "$GIT_TOKEN" },
+		--data '{ "user" : { "email" : "${GIT_EMAIL}", "password" : "${GIT_TOKEN}" },
                        ^-- SC2016: Expressions don't expand in single quotes, use double quotes for that.
-
-
-In /workspace/tools/scripts/push_git_tag.sh line 13:
-				  "tag_name": "'$GIT_VERSION'",
-                                                ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-				  "tag_name": "'"$GIT_VERSION"'",
-
-
-In /workspace/tools/scripts/push_git_tag.sh line 14:
-				  "target_commitish": "'$GIT_BRANCH'",
-                                                        ^---------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-				  "target_commitish": "'"$GIT_BRANCH"'",
-
-
-In /workspace/tools/scripts/push_git_tag.sh line 15:
-				  "name": "'$GIT_VERSION'",
-                                            ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-				  "name": "'"$GIT_VERSION"'",
-
-
-In /workspace/tools/scripts/push_git_tag.sh line 16:
-				  "body": "CI Release of '$GIT_VERSION'",
-                                                          ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-				  "body": "CI Release of '"$GIT_VERSION"'",
 
 For more information:
   https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
@@ -440,22 +127,11 @@ For more information:
 ```
 
 In /workspace/tools/scripts/load_env_files.sh line 15:
-		export $(egrep -v '^#' "$FILE" | xargs)
+		export $(grep -Ev '^#' "${FILE}" | xargs)
                        ^-- SC2046: Quote this to prevent word splitting.
-                         ^---^ SC2196: egrep is non-standard and deprecated. Use grep -E instead.
-
-
-In /workspace/tools/scripts/load_env_files.sh line 16:
-		echo -e "Exporting the following vars from $FILE:\n$(cat $FILE)"
-                                                                         ^---^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-		echo -e "Exporting the following vars from $FILE:\n$(cat "$FILE")"
 
 For more information:
   https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-  https://www.shellcheck.net/wiki/SC2196 -- egrep is non-standard and depreca...
 
 ```
 
@@ -466,34 +142,10 @@ For more information:
 ```
 
 In /workspace/tools/scripts/docker_test.sh line 9:
-	TAG="$(cat $ENV | grep "IMAGE_TAG=" | sed 's#.*=##')"
-                   ^--^ SC2086: Double quote to prevent globbing and word splitting.
-                   ^--^ SC2002: Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
-
-Did you mean: 
-	TAG="$(cat "$ENV" | grep "IMAGE_TAG=" | sed 's#.*=##')"
-
-
-In /workspace/tools/scripts/docker_test.sh line 10:
-	if [ ! -z "$TAG" ]; then
-             ^-- SC2236: Use -n instead of ! -z.
-
-
-In /workspace/tools/scripts/docker_test.sh line 20:
-	-e DOCKER_SLEEP=${DOCKER_SLEEP:-60} \
-                        ^-----------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	-e DOCKER_SLEEP="${DOCKER_SLEEP:-60}" \
-
-
-In /workspace/tools/scripts/docker_test.sh line 30:
-	-v $(pwd):/workspace \
-           ^----^ SC2046: Quote this to prevent word splitting.
+	TAG="$(cat "${ENV}" | grep "IMAGE_TAG=" | sed 's#.*=##')"
+                   ^------^ SC2002: Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
 
 For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
   https://www.shellcheck.net/wiki/SC2002 -- Useless cat. Consider 'cmd < file...
 
 ```
@@ -508,54 +160,8 @@ In /workspace/tools/scripts/versioning.sh line 11:
 if [ $? -eq 0 ]; then
      ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
 
-
-In /workspace/tools/scripts/versioning.sh line 12:
-    GIT_VERSION=$(echo $GIT_VERSION |  egrep -o '[0-9]*\.[0-9]*\.[0-9]*' )
-                       ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-                                       ^---^ SC2196: egrep is non-standard and deprecated. Use grep -E instead.
-
-Did you mean: 
-    GIT_VERSION=$(echo "$GIT_VERSION" |  egrep -o '[0-9]*\.[0-9]*\.[0-9]*' )
-
-
-In /workspace/tools/scripts/versioning.sh line 13:
-    MAJOR_VERSION=$(echo $GIT_VERSION | cut -d. -f1)
-                         ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-    MAJOR_VERSION=$(echo "$GIT_VERSION" | cut -d. -f1)
-
-
-In /workspace/tools/scripts/versioning.sh line 14:
-    MINOR_VERSION=$(echo $GIT_VERSION | cut -d. -f2)
-                         ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-    MINOR_VERSION=$(echo "$GIT_VERSION" | cut -d. -f2)
-
-
-In /workspace/tools/scripts/versioning.sh line 15:
-    PATCH_VERSION=$(echo $GIT_VERSION | cut -d. -f3)
-                         ^----------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-    PATCH_VERSION=$(echo "$GIT_VERSION" | cut -d. -f3)
-
-
-In /workspace/tools/scripts/versioning.sh line 24:
-GIT_MESSAGE=$(git show -s --format=%s | tr a-z A-Z)
-                                           ^-^ SC2018: Use '[:lower:]' to support accents and foreign alphabets.
-                                               ^-^ SC2019: Use '[:upper:]' to support accents and foreign alphabets.
-
-
-In /workspace/tools/scripts/versioning.sh line 61:
-GIT_REPO="${GIT_REPO:-$(basename $(git rev-parse --show-toplevel))}"
-                                 ^-- SC2046: Quote this to prevent word splitting.
-
 For more information:
-  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2018 -- Use '[:lower:]' to support accent...
-  https://www.shellcheck.net/wiki/SC2019 -- Use '[:upper:]' to support accent...
+  https://www.shellcheck.net/wiki/SC2181 -- Check exit code directly with e.g...
 
 ```
 
@@ -611,16 +217,16 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 18:38 /app
-drwxr-xr-x 4 user user 4096 Mar 27 18:48 /config
+drwxr-xr-x 1 user user 4096 Mar 27 22:10 /app
+drwxr-xr-x 4 user user 4096 Mar 27 22:20 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
 [20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
-[cont-init.d] 20-certs: exited 0.
+usage: log $(basename $0) MESSAGE...
+[cont-init.d] 20-certs: exited 1.
 [cont-init.d] 20-vnc-password: executing... 
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
@@ -631,6 +237,105 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
 [nginx]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
 
 ```
 
@@ -806,26 +511,145 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 18:40 /app
-drwxr-xr-x 4 user user 4096 Mar 27 18:51 /config
+drwxr-xr-x 1 user user 4096 Mar 27 22:13 /app
+drwxr-xr-x 4 user user 4096 Mar 27 22:22 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
 [20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
-[cont-init.d] 20-certs: exited 0.
+usage: log $(basename $0) MESSAGE...
+[cont-init.d] 20-certs: exited 1.
 [cont-init.d] 20-vnc-password: executing... 
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
 [nginx]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
 
 ```
 
@@ -1113,26 +937,99 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 18:44 /app
-drwxr-xr-x 4 user user 4096 Mar 27 18:53 /config
+drwxr-xr-x 1 user user 4096 Mar 27 22:16 /app
+drwxr-xr-x 4 user user 4096 Mar 27 22:24 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
 [20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
-[cont-init.d] 20-certs: exited 0.
+usage: log $(basename $0) MESSAGE...
+[cont-init.d] 20-certs: exited 1.
 [cont-init.d] 20-vnc-password: executing... 
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
 [nginx]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
+[x11vnc]: Starting . . .
 
 ```
 
