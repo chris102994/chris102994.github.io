@@ -15,22 +15,14 @@
 | Test Service Scripts for: ubuntu-18-v1.0.2 | PASSED |
 | Run shell check for: docker-base-image-gui | PASSED |
 
-<div data-role="main" class="ui-content">
-<div data-role="collapsible"><h2>ShellCheck Results</h2><p>
 
-<div data-role="collapsible"><h2>File: rootfs/app/start_app.sh</h2>
-<p>
 <section markdown="1"> 
 
-```
+## ShellCheck Results
 
-```
+<details><summary>Expand</summary><p>
 
-</p></div>
-
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/openbox/run</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/services.d/openbox/run</summary><p>
 
 ```
 
@@ -47,11 +39,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/openbox/data/check</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/services.d/openbox/data/check</summary><p>
 
 ```
 
@@ -81,11 +70,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/x11vnc/run</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/services.d/x11vnc/run</summary><p>
 
 ```
 
@@ -110,11 +96,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/x11vnc/data/check</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/services.d/x11vnc/data/check</summary><p>
 
 ```
 
@@ -144,11 +127,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/xvfb/run</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/services.d/xvfb/run</summary><p>
 
 ```
 
@@ -183,31 +163,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/xvfb/data/check</h2>
-<p>
-<section markdown="1"> 
-
-```
-
-```
-
-</p></div>
-
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/nginx/run</h2>
-<p>
-<section markdown="1"> 
-
-```
-
-```
-
-</p></div>
-
-<div data-role="collapsible"><h2>File: rootfs/etc/services.d/nginx/data/check</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/services.d/nginx/data/check</summary><p>
 
 ```
 
@@ -237,21 +194,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: rootfs/etc/cont-init.d/20-vnc-password</h2>
-<p>
-<section markdown="1"> 
-
-```
-
-```
-
-</p></div>
-
-<div data-role="collapsible"><h2>File: rootfs/etc/cont-init.d/20-certs</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: rootfs/etc/cont-init.d/20-certs</summary><p>
 
 ```
 
@@ -323,11 +267,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: tools/build/build_container.sh</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: tools/build/build_container.sh</summary><p>
 
 ```
 
@@ -395,11 +336,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: tools/scripts/push_readme_to_dockerhub.sh</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
 
 ```
 
@@ -439,11 +377,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: tools/scripts/push_git_tag.sh</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
 
 ```
 
@@ -489,21 +424,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: tools/scripts/push_to_registry.sh</h2>
-<p>
-<section markdown="1"> 
-
-```
-
-```
-
-</p></div>
-
-<div data-role="collapsible"><h2>File: tools/scripts/load_env_files.sh</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
 
 ```
 
@@ -527,21 +449,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: tools/scripts/make_container.sh</h2>
-<p>
-<section markdown="1"> 
-
-```
-
-```
-
-</p></div>
-
-<div data-role="collapsible"><h2>File: tools/scripts/docker_test.sh</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: tools/scripts/docker_test.sh</summary><p>
 
 ```
 
@@ -578,11 +487,8 @@ For more information:
 
 ```
 
-</p></div>
 
-<div data-role="collapsible"><h2>File: tools/scripts/versioning.sh</h2>
-<p>
-<section markdown="1"> 
+<details><summary>File: tools/scripts/versioning.sh</summary><p>
 
 ```
 
@@ -641,20 +547,23 @@ For more information:
 
 ```
 
-</p></div>
 
-</p></div></div>
+</p></details>
 
 <main>
 
-<section markdown="1">
+
 ## christopher102994/docker-base-image-gui:alpine-3.10-v1.0.2
+
 
 [![alpine-3.10-v1.0.2](alpine-3.10-v1.0.2.png =600x*)](alpine-3.10-v1.0.2.png)
 
+
 ### Build Version: alpine-3.10-v1.0.2
 
-<div data-role="collapsible"><h2>Logs</h2><p>
+### Logs
+
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -689,8 +598,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 01:24 /app
-drwxr-xr-x 4 user user 4096 Mar 27 01:34 /config
+drwxr-xr-x 1 user user 4096 Mar 27 03:38 /app
+drwxr-xr-x 4 user user 4096 Mar 27 03:48 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -706,16 +615,17 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 [run]: The Package Manager is apk
 [services.d] done.
 [xvfb]: Starting . . .
-[openbox]: Starting . . .
 [x11vnc]: Starting . . .
+[openbox]: Starting . . .
 [nginx]: Starting . . .
 
 ```
 
-</p></div>
+</p></details>
 
+### Package Info
 
-<div data-role="collapsible"><h2>Package Info</h2><p>
+<details><summary>Expand</summary><p>
 
 ```
 musl-1.1.22-r3
@@ -834,18 +744,21 @@ WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
-</p></div>
-
+</p></details>
 </section>
 
-<section markdown="1">
+
 ## christopher102994/docker-base-image-gui:debian-11-v1.0.2
+
 
 [![debian-11-v1.0.2](debian-11-v1.0.2.png =600x*)](debian-11-v1.0.2.png)
 
+
 ### Build Version: debian-11-v1.0.2
 
-<div data-role="collapsible"><h2>Logs</h2><p>
+### Logs
+
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -880,20 +793,34 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 01:27 /app
-drwxr-xr-x 4 user user 4096 Mar 27 01:36 /config
+drwxr-xr-x 1 user user 4096 Mar 27 03:41 /app
+drwxr-xr-x 4 user user 4096 Mar 27 03:50 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
+[20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
+[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
+[cont-init.d] 20-certs: exited 0.
+[cont-init.d] 20-vnc-password: executing... 
+[cont-init.d] 20-vnc-password: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+[run]: The Package Manager is apt-get
+[services.d] done.
+[xvfb]: Starting . . .
+[openbox]: Starting . . .
+[x11vnc]: Starting . . .
+[nginx]: Starting . . .
 
 ```
 
-</p></div>
+</p></details>
 
+### Package Info
 
-<div data-role="collapsible"><h2>Package Info</h2><p>
+<details><summary>Expand</summary><p>
 
 ```
 
@@ -1124,18 +1051,21 @@ zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
 
 ```
 
-</p></div>
-
+</p></details>
 </section>
 
-<section markdown="1">
+
 ## christopher102994/docker-base-image-gui:ubuntu-18-v1.0.2
+
 
 [![ubuntu-18-v1.0.2](ubuntu-18-v1.0.2.png =600x*)](ubuntu-18-v1.0.2.png)
 
+
 ### Build Version: ubuntu-18-v1.0.2
 
-<div data-role="collapsible"><h2>Logs</h2><p>
+### Logs
+
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -1170,8 +1100,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 01:30 /app
-drwxr-xr-x 4 user user 4096 Mar 27 01:38 /config
+drwxr-xr-x 1 user user 4096 Mar 27 03:44 /app
+drwxr-xr-x 4 user user 4096 Mar 27 03:52 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -1193,10 +1123,11 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 
 ```
 
-</p></div>
+</p></details>
 
+### Package Info
 
-<div data-role="collapsible"><h2>Package Info</h2><p>
+<details><summary>Expand</summary><p>
 
 ```
 
@@ -1419,8 +1350,7 @@ zlib1g/now 1:1.2.11.dfsg-0ubuntu2 amd64 [installed,local]
 
 ```
 
-</p></div>
-
+</p></details>
 </section>
 
 </main>
