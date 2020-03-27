@@ -1,18 +1,18 @@
 ## Test Results docker-base-image-gui
 
-## Test's: 7/10 Passed
+## Test's: 10/10 Passed
 
 | Test | Result |
 | ----------------------- | --- |
 | Screenshot alpine-3.10-v1.0.2 | PASSED |
 | Test Init Scripts for: alpine-3.10-v1.0.2 | PASSED |
-| Test Service Scripts for: alpine-3.10-v1.0.2 | FAILED |
+| Test Service Scripts for: alpine-3.10-v1.0.2 | PASSED |
 | Screenshot debian-11-v1.0.2 | PASSED |
 | Test Init Scripts for: debian-11-v1.0.2 | PASSED |
-| Test Service Scripts for: debian-11-v1.0.2 | FAILED |
+| Test Service Scripts for: debian-11-v1.0.2 | PASSED |
 | Screenshot ubuntu-18-v1.0.2 | PASSED |
 | Test Init Scripts for: ubuntu-18-v1.0.2 | PASSED |
-| Test Service Scripts for: ubuntu-18-v1.0.2 | FAILED |
+| Test Service Scripts for: ubuntu-18-v1.0.2 | PASSED |
 | Run shell check for: docker-base-image-gui | PASSED |
 
 
@@ -43,11 +43,11 @@ Did you mean:
 
 
 In /workspace/rootfs/etc/cont-init.d/20-certs line 47:
-	log "$(basename $0) Generating self-signed certificate for VNC server, this will take a while. . ."
+	log "$(basename $0)" "Generating self-signed certificate for VNC server, this will take a while. . ."
                         ^-- SC2086: Double quote to prevent globbing and word splitting.
 
 Did you mean: 
-	log "$(basename "$0") Generating self-signed certificate for VNC server, this will take a while. . ."
+	log "$(basename "$0")" "Generating self-signed certificate for VNC server, this will take a while. . ."
 
 For more information:
   https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
@@ -167,6 +167,7 @@ For more information:
 
 </p></details>
 
+</p></details>
 
 <main>
 
@@ -217,16 +218,16 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 22:10 /app
-drwxr-xr-x 4 user user 4096 Mar 27 22:20 /config
+drwxr-xr-x 1 user user 4096 Mar 27 22:41 /app
+drwxr-xr-x 4 user user 4096 Mar 27 22:51 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
 [20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-usage: log $(basename $0) MESSAGE...
-[cont-init.d] 20-certs: exited 1.
+[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
+[cont-init.d] 20-certs: exited 0.
 [cont-init.d] 20-vnc-password: executing... 
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
@@ -237,105 +238,6 @@ usage: log $(basename $0) MESSAGE...
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
 [nginx]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
 
 ```
 
@@ -511,145 +413,26 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 22:13 /app
-drwxr-xr-x 4 user user 4096 Mar 27 22:22 /config
+drwxr-xr-x 1 user user 4096 Mar 27 22:44 /app
+drwxr-xr-x 4 user user 4096 Mar 27 22:53 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
 [20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-usage: log $(basename $0) MESSAGE...
-[cont-init.d] 20-certs: exited 1.
+[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
+[cont-init.d] 20-certs: exited 0.
 [cont-init.d] 20-vnc-password: executing... 
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
+[x11vnc]: Starting . . .
 [openbox]: Starting . . .
-[x11vnc]: Starting . . .
 [nginx]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
 
 ```
 
@@ -937,99 +720,26 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 22:16 /app
-drwxr-xr-x 4 user user 4096 Mar 27 22:24 /config
+drwxr-xr-x 1 user user 4096 Mar 27 22:47 /app
+drwxr-xr-x 4 user user 4096 Mar 27 22:55 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
 [20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-usage: log $(basename $0) MESSAGE...
-[cont-init.d] 20-certs: exited 1.
+[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
+[cont-init.d] 20-certs: exited 0.
 [cont-init.d] 20-vnc-password: executing... 
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
+[x11vnc]: Starting . . .
 [openbox]: Starting . . .
-[x11vnc]: Starting . . .
 [nginx]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
-[x11vnc]: Starting . . .
 
 ```
 
