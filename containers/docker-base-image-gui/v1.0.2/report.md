@@ -166,12 +166,11 @@ For more information:
 ```
 
 </p></details>
-
 </p></details>
-
+</section>
 <main>
 
-
+<section markdown="1">
 
 ## christopher102994/docker-base-image-gui:alpine-3.10-v1.0.2
 
