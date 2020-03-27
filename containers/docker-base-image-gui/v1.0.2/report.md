@@ -16,8 +16,6 @@
 | Run shell check for: docker-base-image-gui | PASSED |
 
 
-
-<main>
 <section markdown="1"> 
 
 ## ShellCheck Results
@@ -564,6 +562,7 @@ For more information:
 </p></details>
 
 
+<main>
 
 
 
@@ -612,8 +611,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 17:53 /app
-drwxr-xr-x 4 user user 4096 Mar 27 18:05 /config
+drwxr-xr-x 1 user user 4096 Mar 27 18:38 /app
+drwxr-xr-x 4 user user 4096 Mar 27 18:48 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -807,8 +806,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 17:56 /app
-drwxr-xr-x 4 user user 4096 Mar 27 18:07 /config
+drwxr-xr-x 1 user user 4096 Mar 27 18:40 /app
+drwxr-xr-x 4 user user 4096 Mar 27 18:51 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -1114,8 +1113,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 27 18:00 /app
-drwxr-xr-x 4 user user 4096 Mar 27 18:09 /config
+drwxr-xr-x 1 user user 4096 Mar 27 18:44 /app
+drwxr-xr-x 4 user user 4096 Mar 27 18:53 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
