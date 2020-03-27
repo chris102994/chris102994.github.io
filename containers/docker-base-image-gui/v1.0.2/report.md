@@ -16,8 +16,6 @@
 | Run shell check for: docker-base-image-gui | PASSED |
 
 
-<section markdown="1"> 
-
 ## ShellCheck Results
 
 <details><summary>Expand</summary><p>
@@ -167,7 +165,7 @@ For more information:
 
 </p></details>
 </p></details>
-</section>
+
 <main>
 
 <section markdown="1">
