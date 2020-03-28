@@ -1,16 +1,124 @@
 ## Test Results docker-hakuneko
 
-## Test's: 3/3 Passed
+## Test's: 4/4 Passed
 
 | Test | Result |
 | ----------------------- | --- |
 | Screenshot ubuntu-18-v1.0.0 | PASSED |
 | Test Init Scripts for: ubuntu-18-v1.0.0 | PASSED |
 | Test Service Scripts for: ubuntu-18-v1.0.0 | PASSED |
+| Run shell check for: docker-hakuneko | PASSED |
 
 <main>
 
 <section markdown="1">
+ 
+## ShellCheck Results
+
+<details><summary>Expand</summary><blockquote><p>
+
+<details><summary>File: tools/build/build_container.sh</summary><p>
+
+```
+
+In /workspace/tools/build/build_container.sh line 77:
+source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
+       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+
+In /workspace/tools/build/build_container.sh line 80:
+source "${SCRIPTS_DIR}"/versioning.sh || true
+       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
+				--write-out %{response_code} \
+                                             ^-- SC1083: This { is literal. Check expression (missing ;/\n?) or quote it.
+                                                           ^-- SC1083: This } is literal. Check expression (missing ;/\n?) or quote it.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_git_tag.sh line 12:
+		--data '{ "user" : { "email" : "${GIT_EMAIL}", "password" : "${GIT_TOKEN}" },
+                       ^-- SC2016: Expressions don't expand in single quotes, use double quotes for that.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/load_env_files.sh line 15:
+		export $(grep -Ev '^#' "${FILE}" | xargs)
+                       ^-- SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/docker_test.sh line 9:
+	TAG="$(cat "${ENV}" | grep "IMAGE_TAG=" | sed 's#.*=##')"
+                   ^------^ SC2002: Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2002 -- Useless cat. Consider 'cmd < file...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/versioning.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/versioning.sh line 11:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2181 -- Check exit code directly with e.g...
+
+```
+
+</p></details>
+
+</blockquote></p></details>
+</section>
+ 
+
+<section markdown="1">
+
 ## christopher102994/docker-hakuneko:ubuntu-18-v1.0.0
 
 [![ubuntu-18-v1.0.0](ubuntu-18-v1.0.0.png =600x*)](ubuntu-18-v1.0.0.png)
@@ -19,8 +127,7 @@
 
 ### Logs
 
-<details><summary>Expand</summary>
-<p>
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -56,9 +163,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 23:50 /app
-drwxr-xr-x 4 user user 4096 Mar 25 23:52 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:18 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:20 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -78,13 +185,12 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:13 /defaults
 [nginx]: Starting . . .
 
 ```
-</p>
-</details>
 
-### Package info
+</p></details>
 
-<details><summary>Expand</summary>
-<p>
+### Package Info
+
+<details><summary>Expand</summary><p>
 
 ```
 
@@ -357,8 +463,7 @@ zlib1g/now 1:1.2.11.dfsg-0ubuntu2 amd64 [installed,local]
 
 ```
 
-</p>
-</details>
+</p></details>
 </section>
 
 </main>
