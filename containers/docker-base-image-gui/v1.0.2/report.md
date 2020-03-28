@@ -15,8 +15,6 @@
 | Test Service Scripts for: ubuntu-18-v1.0.2 | PASSED |
 | Run shell check for: docker-base-image-gui | PASSED |
 
-
-<main>
  <section markdown="1">
 	 
 ## ShellCheck Results
@@ -171,7 +169,8 @@ For more information:
 
 </blockquote></p></details>
 </section>
- 
+
+<main>
 
 <section markdown="1">
 
