@@ -9,14 +9,14 @@
 | Test Service Scripts for: alpine-3.10-v1.0.0 | PASSED |
 | Run shell check for: docker-tinymediamanager | PASSED |
 
-
 <main>
-  
- ## ShellCheck Results
- 
-<details><summary>Expand</summary><blockquote><p>
 
 <section markdown="1">
+ 
+## ShellCheck Results
+
+<details><summary>Expand</summary><blockquote><p>
+
 <details><summary>File: tools/build/build_container.sh</summary><p>
 
 ```
@@ -24,10 +24,6 @@
 In /workspace/tools/build/build_container.sh line 77:
 source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
        ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-                                          ^--^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-source "${SCRIPTS_DIR}"/load_env_files.sh "$ENV"
 
 
 In /workspace/tools/build/build_container.sh line 80:
@@ -36,25 +32,14 @@ source "${SCRIPTS_DIR}"/versioning.sh || true
 
 For more information:
   https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
 
 ```
-
-In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 13:
-		--data '{ "username" : "'${DOCKER_USERNAME}'", "password" : "'${DOCKER_PASSWORD}'" }' \
-                                         ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
-                                                                              ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-		--data '{ "username" : "'"${DOCKER_USERNAME}"'", "password" : "'"${DOCKER_PASSWORD}"'" }' \
-
 
 In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 				--write-out %{response_code} \
@@ -63,13 +48,11 @@ In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 
 For more information:
   https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
 
 ```
@@ -85,7 +68,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/load_env_files.sh</summary><p>
 
 ```
@@ -101,7 +83,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/docker_test.sh</summary><p>
 
 ```
@@ -117,7 +98,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/versioning.sh</summary><p>
 
 ```
@@ -183,13 +163,26 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:44 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:46 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:25 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:27 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
+[20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
+[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
+[cont-init.d] 20-certs: exited 0.
+[cont-init.d] 20-vnc-password: executing... 
+[cont-init.d] 20-vnc-password: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+[run]: The Package Manager is apk
+[services.d] done.
+[xvfb]: Starting . . .
+[openbox]: Starting . . .
+[x11vnc]: Starting . . .
+[nginx]: Starting . . .
 
 ```
 
