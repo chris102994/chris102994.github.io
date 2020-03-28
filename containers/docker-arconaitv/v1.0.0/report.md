@@ -1,16 +1,124 @@
 ## Test Results docker-arconaitv
 
-## Test's: 3/3 Passed
+## Test's: 4/4 Passed
 
 | Test | Result |
 | ----------------------- | --- |
 | Screenshot alpine-3.10-v1.0.0 | PASSED |
 | Test Init Scripts for: alpine-3.10-v1.0.0 | PASSED |
 | Test Service Scripts for: alpine-3.10-v1.0.0 | PASSED |
+| Run shell check for: docker-arconaitv | PASSED |
 
 <main>
 
 <section markdown="1">
+ 
+## ShellCheck Results
+
+<details><summary>Expand</summary><blockquote><p>
+
+<details><summary>File: tools/build/build_container.sh</summary><p>
+
+```
+
+In /workspace/tools/build/build_container.sh line 77:
+source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
+       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+
+In /workspace/tools/build/build_container.sh line 80:
+source "${SCRIPTS_DIR}"/versioning.sh || true
+       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
+				--write-out %{response_code} \
+                                             ^-- SC1083: This { is literal. Check expression (missing ;/\n?) or quote it.
+                                                           ^-- SC1083: This } is literal. Check expression (missing ;/\n?) or quote it.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_git_tag.sh line 12:
+		--data '{ "user" : { "email" : "${GIT_EMAIL}", "password" : "${GIT_TOKEN}" },
+                       ^-- SC2016: Expressions don't expand in single quotes, use double quotes for that.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/load_env_files.sh line 15:
+		export $(grep -Ev '^#' "${FILE}" | xargs)
+                       ^-- SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/docker_test.sh line 9:
+	TAG="$(cat "${ENV}" | grep "IMAGE_TAG=" | sed 's#.*=##')"
+                   ^------^ SC2002: Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2002 -- Useless cat. Consider 'cmd < file...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/versioning.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/versioning.sh line 11:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2181 -- Check exit code directly with e.g...
+
+```
+
+</p></details>
+
+</blockquote></p></details>
+</section>
+ 
+
+<section markdown="1">
+
 ## christopher102994/docker-arconaitv:alpine-3.10-v1.0.0
 
 [![alpine-3.10-v1.0.0](alpine-3.10-v1.0.0.png =600x*)](alpine-3.10-v1.0.0.png)
@@ -19,8 +127,7 @@
 
 ### Logs
 
-<details><summary>Expand</summary>
-<p>
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -54,9 +161,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 26 01:39 /app
-drwxr-xr-x 4 user user 4096 Mar 26 01:41 /config
-drwxr-xr-x 1 user user 4096 Mar 26 01:39 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 02:57 /app
+drwxr-xr-x 4 user user 4096 Mar 28 02:59 /config
+drwxr-xr-x 1 user user 4096 Mar 28 02:57 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-arconai-attrs: executing... 
@@ -77,22 +184,19 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
-</p>
-</details>
 
-### Package info
+</p></details>
 
-<details><summary>Expand</summary>
-<p>
+### Package Info
+
+<details><summary>Expand</summary><p>
 
 ```
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -294,18 +398,19 @@ libnotify-0.7.8-r0
 libcroco-0.6.13-r1
 librsvg-2.40.21-r0
 xcb-util-keysyms-0.4.0-r1
-vlc-xorg-3.0.8-r1
+vlc-xorgWARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
+-3.0.8-r1
 vlc-3.0.8-r1
 gdbm-1.13-r1
 sqlite-libs-3.28.0-r2
 python3-3.7.5-r1
-unzip-6.0-r4
+unzip-6.0-r6
 zip-3.0-r7
 
 ```
 
-</p>
-</details>
+</p></details>
 </section>
 
 </main>
