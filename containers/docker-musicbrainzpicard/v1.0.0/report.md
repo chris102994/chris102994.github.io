@@ -163,9 +163,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:18 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:20 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 04:00 /app
+drwxr-xr-x 4 user user 4096 Mar 28 04:02 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:19 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -207,7 +207,6 @@ base-files/now 11 amd64 [installed,local]
 base-passwd/now 3.5.47 amd64 [installed,local]
 bash/now 5.0-6 amd64 [installed,local]
 bsdutils/now 1:2.34-0.1 amd64 [installed,local]
-bzip2/now 1.0.8-2 amd64 [installed,local]
 ca-certificates/now 20190110 all [installed,local]
 coreutils/now 8.30-3+b1 amd64 [installed,local]
 cron/now 3.0pl1-136 amd64 [installed,local]
@@ -224,7 +223,6 @@ dmsetup/now 2:1.02.167-1+b1 amd64 [installed,local]
 dpkg/now 1.19.7 amd64 [installed,local]
 e2fsprogs/now 1.45.5-2 amd64 [installed,local]
 fdisk/now 2.34-0.1 amd64 [installed,local]
-file/now 1:5.38-4 amd64 [installed,local]
 findutils/now 4.7.0-1 amd64 [installed,local]
 fontconfig-config/now 2.13.1-2 all [installed,local]
 fontconfig/now 2.13.1-2+b1 amd64 [installed,local]
@@ -376,8 +374,6 @@ liblcms2-2/now 2.9-4+b1 amd64 [installed,local]
 libllvm9/now 1:9.0.1-10 amd64 [installed,local]
 liblz4-1/now 1.9.2-2 amd64 [installed,local]
 liblzma5/now 5.2.4-1+b1 amd64 [installed,local]
-libmagic-mgc/now 1:5.38-4 amd64 [installed,local]
-libmagic1/now 1:5.38-4 amd64 [installed,local]
 libmount1/now 2.34-0.1 amd64 [installed,local]
 libmp3lame0/now 3.100-3 amd64 [installed,local]
 libmpdec2/now 2.4.2-3 amd64 [installed,local]
@@ -398,8 +394,8 @@ libnginx-mod-mail/now 1.16.1-3 amd64 [installed,local]
 libnginx-mod-stream/now 1.16.1-3 amd64 [installed,local]
 libnss-systemd/now 244.3-1 amd64 [installed,local]
 libnuma1/now 2.0.12-1+b1 amd64 [installed,local]
-libobrender32v5/now 3.6.1-8 amd64 [installed,local]
-libobt2v5/now 3.6.1-8 amd64 [installed,local]
+libobrender32v5/now 3.6.1-9 amd64 [installed,local]
+libobt2v5/now 3.6.1-9 amd64 [installed,local]
 libogg0/now 1.3.2-1+b1 amd64 [installed,local]
 libopenjp2-7/now 2.3.1-1 amd64 [installed,local]
 libopenmpt0/now 0.4.11-1 amd64 [installed,local]
@@ -582,7 +578,7 @@ nginx-common/now 1.16.1-3 all [installed,local]
 nginx-full/now 1.16.1-3 amd64 [installed,local]
 nginx/now 1.16.1-3 all [installed,local]
 ocl-icd-libopencl1/now 2.2.12-3 amd64 [installed,local]
-openbox/now 3.6.1-8 amd64 [installed,local]
+openbox/now 3.6.1-9 amd64 [installed,local]
 openssl/now 1.1.1d-2 amd64 [installed,local]
 passwd/now 1:4.8.1-1 amd64 [installed,local]
 perl-base/now 5.30.0-9 amd64 [installed,local]
@@ -619,7 +615,6 @@ x11-xkb-utils/now 7.7+5 amd64 [installed,local]
 xkb-data/now 2.29-2 all [installed,local]
 xserver-common/now 2:1.20.7-4 all [installed,local]
 xvfb/now 2:1.20.7-4 amd64 [installed,local]
-xz-utils/now 5.2.4-1+b1 amd64 [installed,local]
 zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
 
 ```
