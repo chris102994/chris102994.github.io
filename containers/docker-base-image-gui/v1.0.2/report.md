@@ -170,9 +170,10 @@ For more information:
 <main>
 
 <section markdown="1"> 
+
 ## christopher102994/docker-base-image-gui:alpine-3.10-v1.0.2
 
-[![alpine-3.10-v1.0.2](alpine-3.10-v1.0.2.png =600x*)](alpine-3.10-v1.0.2.png)
+[![alpine-3.10-v1.0.2](alpine-3.10-v1.0.2.png)](alpine-3.10-v1.0.2.png)
 
 ### Build Version: alpine-3.10-v1.0.2
 
@@ -363,9 +364,10 @@ xvfb-1.20.5-r0
 </section>
 
 <section markdown="1"> 
+
 ## christopher102994/docker-base-image-gui:debian-11-v1.0.2
 
-[![debian-11-v1.0.2](debian-11-v1.0.2.png =600x*)](debian-11-v1.0.2.png)
+[![debian-11-v1.0.2](debian-11-v1.0.2.png)](debian-11-v1.0.2.png)
 
 ### Build Version: debian-11-v1.0.2
 
@@ -668,9 +670,10 @@ zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
 </section>
 
 <section markdown="1"> 
+
 ## christopher102994/docker-base-image-gui:ubuntu-18-v1.0.2
 
-[![ubuntu-18-v1.0.2](ubuntu-18-v1.0.2.png =600x*)](ubuntu-18-v1.0.2.png)
+[![ubuntu-18-v1.0.2](ubuntu-18-v1.0.2.png)](ubuntu-18-v1.0.2.png)
 
 ### Build Version: ubuntu-18-v1.0.2
 
