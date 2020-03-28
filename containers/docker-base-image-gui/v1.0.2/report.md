@@ -57,7 +57,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/build/build_container.sh</summary><p>
 
 ```
@@ -83,7 +82,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
 
 ```
@@ -110,7 +108,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
 
 ```
@@ -126,7 +123,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/load_env_files.sh</summary><p>
 
 ```
@@ -142,7 +138,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/docker_test.sh</summary><p>
 
 ```
@@ -158,7 +153,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/versioning.sh</summary><p>
 
 ```
