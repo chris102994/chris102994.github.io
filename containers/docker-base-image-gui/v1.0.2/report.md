@@ -56,8 +56,6 @@ For more information:
 ```
 
 </p></details>
-</blockquote></p></details>
-</section>
 
 <section markdown="1">
 <details><summary>File: tools/build/build_container.sh</summary><p>
@@ -84,8 +82,6 @@ For more information:
 ```
 
 </p></details>
-</blockquote></p></details>
-</section>
 
 <section markdown="1">
 <details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
@@ -113,8 +109,6 @@ For more information:
 ```
 
 </p></details>
-</blockquote></p></details>
-</section>
 
 <section markdown="1">
 <details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
@@ -131,8 +125,6 @@ For more information:
 ```
 
 </p></details>
-</blockquote></p></details>
-</section>
 
 <section markdown="1">
 <details><summary>File: tools/scripts/load_env_files.sh</summary><p>
@@ -149,8 +141,6 @@ For more information:
 ```
 
 </p></details>
-</blockquote></p></details>
-</section>
 
 <section markdown="1">
 <details><summary>File: tools/scripts/docker_test.sh</summary><p>
@@ -167,8 +157,6 @@ For more information:
 ```
 
 </p></details>
-</blockquote></p></details>
-</section>
 
 <section markdown="1">
 <details><summary>File: tools/scripts/versioning.sh</summary><p>
@@ -185,9 +173,9 @@ For more information:
 ```
 
 </p></details>
+
 </blockquote></p></details>
 </section>
-
  
 
 <section markdown="1">
@@ -235,8 +223,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 00:56 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:06 /config
+drwxr-xr-x 1 user user 4096 Mar 28 01:26 /app
+drwxr-xr-x 4 user user 4096 Mar 28 01:36 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -265,6 +253,8 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
 <details><summary>Expand</summary><p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -376,8 +366,6 @@ libxshmfence-1.3-r0
 mesa-gl-19.0.6-r0
 libxfont2-2.0.3-r2
 xvfb-1.20.5-r0
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
@@ -429,26 +417,13 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 00:59 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:08 /config
+drwxr-xr-x 1 user user 4096 Mar 28 01:29 /app
+drwxr-xr-x 4 user user 4096 Mar 28 01:38 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
-[20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
-[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
-[cont-init.d] 20-certs: exited 0.
-[cont-init.d] 20-vnc-password: executing... 
-[cont-init.d] 20-vnc-password: exited 0.
-[cont-init.d] done.
-[services.d] starting services
-[run]: The Package Manager is apt-get
-[services.d] done.
-[xvfb]: Starting . . .
-[x11vnc]: Starting . . .
-[openbox]: Starting . . .
-[nginx]: Starting . . .
 
 ```
 
@@ -735,8 +710,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:02 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:10 /config
+drwxr-xr-x 1 user user 4096 Mar 28 01:32 /app
+drwxr-xr-x 4 user user 4096 Mar 28 01:40 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -749,11 +724,11 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
