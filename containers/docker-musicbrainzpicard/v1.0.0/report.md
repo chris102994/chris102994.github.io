@@ -1,16 +1,124 @@
 ## Test Results docker-musicbrainzpicard
 
-## Test's: 3/3 Passed
+## Test's: 4/4 Passed
 
 | Test | Result |
 | ----------------------- | --- |
 | Screenshot debian-11-v1.0.0 | PASSED |
 | Test Init Scripts for: debian-11-v1.0.0 | PASSED |
 | Test Service Scripts for: debian-11-v1.0.0 | PASSED |
+| Run shell check for: docker-musicbrainzpicard | PASSED |
 
 <main>
 
 <section markdown="1">
+ 
+## ShellCheck Results
+
+<details><summary>Expand</summary><blockquote><p>
+
+<details><summary>File: tools/build/build_container.sh</summary><p>
+
+```
+
+In /workspace/tools/build/build_container.sh line 77:
+source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
+       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+
+In /workspace/tools/build/build_container.sh line 80:
+source "${SCRIPTS_DIR}"/versioning.sh || true
+       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
+				--write-out %{response_code} \
+                                             ^-- SC1083: This { is literal. Check expression (missing ;/\n?) or quote it.
+                                                           ^-- SC1083: This } is literal. Check expression (missing ;/\n?) or quote it.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_git_tag.sh line 12:
+		--data '{ "user" : { "email" : "${GIT_EMAIL}", "password" : "${GIT_TOKEN}" },
+                       ^-- SC2016: Expressions don't expand in single quotes, use double quotes for that.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/load_env_files.sh line 15:
+		export $(grep -Ev '^#' "${FILE}" | xargs)
+                       ^-- SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/docker_test.sh line 9:
+	TAG="$(cat "${ENV}" | grep "IMAGE_TAG=" | sed 's#.*=##')"
+                   ^------^ SC2002: Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2002 -- Useless cat. Consider 'cmd < file...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/versioning.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/versioning.sh line 11:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2181 -- Check exit code directly with e.g...
+
+```
+
+</p></details>
+
+</blockquote></p></details>
+</section>
+ 
+
+<section markdown="1">
+
 ## christopher102994/docker-musicbrainzpicard:debian-11-v1.0.0
 
 [![debian-11-v1.0.0](debian-11-v1.0.0.png =600x*)](debian-11-v1.0.0.png)
@@ -19,8 +127,7 @@
 
 ### Logs
 
-<details><summary>Expand</summary>
-<p>
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -56,9 +163,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 25 22:00 /app
-drwxr-xr-x 4 user user 4096 Mar 25 22:02 /config
-drwxr-xr-x 1 user user 4096 Mar 25 01:12 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:18 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:20 /config
+drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -73,18 +180,17 @@ drwxr-xr-x 1 user user 4096 Mar 25 01:12 /defaults
 [run]: The Package Manager is apt-get
 [services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
-</p>
-</details>
 
-### Package info
+</p></details>
 
-<details><summary>Expand</summary>
-<p>
+### Package Info
+
+<details><summary>Expand</summary><p>
 
 ```
 
@@ -123,7 +229,7 @@ findutils/now 4.7.0-1 amd64 [installed,local]
 fontconfig-config/now 2.13.1-2 all [installed,local]
 fontconfig/now 2.13.1-2+b1 amd64 [installed,local]
 fonts-dejavu-core/now 2.37-1 all [installed,local]
-gcc-10-base/now 10-20200312-2 amd64 [installed,local]
+gcc-10-base/now 10-20200324-1 amd64 [installed,local]
 gcc-9-base/now 9.2.1-29 amd64 [installed,local]
 glib-networking-common/now 2.64.0-1 all [installed,local]
 glib-networking-services/now 2.64.0-1 amd64 [installed,local]
@@ -140,7 +246,7 @@ i965-va-driver/now 2.4.0+dfsg1-1 amd64 [installed,local]
 init-system-helpers/now 1.57 all [installed,local]
 intel-media-va-driver/now 19.4.0r+dfsg1-1 amd64 [installed,local]
 iso-codes/now 4.4-1 all [installed,local]
-krb5-locales/now 1.17-6 all [installed,local]
+krb5-locales/now 1.17-7 all [installed,local]
 libaacs0/now 0.9.0-2 amd64 [installed,local]
 libacl1/now 2.2.53-5 amd64 [installed,local]
 libaom0/now 1.0.0.errata1-3 amd64 [installed,local]
@@ -180,7 +286,7 @@ libcdparanoia0/now 3.10.2+debian-13+b1 amd64 [installed,local]
 libchromaprint-tools/now 1.4.3-3 amd64 [installed,local]
 libchromaprint1/now 1.4.3-3 amd64 [installed,local]
 libcodec2-0.9/now 0.9.2-2 amd64 [installed,local]
-libcolord2/now 1.4.3-4 amd64 [installed,local]
+libcolord2/now 1.4.4-2 amd64 [installed,local]
 libcom-err2/now 1.45.5-2 amd64 [installed,local]
 libcroco3/now 0.6.13-1 amd64 [installed,local]
 libcrypt1/now 1:4.4.10-10 amd64 [installed,local]
@@ -216,8 +322,8 @@ libfontenc1/now 1:1.1.3-1+b2 amd64 [installed,local]
 libfreetype6/now 2.10.1-2 amd64 [installed,local]
 libfribidi0/now 1.0.8-2 amd64 [installed,local]
 libgbm1/now 19.3.3-1 amd64 [installed,local]
-libgcc-s1/now 10-20200312-2 amd64 [installed,local]
-libgcc1/now 1:10-20200312-2 amd64 [installed,local]
+libgcc-s1/now 10-20200324-1 amd64 [installed,local]
+libgcc1/now 1:10-20200324-1 amd64 [installed,local]
 libgcrypt20/now 1.8.5-3 amd64 [installed,local]
 libgd3/now 2.2.5-5.2 amd64 [installed,local]
 libgdk-pixbuf2.0-0/now 2.40.0+dfsg-3 amd64 [installed,local]
@@ -234,11 +340,11 @@ libglx0/now 1.3.1-1 amd64 [installed,local]
 libgme0/now 0.6.2-1+b1 amd64 [installed,local]
 libgmp10/now 2:6.1.2+dfsg-4 amd64 [installed,local]
 libgnutls30/now 3.6.12-2 amd64 [installed,local]
-libgomp1/now 10-20200312-2 amd64 [installed,local]
+libgomp1/now 10-20200324-1 amd64 [installed,local]
 libgpg-error0/now 1.37-1 amd64 [installed,local]
 libgraphite2-3/now 1.3.13-11 amd64 [installed,local]
 libgsm1/now 1.0.18-2 amd64 [installed,local]
-libgssapi-krb5-2/now 1.17-6 amd64 [installed,local]
+libgssapi-krb5-2/now 1.17-7 amd64 [installed,local]
 libgstreamer-plugins-base1.0-0/now 1.16.2-2 amd64 [installed,local]
 libgstreamer1.0-0/now 1.16.2-2 amd64 [installed,local]
 libgtk-3-0/now 3.24.14-1 amd64 [installed,local]
@@ -261,11 +367,11 @@ libjpeg62-turbo/now 1:1.5.2-2+b1 amd64 [installed,local]
 libjson-c4/now 0.13.1+dfsg-7 amd64 [installed,local]
 libjson-glib-1.0-0/now 1.4.4-2 amd64 [installed,local]
 libjson-glib-1.0-common/now 1.4.4-2 all [installed,local]
-libk5crypto3/now 1.17-6 amd64 [installed,local]
+libk5crypto3/now 1.17-7 amd64 [installed,local]
 libkeyutils1/now 1.6.1-2 amd64 [installed,local]
 libkmod2/now 27-2 amd64 [installed,local]
-libkrb5-3/now 1.17-6 amd64 [installed,local]
-libkrb5support0/now 1.17-6 amd64 [installed,local]
+libkrb5-3/now 1.17-7 amd64 [installed,local]
+libkrb5support0/now 1.17-7 amd64 [installed,local]
 liblcms2-2/now 2.9-4+b1 amd64 [installed,local]
 libllvm9/now 1:9.0.1-10 amd64 [installed,local]
 liblz4-1/now 1.9.2-2 amd64 [installed,local]
@@ -320,10 +426,12 @@ libprocps8/now 2:3.3.16-4 amd64 [installed,local]
 libproxy1v5/now 0.4.15-9 amd64 [installed,local]
 libpsl5/now 0.21.0-1 amd64 [installed,local]
 libpulse0/now 13.0-5 amd64 [installed,local]
-libpython3-stdlib/now 3.7.5-3 amd64 [installed,local]
+libpython3-stdlib/now 3.8.2-2 amd64 [installed,local]
 libpython3.7-minimal/now 3.7.7-1 amd64 [installed,local]
 libpython3.7-stdlib/now 3.7.7-1 amd64 [installed,local]
 libpython3.7/now 3.7.7-1 amd64 [installed,local]
+libpython3.8-minimal/now 3.8.2-1 amd64 [installed,local]
+libpython3.8-stdlib/now 3.8.2-1 amd64 [installed,local]
 libqt5core5a/now 5.12.5+dfsg-9 amd64 [installed,local]
 libqt5dbus5/now 5.12.5+dfsg-9 amd64 [installed,local]
 libqt5designer5/now 5.12.5-2+b2 amd64 [installed,local]
@@ -367,7 +475,7 @@ libss2/now 1.45.5-2 amd64 [installed,local]
 libssh-gcrypt-4/now 0.9.3-2 amd64 [installed,local]
 libssl1.1/now 1.1.1d-2 amd64 [installed,local]
 libstartup-notification0/now 0.12-6 amd64 [installed,local]
-libstdc++6/now 10-20200312-2 amd64 [installed,local]
+libstdc++6/now 10-20200324-1 amd64 [installed,local]
 libswresample3/now 7:4.2.2-1+b1 amd64 [installed,local]
 libsystemd0/now 244.3-1 amd64 [installed,local]
 libtasn1-6/now 4.15.0-2 amd64 [installed,local]
@@ -478,18 +586,18 @@ openbox/now 3.6.1-8 amd64 [installed,local]
 openssl/now 1.1.1d-2 amd64 [installed,local]
 passwd/now 1:4.8.1-1 amd64 [installed,local]
 perl-base/now 5.30.0-9 amd64 [installed,local]
-picard/now 2.3-1 amd64 [installed,local]
+picard/now 2.3.1-1+b1 amd64 [installed,local]
 procps/now 2:3.3.16-4 amd64 [installed,local]
 publicsuffix/now 20200201.2258-1 all [installed,local]
 python3-libdiscid/now 1.1-1+b1 amd64 [installed,local]
-python3-minimal/now 3.7.5-3 amd64 [installed,local]
+python3-minimal/now 3.8.2-2 amd64 [installed,local]
 python3-mutagen/now 1.44.0-1 all [installed,local]
 python3-pyqt5.qtmultimedia/now 5.14.1+dfsg-3 amd64 [installed,local]
 python3-pyqt5/now 5.14.1+dfsg-3 amd64 [installed,local]
 python3-sip/now 4.19.21+dfsg-2 amd64 [installed,local]
-python3.7-minimal/now 3.7.7-1 amd64 [installed,local]
-python3.7/now 3.7.7-1 amd64 [installed,local]
-python3/now 3.7.5-3 amd64 [installed,local]
+python3.8-minimal/now 3.8.2-1 amd64 [installed,local]
+python3.8/now 3.8.2-1 amd64 [installed,local]
+python3/now 3.8.2-2 amd64 [installed,local]
 qt5-gtk-platformtheme/now 5.12.5+dfsg-9 amd64 [installed,local]
 qttranslations5-l10n/now 5.12.5-1 all [installed,local]
 readline-common/now 8.0-4 all [installed,local]
@@ -516,8 +624,7 @@ zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
 
 ```
 
-</p>
-</details>
+</p></details>
 </section>
 
 </main>
