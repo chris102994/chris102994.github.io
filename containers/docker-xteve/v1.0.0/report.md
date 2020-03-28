@@ -12,33 +12,17 @@
 | Test Service Scripts for: ubuntu-18-v1.0.0 | PASSED |
 | Run shell check for: docker-xteve | PASSED |
 
-
 <main>
-  
- ## ShellCheck Results
- 
-<details><summary>Expand</summary><blockquote><p>
 
 <section markdown="1">
+ 
+## ShellCheck Results
+
+<details><summary>Expand</summary><blockquote><p>
+
 <details><summary>File: rootfs/etc/services.d/xteve/data/check</summary><p>
 
 ```
-
-In /workspace/rootfs/etc/services.d/xteve/data/check line 6:
-        mapfile -t PIDS < <( pgrep $1 )
-                                   ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        mapfile -t PIDS < <( pgrep "$1" )
-
-
-In /workspace/rootfs/etc/services.d/xteve/data/check line 8:
-        echo $LENGTH
-             ^-----^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-        echo "$LENGTH"
-
 
 In /workspace/rootfs/etc/services.d/xteve/data/check line 15:
 if [ $(get_number_of_processes $PROCESS_NAME) -ne 0 ]; then
@@ -46,13 +30,11 @@ if [ $(get_number_of_processes $PROCESS_NAME) -ne 0 ]; then
 
 For more information:
   https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/build/build_container.sh</summary><p>
 
 ```
@@ -60,10 +42,6 @@ For more information:
 In /workspace/tools/build/build_container.sh line 77:
 source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
        ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-                                          ^--^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-source "${SCRIPTS_DIR}"/load_env_files.sh "$ENV"
 
 
 In /workspace/tools/build/build_container.sh line 80:
@@ -72,25 +50,14 @@ source "${SCRIPTS_DIR}"/versioning.sh || true
 
 For more information:
   https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
 
 ```
-
-In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 13:
-		--data '{ "username" : "'${DOCKER_USERNAME}'", "password" : "'${DOCKER_PASSWORD}'" }' \
-                                         ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
-                                                                              ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-		--data '{ "username" : "'"${DOCKER_USERNAME}"'", "password" : "'"${DOCKER_PASSWORD}"'" }' \
-
 
 In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 				--write-out %{response_code} \
@@ -99,13 +66,11 @@ In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 
 For more information:
   https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
 
 ```
@@ -121,7 +86,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/load_env_files.sh</summary><p>
 
 ```
@@ -137,7 +101,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/docker_test.sh</summary><p>
 
 ```
@@ -153,7 +116,6 @@ For more information:
 
 </p></details>
 
-<section markdown="1">
 <details><summary>File: tools/scripts/versioning.sh</summary><p>
 
 ```
@@ -215,9 +177,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:40 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:46 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:18 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:22 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
@@ -489,8 +451,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:42 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:48 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:19 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:25 /config
 drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
