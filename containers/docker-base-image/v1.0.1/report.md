@@ -1,6 +1,6 @@
 ## Test Results docker-base-image
 
-## Test's: 6/6 Passed
+## Test's: 7/7 Passed
 
 | Test | Result |
 | ----------------------- | --- |
@@ -10,18 +10,438 @@
 | Test Service Scripts for: debian-11-v1.0.1 | PASSED |
 | Test Init Scripts for: ubuntu-18-v1.0.1 | PASSED |
 | Test Service Scripts for: ubuntu-18-v1.0.1 | PASSED |
+| Run shell check for: docker-base-image | PASSED |
 
 <main>
 
 <section markdown="1">
+ 
+## ShellCheck Results
+
+<details><summary>Expand</summary><blockquote><p>
+
+<details><summary>File: rootfs/usr/local/bin/pkg-manager</summary><p>
+
+```
+
+In /workspace/rootfs/usr/local/bin/pkg-manager line 6:
+    log $(basename $0) "not_supported: $(basename "$0") doesn't support this package manager."
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/pkg-manager line 19:
+    log $(basename $0) "The Package Manager is $MANAGER"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/usr/local/bin/check_and_terminate_process</summary><p>
+
+```
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 4:
+	log $(basename $0) "usage: $(basename "$0") PROCESS_NAME
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 23:
+		log $(basename $0) "Previous instance of $1 detected. Terminating it . . ."
+                    ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 24:
+		kill -15 $(pgrep -o $1) # -15 is SIGTERM
+                         ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 27:
+		for i in $(seq 1 5); do
+                ^-^ SC2034: i appears unused. Verify use (or export if used externally).
+
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 34:
+			log $(basename $0) "Previous instance of $1 still running after 5 seconds. Killing it . . ."
+                            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 35:
+			kill -9 $(pgrep -o $1) # -9 is SIGKILL
+                                ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/check_and_terminate_process line 60:
+if [ $(get_number_of_processes $1) -ne 0 ]; then
+     ^---------------------------^ SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2034 -- i appears unused. Verify use (or ...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/usr/local/bin/inst-pkg</summary><p>
+
+```
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 9:
+    log $(basename $0) "usage: $(basename "$0") [--virtual NAME ] PKG [PKG...]"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 14:
+    log $(basename $0) "not_supported: $(basename "$0") doesn't support this package manager."
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 19:
+    log $(basename $0) "Cleaning up..."
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 42:
+    log $(basename $0) "Installing package(s)..."
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 45:
+                        log $(basename $0) "Updating packages. . . "
+                            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 47:
+                        log $(basename $0) "Installing $@"
+                            ^------------^ SC2046: Quote this to prevent word splitting.
+                                                       ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 51:
+                        log $(basename $0) "Installing $@"
+                            ^------------^ SC2046: Quote this to prevent word splitting.
+                                                       ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 72:
+    if [ ! -z "PKGS_ALREADY_INSTALLED" ]; then
+         ^-- SC2236: Use -n instead of ! -z.
+               ^--------------------^ SC2157: Argument to -z is always false due to literal strings.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 73:
+        [ -z $(echo $PKGS_ALREADY_INSTALLED | sed 's/[[:space:]]\+//g' ) ] || log $(basename $0) "Already installed: $PKGS_ALREADY_INSTALLED"
+             ^-- SC2046: Quote this to prevent word splitting.
+                                                                                  ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 75:
+    if [ ! -z "PKGS_TO_INSTALL" ]; then
+         ^-- SC2236: Use -n instead of ! -z.
+               ^-------------^ SC2157: Argument to -z is always false due to literal strings.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 76:
+        [ -z $(echo $PKGS_TO_INSTALL | sed 's/[[:space:]]\+//g' ) ] || log $(basename $0) "To be installed: $PKGS_TO_INSTALL"
+             ^-- SC2046: Quote this to prevent word splitting.
+                                                                           ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 81:
+    log $(basename $0) "Ensuring that everything was installed"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 83:
+    for PKG in "$*"
+               ^--^ SC2066: Since you double quoted this, it will not word split, and the loop will only run once.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 91:
+        log $(basename $0) "Successfully installed: $@"
+            ^------------^ SC2046: Quote this to prevent word splitting.
+                                                    ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 94:
+        log $(basename $0) "The following packages couldn't be installed: $UNINSTALLED_PKGS"
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 117:
+    log $(basename $0) "This script must be run as root!"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 126:
+. pkg-manager
+  ^---------^ SC1091: Not following: pkg-manager was not specified as input (see shellcheck -x).
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 134:
+        log $(basename $0) "No virtual packages listed..."
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 139:
+    log $(basename $0) "Package Group Name: $VIRTUAL_PKG"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 141:
+        log $(basename $0) "ERROR: Virtual Package '$VIRTUAL_PKG' already exists..."
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/inst-pkg line 151:
+if [ ! -z "$PKGS_TO_INSTALL" ]; then 
+     ^-- SC2236: Use -n instead of ! -z.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2066 -- Since you double quoted this, it ...
+  https://www.shellcheck.net/wiki/SC2145 -- Argument mixes string and array. ...
+  https://www.shellcheck.net/wiki/SC2157 -- Argument to -z is always false du...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/usr/local/bin/rm-pkg</summary><p>
+
+```
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 9:
+    log $(basename $0) "usage: $(basename "$0") PKG [PKG...]"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 14:
+    log $(basename $0) "not_supported: $(basename "$0") doesn't support this package manager."
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 19:
+    log $(basename $0) "Cleaning up..."
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 42:
+    log $(basename $0) "Removing package(s) $@"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+                                            ^-- SC2145: Argument mixes string and array. Use * or separate argument.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 45:
+                        apt-get -q purge -y $@
+                                            ^-- SC2068: Double quote array expansions to avoid re-splitting elements.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 49:
+                        apk --no-cache del $@
+                                           ^-- SC2068: Double quote array expansions to avoid re-splitting elements.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 61:
+    log $(basename $0) "This script must be run as root!"
+        ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/usr/local/bin/rm-pkg line 70:
+. pkg-manager
+  ^---------^ SC1091: Not following: pkg-manager was not specified as input (see shellcheck -x).
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2068 -- Double quote array expansions to ...
+  https://www.shellcheck.net/wiki/SC2145 -- Argument mixes string and array. ...
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/etc/services.d/cron/run</summary><p>
+
+```
+
+In /workspace/rootfs/etc/services.d/cron/run line 3:
+. pkg-manager
+  ^---------^ SC1091: Not following: pkg-manager was not specified as input (see shellcheck -x).
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1091 -- Not following: pkg-manager was no...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/etc/cont-init.d/10-display-container-info</summary><p>
+
+```
+
+In /workspace/rootfs/etc/cont-init.d/10-display-container-info line 3:
+log $(basename $0) "
+    ^------------^ SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/etc/cont-init.d/05-init-mounted-folders</summary><p>
+
+```
+
+In /workspace/rootfs/etc/cont-init.d/05-init-mounted-folders line 9:
+	log $(basename $0) "First boot with mounted /config/data detected."
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/etc/cont-init.d/05-init-mounted-folders line 17:
+	log $(basename $0) "First boot with mounted /config/log detected."
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: rootfs/etc/cont-init.d/01-users-and-groups</summary><p>
+
+```
+
+In /workspace/rootfs/etc/cont-init.d/01-users-and-groups line 9:
+	log $(basename $0) "Changing user 'user' to $USERNAME"
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+
+In /workspace/rootfs/etc/cont-init.d/01-users-and-groups line 14:
+	log $(basename $0) "Changing group 'user' to $GROUPNAME"
+            ^------------^ SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/build/build_container.sh</summary><p>
+
+```
+
+In /workspace/tools/build/build_container.sh line 77:
+source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
+       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+
+In /workspace/tools/build/build_container.sh line 80:
+source "${SCRIPTS_DIR}"/versioning.sh || true
+       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
+				--write-out %{response_code} \
+                                             ^-- SC1083: This { is literal. Check expression (missing ;/\n?) or quote it.
+                                                           ^-- SC1083: This } is literal. Check expression (missing ;/\n?) or quote it.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/push_git_tag.sh line 12:
+		--data '{ "user" : { "email" : "${GIT_EMAIL}", "password" : "${GIT_TOKEN}" },
+                       ^-- SC2016: Expressions don't expand in single quotes, use double quotes for that.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2016 -- Expressions don't expand in singl...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/load_env_files.sh line 15:
+		export $(grep -Ev '^#' "${FILE}" | xargs)
+                       ^-- SC2046: Quote this to prevent word splitting.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2046 -- Quote this to prevent word splitt...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/docker_test.sh line 9:
+	TAG="$(cat "${ENV}" | grep "IMAGE_TAG=" | sed 's#.*=##')"
+                   ^------^ SC2002: Useless cat. Consider 'cmd < file | ..' or 'cmd file | ..' instead.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2002 -- Useless cat. Consider 'cmd < file...
+
+```
+
+</p></details>
+
+<details><summary>File: tools/scripts/versioning.sh</summary><p>
+
+```
+
+In /workspace/tools/scripts/versioning.sh line 11:
+if [ $? -eq 0 ]; then
+     ^-- SC2181: Check exit code directly with e.g. 'if mycmd;', not indirectly with $?.
+
+For more information:
+  https://www.shellcheck.net/wiki/SC2181 -- Check exit code directly with e.g...
+
+```
+
+</p></details>
+
+</blockquote></p></details>
+</section>
+ 
+
+<section markdown="1">
+
 ## christopher102994/docker-base-image:alpine-3.10-v1.0.1
 
 ### Build Version: alpine-3.10-v1.0.1
 
 ### Logs
 
-<details><summary>Expand</summary>
-<p>
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -53,29 +473,28 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /app
-drwxr-xr-x 4 user user 4096 Mar 26 00:24 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:21 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apk
 [services.d] done.
+[run]: The Package Manager is apk
 
 ```
-</p>
-</details>
 
-### Package info
+</p></details>
 
-<details><summary>Expand</summary>
-<p>
+### Package Info
+
+<details><summary>Expand</summary><p>
 
 ```
-musl-1.1.22-r3
 WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
 WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
+musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
 alpine-keys-2.1-r2
@@ -105,19 +524,18 @@ tzdata-2019c-r0
 
 ```
 
-</p>
-</details>
+</p></details>
 </section>
 
 <section markdown="1">
+
 ## christopher102994/docker-base-image:debian-11-v1.0.1
 
 ### Build Version: debian-11-v1.0.1
 
 ### Logs
 
-<details><summary>Expand</summary>
-<p>
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -149,24 +567,23 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 26 00:21 /app
-drwxr-xr-x 4 user user 4096 Mar 26 00:25 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:19 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:22 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:19 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 
 ```
-</p>
-</details>
 
-### Package info
+</p></details>
 
-<details><summary>Expand</summary>
-<p>
+### Package Info
+
+<details><summary>Expand</summary><p>
 
 ```
 
@@ -274,19 +691,18 @@ zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
 
 ```
 
-</p>
-</details>
+</p></details>
 </section>
 
 <section markdown="1">
+
 ## christopher102994/docker-base-image:ubuntu-18-v1.0.1
 
 ### Build Version: ubuntu-18-v1.0.1
 
 ### Logs
 
-<details><summary>Expand</summary>
-<p>
+<details><summary>Expand</summary><p>
 
 ```
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
@@ -318,9 +734,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 26 00:23 /app
-drwxr-xr-x 4 user user 4096 Mar 26 00:26 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:20 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:23 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
@@ -329,13 +745,12 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 [services.d] done.
 
 ```
-</p>
-</details>
 
-### Package info
+</p></details>
 
-<details><summary>Expand</summary>
-<p>
+### Package Info
+
+<details><summary>Expand</summary><p>
 
 ```
 
@@ -439,8 +854,7 @@ zlib1g/now 1:1.2.11.dfsg-0ubuntu2 amd64 [installed,local]
 
 ```
 
-</p>
-</details>
+</p></details>
 </section>
 
 </main>
