@@ -15,46 +15,13 @@
 | Test Service Scripts for: ubuntu-18-v1.0.2 | PASSED |
 | Run shell check for: docker-base-image-gui | PASSED |
 
- <section markdown="1">
-	 
-## ShellCheck Results
+<main>
+
+<section markdown="1">
  
+## ShellCheck Results
+
 <details><summary>Expand</summary><blockquote><p>
-
-
-<details><summary>File: rootfs/etc/cont-init.d/20-certs</summary><p>
-
-```
-
-In /workspace/rootfs/etc/cont-init.d/20-certs line 19:
-	log "$(basename $0)" "Generating DH Parameters (2048), this will take a while. . ."
-                        ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	log "$(basename "$0")" "Generating DH Parameters (2048), this will take a while. . ."
-
-
-In /workspace/rootfs/etc/cont-init.d/20-certs line 31:
-	log "$(basename $0)" "Generating self-signed certificate for NGINX, this will take a while. . ."
-                        ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	log "$(basename "$0")" "Generating self-signed certificate for NGINX, this will take a while. . ."
-
-
-In /workspace/rootfs/etc/cont-init.d/20-certs line 47:
-	log "$(basename $0)" "Generating self-signed certificate for VNC server, this will take a while. . ."
-                        ^-- SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-	log "$(basename "$0")" "Generating self-signed certificate for VNC server, this will take a while. . ."
-
-For more information:
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
-
-```
-
-</p></details>
 
 <details><summary>File: tools/build/build_container.sh</summary><p>
 
@@ -63,10 +30,6 @@ For more information:
 In /workspace/tools/build/build_container.sh line 77:
 source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
        ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-                                          ^--^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-source "${SCRIPTS_DIR}"/load_env_files.sh "$ENV"
 
 
 In /workspace/tools/build/build_container.sh line 80:
@@ -75,7 +38,6 @@ source "${SCRIPTS_DIR}"/versioning.sh || true
 
 For more information:
   https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
@@ -85,15 +47,6 @@ For more information:
 
 ```
 
-In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 13:
-		--data '{ "username" : "'${DOCKER_USERNAME}'", "password" : "'${DOCKER_PASSWORD}'" }' \
-                                         ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
-                                                                              ^----------------^ SC2086: Double quote to prevent globbing and word splitting.
-
-Did you mean: 
-		--data '{ "username" : "'"${DOCKER_USERNAME}"'", "password" : "'"${DOCKER_PASSWORD}"'" }' \
-
-
 In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 				--write-out %{response_code} \
                                              ^-- SC1083: This { is literal. Check expression (missing ;/\n?) or quote it.
@@ -101,7 +54,6 @@ In /workspace/tools/scripts/push_readme_to_dockerhub.sh line 20:
 
 For more information:
   https://www.shellcheck.net/wiki/SC1083 -- This { is literal. Check expressi...
-  https://www.shellcheck.net/wiki/SC2086 -- Double quote to prevent globbing ...
 
 ```
 
@@ -169,8 +121,7 @@ For more information:
 
 </blockquote></p></details>
 </section>
-
-<main>
+ 
 
 <section markdown="1">
 
@@ -217,9 +168,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:26 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:36 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:27 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -411,13 +362,26 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:29 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:38 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:21 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:20 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:31 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:19 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
 [20-certs]: Generating DH Parameters (2048), this will take a while. . .
+[20-certs]: Generating self-signed certificate for NGINX, this will take a while. . .
+[20-certs]: Generating self-signed certificate for VNC server, this will take a while. . .
+[cont-init.d] 20-certs: exited 0.
+[cont-init.d] 20-vnc-password: executing... 
+[cont-init.d] 20-vnc-password: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+[run]: The Package Manager is apt-get
+[services.d] done.
+[xvfb]: Starting . . .
+[openbox]: Starting . . .
+[x11vnc]: Starting . . .
+[nginx]: Starting . . .
 
 ```
 
@@ -526,6 +490,7 @@ libllvm9/now 1:9.0.1-10 amd64 [installed,local]
 liblz4-1/now 1.9.2-2 amd64 [installed,local]
 liblzma5/now 5.2.4-1+b1 amd64 [installed,local]
 libmount1/now 2.34-0.1 amd64 [installed,local]
+libmpdec2/now 2.4.2-3 amd64 [installed,local]
 libncurses6/now 6.2-1 amd64 [installed,local]
 libncursesw6/now 6.2-1 amd64 [installed,local]
 libnettle7/now 3.5.1+really3.5.1-2 amd64 [installed,local]
@@ -539,8 +504,8 @@ libnginx-mod-http-upstream-fair/now 1.16.1-3 amd64 [installed,local]
 libnginx-mod-http-xslt-filter/now 1.16.1-3 amd64 [installed,local]
 libnginx-mod-mail/now 1.16.1-3 amd64 [installed,local]
 libnginx-mod-stream/now 1.16.1-3 amd64 [installed,local]
-libobrender32v5/now 3.6.1-8 amd64 [installed,local]
-libobt2v5/now 3.6.1-8 amd64 [installed,local]
+libobrender32v5/now 3.6.1-9 amd64 [installed,local]
+libobt2v5/now 3.6.1-9 amd64 [installed,local]
 libp11-kit0/now 0.23.20-1 amd64 [installed,local]
 libpam-modules-bin/now 1.3.1-5 amd64 [installed,local]
 libpam-modules/now 1.3.1-5 amd64 [installed,local]
@@ -556,6 +521,10 @@ libpcre3/now 2:8.39-12+b1 amd64 [installed,local]
 libpixman-1-0/now 0.36.0-1 amd64 [installed,local]
 libpng16-16/now 1.6.37-2 amd64 [installed,local]
 libprocps8/now 2:3.3.16-4 amd64 [installed,local]
+libpython3-stdlib/now 3.8.2-2 amd64 [installed,local]
+libpython3.8-minimal/now 3.8.2-1 amd64 [installed,local]
+libpython3.8-stdlib/now 3.8.2-1 amd64 [installed,local]
+libreadline8/now 8.0-4 amd64 [installed,local]
 librsvg2-2/now 2.46.4-1 amd64 [installed,local]
 libseccomp2/now 2.4.2-2 amd64 [installed,local]
 libselinux1/now 3.0-1+b1 amd64 [installed,local]
@@ -566,6 +535,7 @@ libsensors5/now 1:3.6.0-2 amd64 [installed,local]
 libsepol1/now 3.0-1 amd64 [installed,local]
 libsm6/now 2:1.2.3-1 amd64 [installed,local]
 libsmartcols1/now 2.34-0.1 amd64 [installed,local]
+libsqlite3-0/now 3.31.1-4 amd64 [installed,local]
 libss2/now 1.45.5-2 amd64 [installed,local]
 libssl1.1/now 1.1.1d-2 amd64 [installed,local]
 libstartup-notification0/now 0.12-6 amd64 [installed,local]
@@ -627,17 +597,23 @@ login/now 1:4.8.1-1 amd64 [installed,local]
 logsave/now 1.45.5-2 amd64 [installed,local]
 lsb-base/now 11.1.0 all [installed,local]
 mawk/now 1.3.4.20200120-2 amd64 [installed,local]
+mime-support/now 3.64 all [installed,local]
 mount/now 2.34-0.1 amd64 [installed,local]
 ncurses-base/now 6.1+20191019-1 all [installed,local]
 ncurses-bin/now 6.2-1 amd64 [installed,local]
 nginx-common/now 1.16.1-3 all [installed,local]
 nginx-full/now 1.16.1-3 amd64 [installed,local]
 nginx/now 1.16.1-3 all [installed,local]
-openbox/now 3.6.1-8 amd64 [installed,local]
+openbox/now 3.6.1-9 amd64 [installed,local]
 openssl/now 1.1.1d-2 amd64 [installed,local]
 passwd/now 1:4.8.1-1 amd64 [installed,local]
 perl-base/now 5.30.0-9 amd64 [installed,local]
 procps/now 2:3.3.16-4 amd64 [installed,local]
+python3-minimal/now 3.8.2-2 amd64 [installed,local]
+python3.8-minimal/now 3.8.2-1 amd64 [installed,local]
+python3.8/now 3.8.2-1 amd64 [installed,local]
+python3/now 3.8.2-2 amd64 [installed,local]
+readline-common/now 8.0-4 all [installed,local]
 sed/now 4.7-1 amd64 [installed,local]
 sensible-utils/now 0.0.12+nmu1 all [installed,local]
 shared-mime-info/now 1.10-1 amd64 [installed,local]
@@ -704,9 +680,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 01:32 /app
-drwxr-xr-x 4 user user 4096 Mar 28 01:40 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:23 /app
+drwxr-xr-x 4 user user 4096 Mar 28 03:33 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -718,8 +694,8 @@ drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
