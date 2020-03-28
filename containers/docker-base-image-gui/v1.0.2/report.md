@@ -19,7 +19,7 @@
 <main>
  <section markdown="1">
 	 
- ## ShellCheck Results
+## ShellCheck Results
  
 <details><summary>Expand</summary><blockquote><p>
 
