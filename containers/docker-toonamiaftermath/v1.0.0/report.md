@@ -162,33 +162,14 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:08 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:10 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:08 /defaults
+drwxr-xr-x 1 user user 4096 Mar 30 01:41 /app
+drwxr-xr-x 4 user user 4096 Mar 30 01:43 /config
+drwxr-xr-x 1 user user 4096 Mar 30 01:41 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
 [cont-init.d] 40-fix-toonami-attrs: exited 0.
 [cont-init.d] 50-first-run: executing... 
-[cont-init.d] 50-first-run: exited 0.
-[cont-init.d] 60-fix-xeteve-attrs: executing... 
-Archive:  /defaults/xteve_default.zip
-  inflating: /config/authentication.json  
-  inflating: /config/MEFSLBL3WKWEQXYX469O.m3u  
-  inflating: /config/xteve.m3u       
-  inflating: /config/xteve.xml       
-  inflating: /config/XYDP47B15C52LOH6R46J.xml  
- extracting: /config/pms.json        
-  inflating: /config/settings.json   
-  inflating: /config/urls.json       
-  inflating: /config/xepg.json       
-If you wish to reset to the default parameters passed then remove the files in your mounted /data file.
-[cont-init.d] 60-fix-xeteve-attrs: exited 0.
-[cont-init.d] done.
-[services.d] starting services
-[run]: The Package Manager is apk
-[services.d] done.
-Starting xteve . . .
 
 ```
 
