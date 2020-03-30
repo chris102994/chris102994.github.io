@@ -163,8 +163,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:25 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:27 /config
+drwxr-xr-x 1 user user 4096 Mar 30 01:44 /app
+drwxr-xr-x 4 user user 4096 Mar 30 01:46 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -181,8 +181,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 [services.d] done.
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
-[x11vnc]: Starting . . .
 [nginx]: Starting . . .
+[x11vnc]: Starting . . .
 
 ```
 
