@@ -184,9 +184,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:19 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:20 /defaults
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
+drwxr-xr-x 4 user user 4096 Mar 30 01:44 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 50-setup-user-from-env: executing... 
@@ -200,35 +200,35 @@ Generating public/private ed25519 key pair.
 Your identification has been saved in /config/.ssh/ssh_host_ed25519_key.
 Your public key has been saved in /config/.ssh/ssh_host_ed25519_key.pub.
 The key fingerprint is:
-SHA256:ht3wRM5j2Fz4RMn24Gq1ebHq8V28p2DqPcN5KYjnBB0 root@e0fb318c1e44
+SHA256:mboFsWPaOSOZEfFZnDv/4VDgQOZ1as2EnaMsCJUQpdw root@8492bcdc2b3d
 The key's randomart image is:
 +--[ED25519 256]--+
-|          .+o.   |
-|         B..*    |
-|        o E= o   |
-|       o B o+ o  |
-|      . S +o o o |
-|       . .o o o. |
-|         o.o++ .o|
-|        ..o+B+o.+|
-|         ++.o=ooo|
+|    +=o++..oo.   |
+|   ..=.=+.o*+    |
+|    +.E..=ooo.   |
+|     ..o+++ .    |
+|    . = S+ .     |
+|     B =  o .    |
+|    = * .  + .   |
+|     . =    o    |
+|      .          |
 +----[SHA256]-----+
 Generating public/private rsa key pair.
 Your identification has been saved in /config/.ssh/ssh_host_rsa_key.
 Your public key has been saved in /config/.ssh/ssh_host_rsa_key.pub.
 The key fingerprint is:
-SHA256:javMvtsqK2H+rL6YzgncoI9J2kcQrb4ZIsaj3px/AE4 root@e0fb318c1e44
+SHA256:hQNs8VodrpoH6Njk+vgW4T4DmgwD3yUtJtOyOzRMYgM root@8492bcdc2b3d
 The key's randomart image is:
 +---[RSA 4096]----+
-|   .             |
-|  . .            |
-|   o             |
-|  oE     o       |
-|.oo..   S .      |
-|=+B...   .       |
-|**.B  . .        |
-|*BO.+o +         |
-|O**X==X+.        |
+|     .o.  .      |
+|E     oo + .     |
+|.  . o  = +      |
+|oo= *.oo +       |
+|o=.Oo=o S        |
+|o B*+  +         |
+|o=.=+.o .        |
+|o.oo=  .         |
+|  o=oo           |
 +----[SHA256]-----+
 Successfully Generated SSH keys.
 [cont-init.d] 70-generate-ssh-keys: exited 0.
