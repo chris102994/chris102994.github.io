@@ -177,15 +177,24 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:18 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:22 /config
+drwxr-xr-x 1 user user 4096 Mar 30 01:41 /app
+drwxr-xr-x 4 user user 4096 Mar 30 01:46 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
+Starting xteve . . .
 Starting xteve . . .
 
 ```
@@ -451,15 +460,15 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:19 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:25 /config
-drwxr-xr-x 1 user user 4096 Mar 26 00:23 /defaults
+drwxr-xr-x 1 user user 4096 Mar 30 01:43 /app
+drwxr-xr-x 4 user user 4096 Mar 30 01:48 /config
+drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 Starting xteve . . .
 
 ```
