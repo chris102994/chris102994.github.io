@@ -185,7 +185,7 @@ GID: 900
 # FOLDER PERMISSIONS:
 -------------------------
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
-drwxr-xr-x 4 user user 4096 Mar 30 01:44 /config
+drwxr-xr-x 4 user user 4096 Mar 31 01:45 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -200,35 +200,35 @@ Generating public/private ed25519 key pair.
 Your identification has been saved in /config/.ssh/ssh_host_ed25519_key.
 Your public key has been saved in /config/.ssh/ssh_host_ed25519_key.pub.
 The key fingerprint is:
-SHA256:mboFsWPaOSOZEfFZnDv/4VDgQOZ1as2EnaMsCJUQpdw root@8492bcdc2b3d
+SHA256:c0VfeOg+zZ5AkDk9Y2GaSi9me0DuvEeZK6FtbsaH8kw root@c952e4f748ac
 The key's randomart image is:
 +--[ED25519 256]--+
-|    +=o++..oo.   |
-|   ..=.=+.o*+    |
-|    +.E..=ooo.   |
-|     ..o+++ .    |
-|    . = S+ .     |
-|     B =  o .    |
-|    = * .  + .   |
-|     . =    o    |
-|      .          |
+|            =o.o.|
+|           *+*o..|
+|         o o=.+. |
+|        + o. ..  |
+|        SB..+. o |
+|        =+++ .o o|
+|        +E+.. .o.|
+|       ooOo+   ..|
+|        B=+      |
 +----[SHA256]-----+
 Generating public/private rsa key pair.
 Your identification has been saved in /config/.ssh/ssh_host_rsa_key.
 Your public key has been saved in /config/.ssh/ssh_host_rsa_key.pub.
 The key fingerprint is:
-SHA256:hQNs8VodrpoH6Njk+vgW4T4DmgwD3yUtJtOyOzRMYgM root@8492bcdc2b3d
+SHA256:eLXidT36SOrO85sPwo/HOtiv6ose29o0zWfEohn6q6Y root@c952e4f748ac
 The key's randomart image is:
 +---[RSA 4096]----+
-|     .o.  .      |
-|E     oo + .     |
-|.  . o  = +      |
-|oo= *.oo +       |
-|o=.Oo=o S        |
-|o B*+  +         |
-|o=.=+.o .        |
-|o.oo=  .         |
-|  o=oo           |
+|                 |
+|                 |
+|          .      |
+|       . . o .   |
+|      . S + + o  |
+|       + X + . . |
+|      o *o=.*    |
+|      .O.o+Oo=   |
+|    E+*+O*OOBoo  |
 +----[SHA256]-----+
 Successfully Generated SSH keys.
 [cont-init.d] 70-generate-ssh-keys: exited 0.
@@ -249,8 +249,6 @@ Server listening on :: port 22.
 <details><summary>Expand</summary><p>
 
 ```
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -281,6 +279,8 @@ tzdata-2019c-r0
 openssh-keygen-8.1_p1-r0
 openssh-server-common-8.1_p1-r0
 openssh-server-8.1_p1-r0
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
