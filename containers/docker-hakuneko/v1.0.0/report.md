@@ -164,7 +164,7 @@ GID: 900
 # FOLDER PERMISSIONS:
 -------------------------
 drwxr-xr-x 1 user user 4096 Mar 30 23:43 /app
-drwxr-xr-x 4 user user 4096 Mar 30 23:45 /config
+drwxr-xr-x 4 user user 4096 Mar 31 00:12 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -177,11 +177,11 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
