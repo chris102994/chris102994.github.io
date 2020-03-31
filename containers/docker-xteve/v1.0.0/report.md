@@ -177,8 +177,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 30 01:41 /app
-drwxr-xr-x 4 user user 4096 Mar 30 01:46 /config
+drwxr-xr-x 1 user user 4096 Mar 31 01:42 /app
+drwxr-xr-x 4 user user 4096 Mar 31 01:46 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -186,15 +186,6 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 [services.d] starting services
 [run]: The Package Manager is apk
 [services.d] done.
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
-Starting xteve . . .
 Starting xteve . . .
 
 ```
@@ -460,8 +451,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 30 01:43 /app
-drwxr-xr-x 4 user user 4096 Mar 30 01:48 /config
+drwxr-xr-x 1 user user 4096 Mar 31 01:44 /app
+drwxr-xr-x 4 user user 4096 Mar 31 01:48 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -505,7 +496,7 @@ findutils/now 4.6.0+git+20170828-2 amd64 [installed,local]
 fontconfig/now 2.12.6-0ubuntu2 amd64 [installed,local]
 fontconfig-config/now 2.12.6-0ubuntu2 all [installed,local]
 fonts-dejavu-core/now 2.37-1 all [installed,local]
-gcc-8-base/now 8.3.0-26ubuntu1~18.04 amd64 [installed,local]
+gcc-8-base/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 gpgv/now 2.2.4-1ubuntu1.2 amd64 [installed,local]
 grep/now 3.1-2build1 amd64 [installed,local]
 gzip/now 1.6-5ubuntu1 amd64 [installed,local]
@@ -578,7 +569,7 @@ libfontconfig1/now 2.12.6-0ubuntu2 amd64 [installed,local]
 libfreetype6/now 2.8.1-2ubuntu2 amd64 [installed,local]
 libfribidi0/now 0.19.7-2 amd64 [installed,local]
 libgbm1/now 19.2.8-0ubuntu0~18.04.3 amd64 [installed,local]
-libgcc1/now 1:8.3.0-26ubuntu1~18.04 amd64 [installed,local]
+libgcc1/now 1:8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libgcrypt20/now 1.8.1-4ubuntu1.2 amd64 [installed,local]
 libgdk-pixbuf2.0-0/now 2.36.11-2 amd64 [installed,local]
 libgdk-pixbuf2.0-common/now 2.36.11-2 all [installed,local]
@@ -593,7 +584,7 @@ libglx0/now 1.0.0-2ubuntu2.3 amd64 [installed,local]
 libgme0/now 0.6.2-1 amd64 [installed,local]
 libgmp10/now 2:6.1.2+dfsg-2 amd64 [installed,local]
 libgnutls30/now 3.5.18-1ubuntu1.3 amd64 [installed,local]
-libgomp1/now 8.3.0-26ubuntu1~18.04 amd64 [installed,local]
+libgomp1/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libgpg-error0/now 1.27-6 amd64 [installed,local]
 libgpm2/now 1.20.7-5 amd64 [installed,local]
 libgraphite2-3/now 1.3.11-2 amd64 [installed,local]
@@ -699,7 +690,7 @@ libss2/now 1.44.1-1ubuntu1.3 amd64 [installed,local]
 libssh-gcrypt-4/now 0.8.0~20170825.94fa1e38-1ubuntu0.5 amd64 [installed,local]
 libssh2-1/now 1.8.0-1 amd64 [installed,local]
 libssl1.1/now 1.1.1-1ubuntu2.1~18.04.5 amd64 [installed,local]
-libstdc++6/now 8.3.0-26ubuntu1~18.04 amd64 [installed,local]
+libstdc++6/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libswresample2/now 7:3.4.6-0ubuntu0.18.04.1 amd64 [installed,local]
 libswscale4/now 7:3.4.6-0ubuntu0.18.04.1 amd64 [installed,local]
 libsystemd0/now 237-3ubuntu10.39 amd64 [installed,local]
