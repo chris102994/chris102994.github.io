@@ -163,8 +163,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 30 23:43 /app
-drwxr-xr-x 4 user user 4096 Mar 31 00:12 /config
+drwxr-xr-x 1 user user 4096 Mar 31 00:20 /app
+drwxr-xr-x 4 user user 4096 Mar 31 00:22 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -230,7 +230,7 @@ grep/now 3.1-2build1 amd64 [installed,local]
 gsettings-desktop-schemas/now 3.28.0-1ubuntu1 all [installed,local]
 gtk-update-icon-cache/now 3.22.30-1ubuntu4 amd64 [installed,local]
 gzip/now 1.6-5ubuntu1 amd64 [installed,local]
-hakuneko-desktop/now 5.0.8 amd64 [installed,local]
+hakuneko-desktop/now 6.1.7 amd64 [installed,local]
 hicolor-icon-theme/now 0.17-2 all [installed,local]
 hostname/now 3.20 amd64 [installed,local]
 humanity-icon-theme/now 0.6.15 all [installed,local]
