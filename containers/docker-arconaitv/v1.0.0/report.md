@@ -161,9 +161,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 31 01:42 /app
-drwxr-xr-x 4 user user 4096 Mar 31 01:43 /config
-drwxr-xr-x 1 user user 4096 Mar 31 01:42 /defaults
+drwxr-xr-x 1 user user 4096 Apr  2 01:43 /app
+drwxr-xr-x 4 user user 4096 Apr  2 01:44 /config
+drwxr-xr-x 1 user user 4096 Apr  2 01:43 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-arconai-attrs: executing... 
@@ -184,8 +184,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apk
 [services.d] done.
+[run]: The Package Manager is apk
 Starting xteve . . .
 
 ```
