@@ -163,8 +163,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 31 01:45 /app
-drwxr-xr-x 4 user user 4096 Mar 31 01:47 /config
+drwxr-xr-x 1 user user 4096 Apr  2 01:46 /app
+drwxr-xr-x 4 user user 4096 Apr  2 01:47 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -180,8 +180,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 [run]: The Package Manager is apk
 [services.d] done.
 [xvfb]: Starting . . .
-[openbox]: Starting . . .
 [x11vnc]: Starting . . .
+[openbox]: Starting . . .
 [nginx]: Starting . . .
 
 ```
@@ -193,6 +193,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 <details><summary>Expand</summary><p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -301,9 +303,7 @@ libpciaccess-0.14-r0
 libdrm-2.4.98-r0
 mesa-glapi-19.0.6-r0
 libxshmfence-1.3-r0
-mesa-gl-19.0.6-r0WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
-
+mesa-gl-19.0.6-r0
 libxfont2-2.0.3-r2
 xvfb-1.20.5-r0
 nghttp2-libs-1.39.2-r0
