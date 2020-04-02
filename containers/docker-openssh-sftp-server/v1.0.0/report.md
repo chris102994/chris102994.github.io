@@ -185,7 +185,7 @@ GID: 900
 # FOLDER PERMISSIONS:
 -------------------------
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
-drwxr-xr-x 4 user user 4096 Mar 31 01:45 /config
+drwxr-xr-x 4 user user 4096 Apr  2 01:46 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -200,42 +200,42 @@ Generating public/private ed25519 key pair.
 Your identification has been saved in /config/.ssh/ssh_host_ed25519_key.
 Your public key has been saved in /config/.ssh/ssh_host_ed25519_key.pub.
 The key fingerprint is:
-SHA256:c0VfeOg+zZ5AkDk9Y2GaSi9me0DuvEeZK6FtbsaH8kw root@c952e4f748ac
+SHA256:Kw3olXdkw5zv31vKt6ThnknjA/1utuuv9yR/9rV+FPg root@dec1ba1f7e70
 The key's randomart image is:
 +--[ED25519 256]--+
-|            =o.o.|
-|           *+*o..|
-|         o o=.+. |
-|        + o. ..  |
-|        SB..+. o |
-|        =+++ .o o|
-|        +E+.. .o.|
-|       ooOo+   ..|
-|        B=+      |
+|                 |
+|         o .     |
+|          B   .  |
+|     . . o o . . |
+|    . + S . o . .|
+|   . . + o o . E.|
+|    . . o   o+oo+|
+|       .    ++BXX|
+|            .B%#^|
 +----[SHA256]-----+
 Generating public/private rsa key pair.
 Your identification has been saved in /config/.ssh/ssh_host_rsa_key.
 Your public key has been saved in /config/.ssh/ssh_host_rsa_key.pub.
 The key fingerprint is:
-SHA256:eLXidT36SOrO85sPwo/HOtiv6ose29o0zWfEohn6q6Y root@c952e4f748ac
+SHA256:yw9ud0oM6uzL9hlrZhs4YtCFqColp0Gp3dWTRbyLc8Y root@dec1ba1f7e70
 The key's randomart image is:
 +---[RSA 4096]----+
-|                 |
-|                 |
-|          .      |
-|       . . o .   |
-|      . S + + o  |
-|       + X + . . |
-|      o *o=.*    |
-|      .O.o+Oo=   |
-|    E+*+O*OOBoo  |
+|         oo      |
+|  .. . . o.      |
+| o. . o +  .     |
+|oo o o   ..      |
+|= = o   So .     |
+|.* .   +o+E      |
+|+   o + *+o      |
+|.  . =.o=O. .    |
+|     o*B*ooo     |
 +----[SHA256]-----+
 Successfully Generated SSH keys.
 [cont-init.d] 70-generate-ssh-keys: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apk
 [services.d] done.
+[run]: The Package Manager is apk
 Starting openssh-server
 Server listening on 0.0.0.0 port 22.
 Server listening on :: port 22.
