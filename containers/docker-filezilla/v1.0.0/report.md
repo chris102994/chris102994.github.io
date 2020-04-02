@@ -163,8 +163,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 31 01:45 /app
-drwxr-xr-x 4 user user 4096 Mar 31 01:46 /config
+drwxr-xr-x 1 user user 4096 Apr  2 01:46 /app
+drwxr-xr-x 4 user user 4096 Apr  2 01:47 /config
 drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -321,7 +321,7 @@ avahi-libs-0.7-r2
 p11-kit-0.23.16.1-r0
 libtasn1-4.14-r0
 libunistring-0.9.10-r0
-gnutls-3.6.8-r0
+gnutls-3.6.8-r1
 cups-libs-2.2.12-r0
 libepoxy-1.5.3-r0
 wayland-libs-client-1.17.0-r0
