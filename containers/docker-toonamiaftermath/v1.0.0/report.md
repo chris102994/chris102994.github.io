@@ -162,9 +162,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  2 01:43 /app
-drwxr-xr-x 4 user user 4096 Apr  2 01:45 /config
-drwxr-xr-x 1 user user 4096 Apr  2 01:43 /defaults
+drwxr-xr-x 1 user user 4096 Apr  3 01:43 /app
+drwxr-xr-x 4 user user 4096 Apr  3 01:45 /config
+drwxr-xr-x 1 user user 4096 Apr  3 01:43 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -186,8 +186,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
@@ -199,6 +199,8 @@ Starting xteve . . .
 <details><summary>Expand</summary><p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -247,7 +249,7 @@ libffi-3.2.1-r6
 p11-kit-0.23.16.1-r0
 libtasn1-4.14-r0
 libunistring-0.9.10-r0
-gnutls-3.6.8-r0
+gnutls-3.6.8-r1
 lame-3.100-r0
 opus-1.3.1-r0
 libogg-1.3.3-r2
@@ -400,9 +402,7 @@ libnotify-0.7.8-r0
 libcroco-0.6.13-r1
 librsvg-2.40.21-r0
 xcb-util-keysyms-0.4.0-r1
-vlc-xorgWARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
--3.0.8-r1
+vlc-xorg-3.0.8-r1
 vlc-3.0.8-r1
 gdbm-1.13-r1
 sqlite-libs-3.28.0-r2
