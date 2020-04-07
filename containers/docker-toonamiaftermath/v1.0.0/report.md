@@ -17,26 +17,6 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
 <details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
 
 ```
@@ -162,9 +142,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  5 01:44 /app
-drwxr-xr-x 4 user user 4096 Apr  5 01:46 /config
-drwxr-xr-x 1 user user 4096 Apr  5 01:44 /defaults
+drwxr-xr-x 1 user user 4096 Apr  7 01:45 /app
+drwxr-xr-x 4 user user 4096 Apr  7 01:46 /config
+drwxr-xr-x 1 user user 4096 Apr  7 01:45 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -186,8 +166,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
@@ -199,6 +179,8 @@ Starting xteve . . .
 <details><summary>Expand</summary><p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -407,8 +389,6 @@ sqlite-libs-3.28.0-r2
 python3-3.7.5-r1
 unzip-6.0-r6
 zip-3.0-r7
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
