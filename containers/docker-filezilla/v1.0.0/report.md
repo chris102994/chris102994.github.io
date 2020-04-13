@@ -17,7 +17,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
+<details><summary>File: `tools/build/build_container.sh`</summary><p>
 
 ```
 
