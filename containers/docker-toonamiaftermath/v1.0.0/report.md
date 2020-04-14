@@ -17,7 +17,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -33,7 +33,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -48,7 +48,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -63,7 +63,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -78,7 +78,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -142,9 +142,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr 12 18:18 /app
-drwxr-xr-x 4 user user 4096 Apr 12 18:27 /config
-drwxr-xr-x 1 user user 4096 Apr 12 18:18 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 17:41 /app
+drwxr-xr-x 4 user user 4096 Apr 14 17:47 /config
+drwxr-xr-x 1 user user 4096 Apr 14 17:41 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -166,8 +166,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
