@@ -20,7 +20,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: rootfs/usr/local/bin/pkg-manager</summary><p>
+<details><summary>File: `rootfs/usr/local/bin/pkg-manager`</summary><p>
 
 ```
 
@@ -40,7 +40,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/usr/local/bin/check_and_terminate_process</summary><p>
+<details><summary>File: `rootfs/usr/local/bin/check_and_terminate_process`</summary><p>
 
 ```
 
@@ -86,7 +86,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/usr/local/bin/inst-pkg</summary><p>
+<details><summary>File: `rootfs/usr/local/bin/inst-pkg`</summary><p>
 
 ```
 
@@ -210,7 +210,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/usr/local/bin/rm-pkg</summary><p>
+<details><summary>File: `rootfs/usr/local/bin/rm-pkg`</summary><p>
 
 ```
 
@@ -263,7 +263,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/etc/services.d/cron/run</summary><p>
+<details><summary>File: `rootfs/etc/services.d/cron/run`</summary><p>
 
 ```
 
@@ -278,7 +278,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/etc/cont-init.d/10-display-container-info</summary><p>
+<details><summary>File: `rootfs/etc/cont-init.d/10-display-container-info`</summary><p>
 
 ```
 
@@ -293,7 +293,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/etc/cont-init.d/05-init-mounted-folders</summary><p>
+<details><summary>File: `rootfs/etc/cont-init.d/05-init-mounted-folders`</summary><p>
 
 ```
 
@@ -313,7 +313,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: rootfs/etc/cont-init.d/01-users-and-groups</summary><p>
+<details><summary>File: `rootfs/etc/cont-init.d/01-users-and-groups`</summary><p>
 
 ```
 
@@ -333,27 +333,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -369,7 +349,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -384,7 +364,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -399,7 +379,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -414,7 +394,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -473,15 +453,15 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:21 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /app
+drwxr-xr-x 4 user user 4096 Apr 14 00:04 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 
 ```
 
@@ -567,9 +547,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:19 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:22 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:19 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:01 /app
+drwxr-xr-x 4 user user 4096 Apr 14 00:05 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:01 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
@@ -591,7 +571,7 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 Listing...
 adduser/now 3.118 all [installed,local]
-apt/now 1.8.4 amd64 [installed,local]
+apt/now 2.0.0 amd64 [installed,local]
 base-files/now 11 amd64 [installed,local]
 base-passwd/now 3.5.47 amd64 [installed,local]
 bash/now 5.0-6 amd64 [installed,local]
@@ -605,41 +585,40 @@ debian-archive-keyring/now 2019.1 all [installed,local]
 debianutils/now 4.9.1 amd64 [installed,local]
 diffutils/now 1:3.7-3 amd64 [installed,local]
 dpkg/now 1.19.7 amd64 [installed,local]
-e2fsprogs/now 1.45.5-2 amd64 [installed,local]
+e2fsprogs/now 1.45.6-1 amd64 [installed,local]
 fdisk/now 2.34-0.1 amd64 [installed,local]
 findutils/now 4.7.0-1 amd64 [installed,local]
-gcc-10-base/now 10-20200211-1 amd64 [installed,local]
-gcc-9-base/now 9.2.1-29 amd64 [installed,local]
-gpgv/now 2.2.19-1 amd64 [installed,local]
+gcc-10-base/now 10-20200324-1 amd64 [installed,local]
+gcc-9-base/now 9.3.0-3 amd64 [installed,local]
+gpgv/now 2.2.19-3 amd64 [installed,local]
 grep/now 3.4-1 amd64 [installed,local]
-gzip/now 1.9-3+b1 amd64 [installed,local]
+gzip/now 1.10-2 amd64 [installed,local]
 hostname/now 3.23 amd64 [installed,local]
 init-system-helpers/now 1.57 all [installed,local]
-libacl1/now 2.2.53-5 amd64 [installed,local]
-libapt-pkg5.0/now 1.8.4 amd64 [installed,local]
+libacl1/now 2.2.53-6 amd64 [installed,local]
+libapt-pkg6.0/now 2.0.0 amd64 [installed,local]
 libattr1/now 1:2.4.48-5 amd64 [installed,local]
 libaudit-common/now 1:2.8.5-2 all [installed,local]
 libaudit1/now 1:2.8.5-2+b1 amd64 [installed,local]
 libblkid1/now 2.34-0.1 amd64 [installed,local]
 libbz2-1.0/now 1.0.8-2 amd64 [installed,local]
-libc-bin/now 2.29-10 amd64 [installed,local]
-libc6/now 2.29-10 amd64 [installed,local]
+libc-bin/now 2.30-2 amd64 [installed,local]
+libc6/now 2.30-2 amd64 [installed,local]
 libcap-ng0/now 0.7.9-2.1+b1 amd64 [installed,local]
-libcom-err2/now 1.45.5-2 amd64 [installed,local]
-libcrypt1/now 1:4.4.10-10 amd64 [installed,local]
+libcom-err2/now 1.45.6-1 amd64 [installed,local]
+libcrypt1/now 1:4.4.15-1 amd64 [installed,local]
 libdb5.3/now 5.3.28+dfsg1-0.6 amd64 [installed,local]
 libdebconfclient0/now 0.251 amd64 [installed,local]
-libext2fs2/now 1.45.5-2 amd64 [installed,local]
+libext2fs2/now 1.45.6-1 amd64 [installed,local]
 libfdisk1/now 2.34-0.1 amd64 [installed,local]
 libffi7/now 3.3-3 amd64 [installed,local]
-libgcc-s1/now 10-20200211-1 amd64 [installed,local]
-libgcc1/now 1:10-20200211-1 amd64 [installed,local]
-libgcrypt20/now 1.8.5-3 amd64 [installed,local]
-libgmp10/now 2:6.1.2+dfsg-4 amd64 [installed,local]
+libgcc-s1/now 10-20200324-1 amd64 [installed,local]
+libgcrypt20/now 1.8.5-5 amd64 [installed,local]
+libgmp10/now 2:6.2.0+dfsg-4 amd64 [installed,local]
 libgnutls30/now 3.6.12-2 amd64 [installed,local]
 libgpg-error0/now 1.37-1 amd64 [installed,local]
 libhogweed5/now 3.5.1+really3.5.1-2 amd64 [installed,local]
-libidn2-0/now 2.2.0-2 amd64 [installed,local]
+libidn2-0/now 2.3.0-1 amd64 [installed,local]
 liblz4-1/now 1.9.2-2 amd64 [installed,local]
 liblzma5/now 5.2.4-1+b1 amd64 [installed,local]
 libmount1/now 2.34-0.1 amd64 [installed,local]
@@ -654,40 +633,40 @@ libpam0g/now 1.3.1-5 amd64 [installed,local]
 libpcre2-8-0/now 10.34-7 amd64 [installed,local]
 libpcre3/now 2:8.39-12+b1 amd64 [installed,local]
 libprocps8/now 2:3.3.16-4 amd64 [installed,local]
-libseccomp2/now 2.4.2-2 amd64 [installed,local]
+libseccomp2/now 2.4.3-1 amd64 [installed,local]
 libselinux1/now 3.0-1+b1 amd64 [installed,local]
 libsemanage-common/now 3.0-1 all [installed,local]
 libsemanage1/now 3.0-1+b1 amd64 [installed,local]
 libsepol1/now 3.0-1 amd64 [installed,local]
 libsmartcols1/now 2.34-0.1 amd64 [installed,local]
-libss2/now 1.45.5-2 amd64 [installed,local]
-libssl1.1/now 1.1.1d-2 amd64 [installed,local]
-libstdc++6/now 10-20200211-1 amd64 [installed,local]
+libss2/now 1.45.6-1 amd64 [installed,local]
+libssl1.1/now 1.1.1f-1 amd64 [installed,local]
+libstdc++6/now 10-20200324-1 amd64 [installed,local]
 libsystemd0/now 244.3-1 amd64 [installed,local]
-libtasn1-6/now 4.15.0-2 amd64 [installed,local]
+libtasn1-6/now 4.16.0-2 amd64 [installed,local]
 libtinfo6/now 6.2-1 amd64 [installed,local]
 libudev1/now 244.3-1 amd64 [installed,local]
 libunistring2/now 0.9.10-2 amd64 [installed,local]
 libuuid1/now 2.34-0.1 amd64 [installed,local]
 libzstd1/now 1.4.4+dfsg-3 amd64 [installed,local]
 login/now 1:4.8.1-1 amd64 [installed,local]
-logsave/now 1.45.5-2 amd64 [installed,local]
+logsave/now 1.45.6-1 amd64 [installed,local]
 lsb-base/now 11.1.0 all [installed,local]
 mawk/now 1.3.4.20200120-2 amd64 [installed,local]
 mount/now 2.34-0.1 amd64 [installed,local]
-ncurses-base/now 6.1+20191019-1 all [installed,local]
+ncurses-base/now 6.2-1 all [installed,local]
 ncurses-bin/now 6.2-1 amd64 [installed,local]
-openssl/now 1.1.1d-2 amd64 [installed,local]
+openssl/now 1.1.1f-1 amd64 [installed,local]
 passwd/now 1:4.8.1-1 amd64 [installed,local]
 perl-base/now 5.30.0-9 amd64 [installed,local]
 procps/now 2:3.3.16-4 amd64 [installed,local]
 sed/now 4.7-1 amd64 [installed,local]
 sensible-utils/now 0.0.12+nmu1 all [installed,local]
-sysvinit-utils/now 2.96-2.1 amd64 [installed,local]
-tar/now 1.30+dfsg-6+b1 amd64 [installed,local]
+sysvinit-utils/now 2.96-3 amd64 [installed,local]
+tar/now 1.30+dfsg-7 amd64 [installed,local]
 tzdata/now 2019c-3 all [installed,local]
 util-linux/now 2.34-0.1 amd64 [installed,local]
-zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
+zlib1g/now 1:1.2.11.dfsg-2 amd64 [installed,local]
 
 ```
 
@@ -734,9 +713,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:20 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:23 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:03 /app
+drwxr-xr-x 4 user user 4096 Apr 14 00:06 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:03 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
