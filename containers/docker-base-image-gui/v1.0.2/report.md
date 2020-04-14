@@ -23,27 +23,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -59,7 +39,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -74,7 +54,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -89,7 +69,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -104,7 +84,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -168,9 +148,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:27 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /app
+drwxr-xr-x 4 user user 4096 Apr 14 00:10 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -362,9 +342,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:20 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:31 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:19 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:03 /app
+drwxr-xr-x 4 user user 4096 Apr 14 00:12 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:01 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -379,8 +359,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:19 /defaults
 [run]: The Package Manager is apt-get
 [services.d] done.
 [xvfb]: Starting . . .
-[openbox]: Starting . . .
 [x11vnc]: Starting . . .
+[openbox]: Starting . . .
 [nginx]: Starting . . .
 
 ```
@@ -397,7 +377,7 @@ WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
 
 Listing...
 adduser/now 3.118 all [installed,local]
-apt/now 1.8.4 amd64 [installed,local]
+apt/now 2.0.0 amd64 [installed,local]
 base-files/now 11 amd64 [installed,local]
 base-passwd/now 3.5.47 amd64 [installed,local]
 bash/now 5.0-6 amd64 [installed,local]
@@ -411,59 +391,57 @@ debian-archive-keyring/now 2019.1 all [installed,local]
 debianutils/now 4.9.1 amd64 [installed,local]
 diffutils/now 1:3.7-3 amd64 [installed,local]
 dpkg/now 1.19.7 amd64 [installed,local]
-e2fsprogs/now 1.45.5-2 amd64 [installed,local]
+e2fsprogs/now 1.45.6-1 amd64 [installed,local]
 fdisk/now 2.34-0.1 amd64 [installed,local]
 findutils/now 4.7.0-1 amd64 [installed,local]
 fontconfig-config/now 2.13.1-2 all [installed,local]
 fontconfig/now 2.13.1-2+b1 amd64 [installed,local]
 fonts-dejavu-core/now 2.37-1 all [installed,local]
-gcc-10-base/now 10-20200211-1 amd64 [installed,local]
-gcc-9-base/now 9.2.1-29 amd64 [installed,local]
-gpgv/now 2.2.19-1 amd64 [installed,local]
+gcc-10-base/now 10-20200324-1 amd64 [installed,local]
+gcc-9-base/now 9.3.0-3 amd64 [installed,local]
+gpgv/now 2.2.19-3 amd64 [installed,local]
 grep/now 3.4-1 amd64 [installed,local]
-gzip/now 1.9-3+b1 amd64 [installed,local]
+gzip/now 1.10-2 amd64 [installed,local]
 hostname/now 3.23 amd64 [installed,local]
 init-system-helpers/now 1.57 all [installed,local]
-libacl1/now 2.2.53-5 amd64 [installed,local]
-libapt-pkg5.0/now 1.8.4 amd64 [installed,local]
+libacl1/now 2.2.53-6 amd64 [installed,local]
+libapt-pkg6.0/now 2.0.0 amd64 [installed,local]
 libattr1/now 1:2.4.48-5 amd64 [installed,local]
 libaudit-common/now 1:2.8.5-2 all [installed,local]
 libaudit1/now 1:2.8.5-2+b1 amd64 [installed,local]
 libblkid1/now 2.34-0.1 amd64 [installed,local]
 libbsd0/now 0.10.0-1 amd64 [installed,local]
 libbz2-1.0/now 1.0.8-2 amd64 [installed,local]
-libc-bin/now 2.29-10 amd64 [installed,local]
-libc6/now 2.29-10 amd64 [installed,local]
+libc-bin/now 2.30-2 amd64 [installed,local]
+libc6/now 2.30-2 amd64 [installed,local]
 libcairo2/now 1.16.0-4 amd64 [installed,local]
 libcap-ng0/now 0.7.9-2.1+b1 amd64 [installed,local]
-libcom-err2/now 1.45.5-2 amd64 [installed,local]
-libcroco3/now 0.6.13-1 amd64 [installed,local]
-libcrypt1/now 1:4.4.10-10 amd64 [installed,local]
+libcom-err2/now 1.45.6-1 amd64 [installed,local]
+libcrypt1/now 1:4.4.15-1 amd64 [installed,local]
 libdatrie1/now 0.2.12-3 amd64 [installed,local]
 libdb5.3/now 5.3.28+dfsg1-0.6 amd64 [installed,local]
 libdebconfclient0/now 0.251 amd64 [installed,local]
-libdrm-amdgpu1/now 2.4.100-4 amd64 [installed,local]
-libdrm-common/now 2.4.100-4 all [installed,local]
-libdrm-intel1/now 2.4.100-4 amd64 [installed,local]
-libdrm-nouveau2/now 2.4.100-4 amd64 [installed,local]
-libdrm-radeon1/now 2.4.100-4 amd64 [installed,local]
-libdrm2/now 2.4.100-4 amd64 [installed,local]
+libdrm-amdgpu1/now 2.4.101-1 amd64 [installed,local]
+libdrm-common/now 2.4.101-1 all [installed,local]
+libdrm-intel1/now 2.4.101-1 amd64 [installed,local]
+libdrm-nouveau2/now 2.4.101-1 amd64 [installed,local]
+libdrm-radeon1/now 2.4.101-1 amd64 [installed,local]
+libdrm2/now 2.4.101-1 amd64 [installed,local]
 libedit2/now 3.1-20191231-1 amd64 [installed,local]
 libelf1/now 0.176-1.1 amd64 [installed,local]
 libexpat1/now 2.2.9-1 amd64 [installed,local]
-libext2fs2/now 1.45.5-2 amd64 [installed,local]
+libext2fs2/now 1.45.6-1 amd64 [installed,local]
 libfdisk1/now 2.34-0.1 amd64 [installed,local]
 libffi7/now 3.3-3 amd64 [installed,local]
 libfontconfig1/now 2.13.1-2+b1 amd64 [installed,local]
 libfontenc1/now 1:1.1.3-1+b2 amd64 [installed,local]
 libfreetype6/now 2.10.1-2 amd64 [installed,local]
 libfribidi0/now 1.0.8-2 amd64 [installed,local]
-libgcc-s1/now 10-20200211-1 amd64 [installed,local]
-libgcc1/now 1:10-20200211-1 amd64 [installed,local]
-libgcrypt20/now 1.8.5-3 amd64 [installed,local]
+libgcc-s1/now 10-20200324-1 amd64 [installed,local]
+libgcrypt20/now 1.8.5-5 amd64 [installed,local]
 libgd3/now 2.2.5-5.2 amd64 [installed,local]
-libgdk-pixbuf2.0-0/now 2.40.0+dfsg-3 amd64 [installed,local]
-libgdk-pixbuf2.0-common/now 2.40.0+dfsg-3 all [installed,local]
+libgdk-pixbuf2.0-0/now 2.40.0+dfsg-4 amd64 [installed,local]
+libgdk-pixbuf2.0-common/now 2.40.0+dfsg-4 all [installed,local]
 libgeoip1/now 1.6.12-6 amd64 [installed,local]
 libgif7/now 5.1.9-1 amd64 [installed,local]
 libgl1-mesa-dri/now 19.3.3-1 amd64 [installed,local]
@@ -473,20 +451,20 @@ libglib2.0-0/now 2.64.1-1 amd64 [installed,local]
 libglvnd0/now 1.3.1-1 amd64 [installed,local]
 libglx-mesa0/now 19.3.3-1 amd64 [installed,local]
 libglx0/now 1.3.1-1 amd64 [installed,local]
-libgmp10/now 2:6.1.2+dfsg-4 amd64 [installed,local]
+libgmp10/now 2:6.2.0+dfsg-4 amd64 [installed,local]
 libgnutls30/now 3.6.12-2 amd64 [installed,local]
 libgpg-error0/now 1.37-1 amd64 [installed,local]
-libgraphite2-3/now 1.3.13-11 amd64 [installed,local]
+libgraphite2-3/now 1.3.14-1 amd64 [installed,local]
 libharfbuzz0b/now 2.6.4-1 amd64 [installed,local]
 libhogweed5/now 3.5.1+really3.5.1-2 amd64 [installed,local]
 libice6/now 2:1.0.9-2 amd64 [installed,local]
 libicu63/now 63.2-3 amd64 [installed,local]
 libid3tag0/now 0.15.1b-14 amd64 [installed,local]
-libidn2-0/now 2.2.0-2 amd64 [installed,local]
+libidn2-0/now 2.3.0-1 amd64 [installed,local]
 libimlib2/now 1.6.1-1 amd64 [installed,local]
 libjbig0/now 2.1-3.1+b2 amd64 [installed,local]
 libjpeg62-turbo/now 1:1.5.2-2+b1 amd64 [installed,local]
-libllvm9/now 1:9.0.1-10 amd64 [installed,local]
+libllvm9/now 1:9.0.1-11 amd64 [installed,local]
 liblz4-1/now 1.9.2-2 amd64 [installed,local]
 liblzma5/now 5.2.4-1+b1 amd64 [installed,local]
 libmount1/now 2.34-0.1 amd64 [installed,local]
@@ -511,10 +489,10 @@ libpam-modules-bin/now 1.3.1-5 amd64 [installed,local]
 libpam-modules/now 1.3.1-5 amd64 [installed,local]
 libpam-runtime/now 1.3.1-5 all [installed,local]
 libpam0g/now 1.3.1-5 amd64 [installed,local]
-libpango-1.0-0/now 1.42.4-8 amd64 [installed,local]
-libpangocairo-1.0-0/now 1.42.4-8 amd64 [installed,local]
-libpangoft2-1.0-0/now 1.42.4-8 amd64 [installed,local]
-libpangoxft-1.0-0/now 1.42.4-8 amd64 [installed,local]
+libpango-1.0-0/now 1.44.7-3 amd64 [installed,local]
+libpangocairo-1.0-0/now 1.44.7-3 amd64 [installed,local]
+libpangoft2-1.0-0/now 1.44.7-3 amd64 [installed,local]
+libpangoxft-1.0-0/now 1.44.7-3 amd64 [installed,local]
 libpciaccess0/now 0.14-1 amd64 [installed,local]
 libpcre2-8-0/now 10.34-7 amd64 [installed,local]
 libpcre3/now 2:8.39-12+b1 amd64 [installed,local]
@@ -522,11 +500,11 @@ libpixman-1-0/now 0.36.0-1 amd64 [installed,local]
 libpng16-16/now 1.6.37-2 amd64 [installed,local]
 libprocps8/now 2:3.3.16-4 amd64 [installed,local]
 libpython3-stdlib/now 3.8.2-2 amd64 [installed,local]
-libpython3.8-minimal/now 3.8.2-1 amd64 [installed,local]
-libpython3.8-stdlib/now 3.8.2-1 amd64 [installed,local]
+libpython3.8-minimal/now 3.8.2-1+b1 amd64 [installed,local]
+libpython3.8-stdlib/now 3.8.2-1+b1 amd64 [installed,local]
 libreadline8/now 8.0-4 amd64 [installed,local]
-librsvg2-2/now 2.46.4-1 amd64 [installed,local]
-libseccomp2/now 2.4.2-2 amd64 [installed,local]
+librsvg2-2/now 2.48.2-1 amd64 [installed,local]
+libseccomp2/now 2.4.3-1 amd64 [installed,local]
 libselinux1/now 3.0-1+b1 amd64 [installed,local]
 libsemanage-common/now 3.0-1 all [installed,local]
 libsemanage1/now 3.0-1+b1 amd64 [installed,local]
@@ -536,12 +514,12 @@ libsepol1/now 3.0-1 amd64 [installed,local]
 libsm6/now 2:1.2.3-1 amd64 [installed,local]
 libsmartcols1/now 2.34-0.1 amd64 [installed,local]
 libsqlite3-0/now 3.31.1-4 amd64 [installed,local]
-libss2/now 1.45.5-2 amd64 [installed,local]
-libssl1.1/now 1.1.1d-2 amd64 [installed,local]
+libss2/now 1.45.6-1 amd64 [installed,local]
+libssl1.1/now 1.1.1f-1 amd64 [installed,local]
 libstartup-notification0/now 0.12-6 amd64 [installed,local]
-libstdc++6/now 10-20200211-1 amd64 [installed,local]
+libstdc++6/now 10-20200324-1 amd64 [installed,local]
 libsystemd0/now 244.3-1 amd64 [installed,local]
-libtasn1-6/now 4.15.0-2 amd64 [installed,local]
+libtasn1-6/now 4.16.0-2 amd64 [installed,local]
 libthai-data/now 0.1.28-3 all [installed,local]
 libthai0/now 0.1.28-3 amd64 [installed,local]
 libtiff5/now 4.1.0+git191117-2 amd64 [installed,local]
@@ -557,16 +535,16 @@ libx11-data/now 2:1.6.9-2 all [installed,local]
 libx11-xcb1/now 2:1.6.9-2 amd64 [installed,local]
 libxau6/now 1:1.0.8-1+b2 amd64 [installed,local]
 libxaw7/now 2:1.0.13-1+b2 amd64 [installed,local]
-libxcb-dri2-0/now 1.13.1-5 amd64 [installed,local]
-libxcb-dri3-0/now 1.13.1-5 amd64 [installed,local]
-libxcb-glx0/now 1.13.1-5 amd64 [installed,local]
-libxcb-present0/now 1.13.1-5 amd64 [installed,local]
-libxcb-render0/now 1.13.1-5 amd64 [installed,local]
-libxcb-shape0/now 1.13.1-5 amd64 [installed,local]
-libxcb-shm0/now 1.13.1-5 amd64 [installed,local]
-libxcb-sync1/now 1.13.1-5 amd64 [installed,local]
+libxcb-dri2-0/now 1.14-2 amd64 [installed,local]
+libxcb-dri3-0/now 1.14-2 amd64 [installed,local]
+libxcb-glx0/now 1.14-2 amd64 [installed,local]
+libxcb-present0/now 1.14-2 amd64 [installed,local]
+libxcb-render0/now 1.14-2 amd64 [installed,local]
+libxcb-shape0/now 1.14-2 amd64 [installed,local]
+libxcb-shm0/now 1.14-2 amd64 [installed,local]
+libxcb-sync1/now 1.14-2 amd64 [installed,local]
 libxcb-util0/now 0.3.8-3+b2 amd64 [installed,local]
-libxcb1/now 1.13.1-5 amd64 [installed,local]
+libxcb1/now 1.14-2 amd64 [installed,local]
 libxcomposite1/now 1:0.4.4-2 amd64 [installed,local]
 libxcursor1/now 1:1.2.0-2 amd64 [installed,local]
 libxdamage1/now 1:1.1.5-1 amd64 [installed,local]
@@ -594,31 +572,31 @@ libxxf86vm1/now 1:1.1.4-1+b2 amd64 [installed,local]
 libz3-4/now 4.8.7-4 amd64 [installed,local]
 libzstd1/now 1.4.4+dfsg-3 amd64 [installed,local]
 login/now 1:4.8.1-1 amd64 [installed,local]
-logsave/now 1.45.5-2 amd64 [installed,local]
+logsave/now 1.45.6-1 amd64 [installed,local]
 lsb-base/now 11.1.0 all [installed,local]
 mawk/now 1.3.4.20200120-2 amd64 [installed,local]
 mime-support/now 3.64 all [installed,local]
 mount/now 2.34-0.1 amd64 [installed,local]
-ncurses-base/now 6.1+20191019-1 all [installed,local]
+ncurses-base/now 6.2-1 all [installed,local]
 ncurses-bin/now 6.2-1 amd64 [installed,local]
 nginx-common/now 1.16.1-3 all [installed,local]
 nginx-full/now 1.16.1-3 amd64 [installed,local]
 nginx/now 1.16.1-3 all [installed,local]
 openbox/now 3.6.1-9 amd64 [installed,local]
-openssl/now 1.1.1d-2 amd64 [installed,local]
+openssl/now 1.1.1f-1 amd64 [installed,local]
 passwd/now 1:4.8.1-1 amd64 [installed,local]
 perl-base/now 5.30.0-9 amd64 [installed,local]
 procps/now 2:3.3.16-4 amd64 [installed,local]
 python3-minimal/now 3.8.2-2 amd64 [installed,local]
-python3.8-minimal/now 3.8.2-1 amd64 [installed,local]
-python3.8/now 3.8.2-1 amd64 [installed,local]
+python3.8-minimal/now 3.8.2-1+b1 amd64 [installed,local]
+python3.8/now 3.8.2-1+b1 amd64 [installed,local]
 python3/now 3.8.2-2 amd64 [installed,local]
 readline-common/now 8.0-4 all [installed,local]
 sed/now 4.7-1 amd64 [installed,local]
 sensible-utils/now 0.0.12+nmu1 all [installed,local]
-shared-mime-info/now 1.10-1 amd64 [installed,local]
-sysvinit-utils/now 2.96-2.1 amd64 [installed,local]
-tar/now 1.30+dfsg-6+b1 amd64 [installed,local]
+shared-mime-info/now 1.15-1 amd64 [installed,local]
+sysvinit-utils/now 2.96-3 amd64 [installed,local]
+tar/now 1.30+dfsg-7 amd64 [installed,local]
 tzdata/now 2019c-3 all [installed,local]
 ucf/now 3.0038+nmu1 all [installed,local]
 util-linux/now 2.34-0.1 amd64 [installed,local]
@@ -626,9 +604,9 @@ x11-common/now 1:7.7+20 all [installed,local]
 x11-utils/now 7.7+5 amd64 [installed,local]
 x11-xkb-utils/now 7.7+5 amd64 [installed,local]
 xkb-data/now 2.29-2 all [installed,local]
-xserver-common/now 2:1.20.7-4 all [installed,local]
-xvfb/now 2:1.20.7-4 amd64 [installed,local]
-zlib1g/now 1:1.2.11.dfsg-1.2 amd64 [installed,local]
+xserver-common/now 2:1.20.8-2 all [installed,local]
+xvfb/now 2:1.20.8-2 amd64 [installed,local]
+zlib1g/now 1:1.2.11.dfsg-2 amd64 [installed,local]
 
 ```
 
@@ -680,9 +658,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:23 /app
-drwxr-xr-x 4 user user 4096 Mar 28 03:33 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:06 /app
+drwxr-xr-x 4 user user 4096 Apr 14 00:14 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:03 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -694,8 +672,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
@@ -776,7 +754,7 @@ libfontenc1/now 1:1.1.3-1 amd64 [installed,local]
 libfreetype6/now 2.8.1-2ubuntu2 amd64 [installed,local]
 libgcc1/now 1:8.3.0-26ubuntu1~18.04 amd64 [installed,local]
 libgcrypt20/now 1.8.1-4ubuntu1.2 amd64 [installed,local]
-libgd3/now 2.2.5-4ubuntu0.3 amd64 [installed,local]
+libgd3/now 2.2.5-4ubuntu0.4 amd64 [installed,local]
 libgdk-pixbuf2.0-0/now 2.36.11-2 amd64 [installed,local]
 libgdk-pixbuf2.0-common/now 2.36.11-2 all [installed,local]
 libgeoip1/now 1.6.12-1 amd64 [installed,local]
