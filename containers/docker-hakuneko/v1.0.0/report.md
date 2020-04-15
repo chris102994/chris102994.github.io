@@ -17,27 +17,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -53,7 +33,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -68,7 +48,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -83,7 +63,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -98,7 +78,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -163,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  6 01:11 /app
-drwxr-xr-x 4 user user 4096 Apr  6 01:13 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
+drwxr-xr-x 1 user user 4096 Apr 15 13:30 /app
+drwxr-xr-x 4 user user 4096 Apr 15 13:32 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:03 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -180,8 +160,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
 [run]: The Package Manager is apt-get
 [services.d] done.
 [xvfb]: Starting . . .
-[x11vnc]: Starting . . .
 [openbox]: Starting . . .
+[x11vnc]: Starting . . .
 [nginx]: Starting . . .
 
 ```
@@ -238,8 +218,8 @@ init-system-helpers/now 1.51 all [installed,local]
 iproute2/now 4.15.0-2ubuntu1 amd64 [installed,local]
 libacl1/now 2.2.52-3build1 amd64 [installed,local]
 libapt-pkg5.0/now 1.6.12 amd64 [installed,local]
-libasound2/now 1.1.3-5ubuntu0.4 amd64 [installed,local]
-libasound2-data/now 1.1.3-5ubuntu0.4 all [installed,local]
+libasound2/now 1.1.3-5ubuntu0.5 amd64 [installed,local]
+libasound2-data/now 1.1.3-5ubuntu0.5 all [installed,local]
 libatk-bridge2.0-0/now 2.26.2-1 amd64 [installed,local]
 libatk1.0-0/now 2.28.1-1 amd64 [installed,local]
 libatk1.0-data/now 2.28.1-1 all [installed,local]
@@ -285,7 +265,7 @@ libfontenc1/now 1:1.1.3-1 amd64 [installed,local]
 libfreetype6/now 2.8.1-2ubuntu2 amd64 [installed,local]
 libgcc1/now 1:8.3.0-26ubuntu1~18.04 amd64 [installed,local]
 libgcrypt20/now 1.8.1-4ubuntu1.2 amd64 [installed,local]
-libgd3/now 2.2.5-4ubuntu0.3 amd64 [installed,local]
+libgd3/now 2.2.5-4ubuntu0.4 amd64 [installed,local]
 libgdk-pixbuf2.0-0/now 2.36.11-2 amd64 [installed,local]
 libgdk-pixbuf2.0-common/now 2.36.11-2 all [installed,local]
 libgeoip1/now 1.6.12-1 amd64 [installed,local]
