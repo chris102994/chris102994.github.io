@@ -20,7 +20,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: rootfs/etc/services.d/xteve/data/check</summary><p>
+<details><summary>File: `rootfs/etc/services.d/xteve/data/check`</summary><p>
 
 ```
 
@@ -35,27 +35,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -71,7 +51,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -86,7 +66,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -101,7 +81,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -116,7 +96,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -177,9 +157,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  2 01:43 /app
-drwxr-xr-x 4 user user 4096 Apr  2 01:47 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
+drwxr-xr-x 1 user user 4096 Apr 15 13:31 /app
+drwxr-xr-x 4 user user 4096 Apr 15 13:35 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
@@ -268,8 +248,8 @@ libgcc-8.3.0-r0
 libstdc++-8.3.0-r0
 x265-libs-3.0-r0
 xvidcore-1.3.4-r1
-ffmpeg-libs-4.1.4-r0
-ffmpeg-4.1.4-r0
+ffmpeg-libs-4.1.5-r0
+ffmpeg-4.1.5-r0
 encodings-1.0.4-r1
 libfontenc-1.1.4-r0
 mkfontscale-1.2.1-r1
@@ -451,15 +431,15 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  2 01:44 /app
-drwxr-xr-x 4 user user 4096 Apr  2 01:49 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:20 /defaults
+drwxr-xr-x 1 user user 4096 Apr 15 13:32 /app
+drwxr-xr-x 4 user user 4096 Apr 15 13:37 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:03 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 Starting xteve . . .
 
 ```
@@ -508,8 +488,8 @@ libacl1/now 2.2.52-3build1 amd64 [installed,local]
 libapt-pkg5.0/now 1.6.12 amd64 [installed,local]
 libarchive13/now 3.2.2-3.1ubuntu0.6 amd64 [installed,local]
 libaribb24-0/now 1.0.3-1 amd64 [installed,local]
-libasound2/now 1.1.3-5ubuntu0.4 amd64 [installed,local]
-libasound2-data/now 1.1.3-5ubuntu0.4 all [installed,local]
+libasound2/now 1.1.3-5ubuntu0.5 amd64 [installed,local]
+libasound2-data/now 1.1.3-5ubuntu0.5 all [installed,local]
 libass9/now 1:0.14.0-1 amd64 [installed,local]
 libasyncns0/now 0.8-6 amd64 [installed,local]
 libattr1/now 1:2.4.47-2build1 amd64 [installed,local]
@@ -687,7 +667,7 @@ libsoxr0/now 0.1.2-3 amd64 [installed,local]
 libspeex1/now 1.2~rc1.2-1ubuntu2 amd64 [installed,local]
 libspeexdsp1/now 1.2~rc1.2-1ubuntu2 amd64 [installed,local]
 libss2/now 1.44.1-1ubuntu1.3 amd64 [installed,local]
-libssh-gcrypt-4/now 0.8.0~20170825.94fa1e38-1ubuntu0.5 amd64 [installed,local]
+libssh-gcrypt-4/now 0.8.0~20170825.94fa1e38-1ubuntu0.6 amd64 [installed,local]
 libssh2-1/now 1.8.0-1 amd64 [installed,local]
 libssl1.1/now 1.1.1-1ubuntu2.1~18.04.5 amd64 [installed,local]
 libstdc++6/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
