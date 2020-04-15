@@ -16,7 +16,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: rootfs/etc/cont-init.d/60-set-logging-levels</summary><p>
+<details><summary>File: `rootfs/etc/cont-init.d/60-set-logging-levels`</summary><p>
 
 ```
 
@@ -40,27 +40,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -76,7 +56,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -91,7 +71,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -106,7 +86,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -121,7 +101,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -184,9 +164,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /app
-drwxr-xr-x 4 user user 4096 Apr  2 01:46 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /app
+drwxr-xr-x 4 user user 4096 Apr 15 13:31 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 50-setup-user-from-env: executing... 
@@ -200,43 +180,43 @@ Generating public/private ed25519 key pair.
 Your identification has been saved in /config/.ssh/ssh_host_ed25519_key.
 Your public key has been saved in /config/.ssh/ssh_host_ed25519_key.pub.
 The key fingerprint is:
-SHA256:Kw3olXdkw5zv31vKt6ThnknjA/1utuuv9yR/9rV+FPg root@dec1ba1f7e70
+SHA256:btBNnGRfWtrkAN/tDNC6hmHHmxg+QYuigpFhOiR5Pkg root@8085732c92b5
 The key's randomart image is:
 +--[ED25519 256]--+
+| .        +.o.+  |
+|+E.      +.+ %.. |
+|**       o+o=.= .|
+|* o   ...o* +  + |
+| + . ...So.B +  o|
+|. . .  o  = =    |
+|   .    o  o     |
+|       .         |
 |                 |
-|         o .     |
-|          B   .  |
-|     . . o o . . |
-|    . + S . o . .|
-|   . . + o o . E.|
-|    . . o   o+oo+|
-|       .    ++BXX|
-|            .B%#^|
 +----[SHA256]-----+
 Generating public/private rsa key pair.
 Your identification has been saved in /config/.ssh/ssh_host_rsa_key.
 Your public key has been saved in /config/.ssh/ssh_host_rsa_key.pub.
 The key fingerprint is:
-SHA256:yw9ud0oM6uzL9hlrZhs4YtCFqColp0Gp3dWTRbyLc8Y root@dec1ba1f7e70
+SHA256:ZpjzcZREFKSLYcqkginwgrfZfG0jKC/dta/Ck4Ryhis root@8085732c92b5
 The key's randomart image is:
 +---[RSA 4096]----+
-|         oo      |
-|  .. . . o.      |
-| o. . o +  .     |
-|oo o o   ..      |
-|= = o   So .     |
-|.* .   +o+E      |
-|+   o + *+o      |
-|.  . =.o=O. .    |
-|     o*B*ooo     |
+|         +*.     |
+|         o .     |
+|.   . o . o      |
+|+o + o = o       |
+|B +.o.= S .      |
+|.+o=+..*.o       |
+|  +*++oo=.       |
+|E oo..*o..       |
+| . ..  o.o.      |
 +----[SHA256]-----+
 Successfully Generated SSH keys.
 [cont-init.d] 70-generate-ssh-keys: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
 Starting openssh-server
+[services.d] done.
 Server listening on 0.0.0.0 port 22.
 Server listening on :: port 22.
 
@@ -249,6 +229,8 @@ Server listening on :: port 22.
 <details><summary>Expand</summary><p>
 
 ```
+WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r3
 alpine-baselayout-3.1.2-r0
@@ -279,8 +261,6 @@ tzdata-2019c-r0
 openssh-keygen-8.1_p1-r0
 openssh-server-common-8.1_p1-r0
 openssh-server-8.1_p1-r0
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 
 ```
 
