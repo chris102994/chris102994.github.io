@@ -17,27 +17,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: tools/build/build_container.sh</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -53,7 +33,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -68,7 +48,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -83,7 +63,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -98,7 +78,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -161,9 +141,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  2 01:43 /app
-drwxr-xr-x 4 user user 4096 Apr  2 01:44 /config
-drwxr-xr-x 1 user user 4096 Apr  2 01:43 /defaults
+drwxr-xr-x 1 user user 4096 Apr 15 13:34 /app
+drwxr-xr-x 4 user user 4096 Apr 15 13:35 /config
+drwxr-xr-x 1 user user 4096 Apr 15 13:34 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-arconai-attrs: executing... 
@@ -184,8 +164,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
@@ -247,7 +227,7 @@ libffi-3.2.1-r6
 p11-kit-0.23.16.1-r0
 libtasn1-4.14-r0
 libunistring-0.9.10-r0
-gnutls-3.6.8-r0
+gnutls-3.6.8-r1
 lame-3.100-r0
 opus-1.3.1-r0
 libogg-1.3.3-r2
@@ -268,8 +248,8 @@ libgcc-8.3.0-r0
 libstdc++-8.3.0-r0
 x265-libs-3.0-r0
 xvidcore-1.3.4-r1
-ffmpeg-libs-4.1.4-r0
-ffmpeg-4.1.4-r0
+ffmpeg-libs-4.1.5-r0
+ffmpeg-4.1.5-r0
 encodings-1.0.4-r1
 libfontenc-1.1.4-r0
 mkfontscale-1.2.1-r1
