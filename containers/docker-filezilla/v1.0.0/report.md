@@ -17,27 +17,7 @@
 
 <details><summary>Expand</summary><blockquote><p>
 
-<details><summary>File: `tools/build/build_container.sh`</summary><p>
-
-```
-
-In /workspace/tools/build/build_container.sh line 77:
-source "${SCRIPTS_DIR}"/load_env_files.sh $ENV
-       ^-- SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-
-In /workspace/tools/build/build_container.sh line 80:
-source "${SCRIPTS_DIR}"/versioning.sh || true
-       ^----------------------------^ SC1090: Can't follow non-constant source. Use a directive to specify location.
-
-For more information:
-  https://www.shellcheck.net/wiki/SC1090 -- Can't follow non-constant source....
-
-```
-
-</p></details>
-
-<details><summary>File: tools/scripts/push_readme_to_dockerhub.sh</summary><p>
+<details><summary>File: `tools/scripts/push_readme_to_dockerhub.sh`</summary><p>
 
 ```
 
@@ -53,7 +33,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/push_git_tag.sh</summary><p>
+<details><summary>File: `tools/scripts/push_git_tag.sh`</summary><p>
 
 ```
 
@@ -68,7 +48,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/load_env_files.sh</summary><p>
+<details><summary>File: `tools/scripts/load_env_files.sh`</summary><p>
 
 ```
 
@@ -83,7 +63,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/docker_test.sh</summary><p>
+<details><summary>File: `tools/scripts/docker_test.sh`</summary><p>
 
 ```
 
@@ -98,7 +78,7 @@ For more information:
 
 </p></details>
 
-<details><summary>File: tools/scripts/versioning.sh</summary><p>
+<details><summary>File: `tools/scripts/versioning.sh`</summary><p>
 
 ```
 
@@ -163,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  2 01:58 /app
-drwxr-xr-x 4 user user 4096 Apr  2 02:00 /config
-drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
+drwxr-xr-x 1 user user 4096 Apr 15 12:27 /app
+drwxr-xr-x 4 user user 4096 Apr 15 12:28 /config
+drwxr-xr-x 1 user user 4096 Apr 14 00:00 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 20-certs: executing... 
@@ -177,8 +157,8 @@ drwxr-xr-x 1 user user 4096 Mar 28 03:17 /defaults
 [cont-init.d] 20-vnc-password: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 [xvfb]: Starting . . .
 [openbox]: Starting . . .
 [x11vnc]: Starting . . .
