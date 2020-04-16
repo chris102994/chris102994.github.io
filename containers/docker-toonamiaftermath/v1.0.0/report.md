@@ -142,9 +142,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr 15 13:31 /app
-drwxr-xr-x 4 user user 4096 Apr 15 13:32 /config
-drwxr-xr-x 1 user user 4096 Apr 15 13:31 /defaults
+drwxr-xr-x 1 user user 4096 Apr 16 19:53 /app
+drwxr-xr-x 4 user user 4096 Apr 16 19:54 /config
+drwxr-xr-x 1 user user 4096 Apr 16 19:53 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -250,8 +250,8 @@ libgcc-8.3.0-r0
 libstdc++-8.3.0-r0
 x265-libs-3.0-r0
 xvidcore-1.3.4-r1
-ffmpeg-libs-4.1.4-r0
-ffmpeg-4.1.4-r0
+ffmpeg-libs-4.1.5-r0
+ffmpeg-4.1.5-r0
 encodings-1.0.4-r1
 libfontenc-1.1.4-r0
 mkfontscale-1.2.1-r1
