@@ -142,9 +142,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr 16 19:53 /app
-drwxr-xr-x 4 user user 4096 Apr 16 19:54 /config
-drwxr-xr-x 1 user user 4096 Apr 16 19:53 /defaults
+drwxr-xr-x 1 user user 4096 May 21 20:41 /app
+drwxr-xr-x 4 user user 4096 May 21 20:42 /config
+drwxr-xr-x 1 user user 4096 May 21 20:41 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -166,8 +166,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apk
+[services.d] done.
 Starting xteve . . .
 
 ```
@@ -284,7 +284,7 @@ libcap-2.27-r0
 jansson-2.12-r0
 db-5.3.28-r1
 libsasl-2.1.27-r4
-libldap-2.4.48-r0
+libldap-2.4.48-r1
 samba-libs-4.10.12-r0
 libsmbclient-4.10.12-r0
 dbus-libs-1.12.16-r0
@@ -385,7 +385,7 @@ xcb-util-keysyms-0.4.0-r1
 vlc-xorg-3.0.8-r1
 vlc-3.0.8-r1
 gdbm-1.13-r1
-sqlite-libs-3.28.0-r2
+sqlite-libs-3.28.0-r3
 python3-3.7.5-r1
 unzip-6.0-r6
 zip-3.0-r7
