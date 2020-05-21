@@ -157,8 +157,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr 15 13:31 /app
-drwxr-xr-x 4 user user 4096 Apr 15 13:35 /config
+drwxr-xr-x 1 user user 4096 May 21 20:40 /app
+drwxr-xr-x 4 user user 4096 May 21 20:44 /config
 drwxr-xr-x 1 user user 4096 Apr 14 00:00 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -282,7 +282,7 @@ libcap-2.27-r0
 jansson-2.12-r0
 db-5.3.28-r1
 libsasl-2.1.27-r4
-libldap-2.4.48-r0
+libldap-2.4.48-r1
 samba-libs-4.10.12-r0
 libsmbclient-4.10.12-r0
 dbus-libs-1.12.16-r0
@@ -431,8 +431,8 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr 15 13:32 /app
-drwxr-xr-x 4 user user 4096 Apr 15 13:37 /config
+drwxr-xr-x 1 user user 4096 May 21 20:42 /app
+drwxr-xr-x 4 user user 4096 May 21 20:46 /config
 drwxr-xr-x 1 user user 4096 Apr 14 00:03 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
@@ -632,7 +632,7 @@ libpng16-16/now 1.6.34-1ubuntu0.18.04.2 amd64 [installed,local]
 libpostproc54/now 7:3.4.6-0ubuntu0.18.04.1 amd64 [installed,local]
 libprocps6/now 2:3.3.12-3ubuntu1.2 amd64 [installed,local]
 libprotobuf-lite10/now 3.0.0-9.1ubuntu1 amd64 [installed,local]
-libpulse0/now 1:11.1-1ubuntu7.4 amd64 [installed,local]
+libpulse0/now 1:11.1-1ubuntu7.7 amd64 [installed,local]
 libqt5core5a/now 5.9.5+dfsg-0ubuntu2.5 amd64 [installed,local]
 libqt5dbus5/now 5.9.5+dfsg-0ubuntu2.5 amd64 [installed,local]
 libqt5gui5/now 5.9.5+dfsg-0ubuntu2.5 amd64 [installed,local]
