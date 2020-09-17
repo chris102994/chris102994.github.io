@@ -142,9 +142,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Sep 17 23:13 /app
-drwxr-xr-x 4 user user 4096 Sep 17 23:15 /config
-drwxr-xr-x 1 user user 4096 Sep 17 23:13 /defaults
+drwxr-xr-x 1 user user 4096 Sep 17 23:34 /app
+drwxr-xr-x 4 user user 4096 Sep 17 23:36 /config
+drwxr-xr-x 1 user user 4096 Sep 17 23:34 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -183,14 +183,14 @@ Starting xteve . . .
 WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
 WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
-busybox-1.30.1-r3
+busybox-1.30.1-r4
 alpine-baselayout-3.1.2-r0
 alpine-keys-2.1-r2
-libcrypto1.1-1.1.1d-r2
-libssl1.1-1.1.1d-r2
-ca-certificates-cacert-20190108-r0
+libcrypto1.1-1.1.1g-r0
+libssl1.1-1.1.1g-r0
+ca-certificates-cacert-20191127-r2
 libtls-standalone-2.9.1-r0
-ssl_client-1.30.1-r3
+ssl_client-1.30.1-r4
 zlib-1.2.11-r1
 apk-tools-2.10.4-r2
 scanelf-1.2.3-r0
@@ -202,19 +202,19 @@ ncurses-terminfo-base-6.1_p20190518-r2
 ncurses-libs-6.1_p20190518-r2
 readline-8.0.0-r0
 bash-5.0.0-r0
-ca-certificates-20190108-r0
+ca-certificates-20191127-r2
 libacl-2.2.52-r6
 libattr-2.4.48-r0
 coreutils-8.31-r0
 linux-pam-1.3.0-r1
 shadow-4.6-r2
-tzdata-2019c-r0
+tzdata-2020a-r0
 sdl2-2.0.10-r0
 libxau-1.0.9-r0
 libbsd-0.9.1-r0
 libxdmcp-1.1.3-r0
 libxcb-1.13.1-r0
-libx11-1.6.8-r1
+libx11-1.6.12-r0
 alsa-lib-1.1.9-r0
 expat-2.2.8-r0
 libbz2-1.0.6-r7
@@ -230,12 +230,12 @@ libffi-3.2.1-r6
 p11-kit-0.23.16.1-r0
 libtasn1-4.14-r0
 libunistring-0.9.10-r0
-gnutls-3.6.8-r1
+gnutls-3.6.15-r0
 lame-3.100-r0
 opus-1.3.1-r0
 libogg-1.3.3-r2
 libtheora-1.1.1-r14
-libjpeg-turbo-2.0.4-r0
+libjpeg-turbo-2.0.4-r1
 v4l-utils-libs-1.16.6-r0
 libxext-1.3.4-r0
 libxfixes-5.0.3-r2
@@ -251,8 +251,8 @@ libgcc-8.3.0-r0
 libstdc++-8.3.0-r0
 x265-libs-3.0-r0
 xvidcore-1.3.4-r1
-ffmpeg-libs-4.1.5-r0
-ffmpeg-4.1.5-r0
+ffmpeg-libs-4.1.6-r0
+ffmpeg-4.1.6-r0
 encodings-1.0.4-r1
 libfontenc-1.1.4-r0
 mkfontscale-1.2.1-r1
@@ -275,20 +275,20 @@ lmdb-0.9.24-r0
 talloc-2.2.0-r0
 tdb-libs-1.3.18-r0
 tevent-0.9.39-r0
-ldb-1.5.6-r0
+ldb-1.5.8-r0
 popt-1.16-r7
-libwbclient-4.10.12-r0
-samba-client-libs-4.10.12-r0
-samba-common-libs-4.10.12-r0
-samba-heimdal-libs-4.10.12-r0
+libwbclient-4.10.17-r0
+samba-client-libs-4.10.17-r0
+samba-common-libs-4.10.17-r0
+samba-heimdal-libs-4.10.17-r0
 libcap-2.27-r0
 jansson-2.12-r0
 db-5.3.28-r1
 libsasl-2.1.27-r4
 libldap-2.4.48-r1
-samba-libs-4.10.12-r0
-libsmbclient-4.10.12-r0
-dbus-libs-1.12.16-r0
+samba-libs-4.10.17-r0
+libsmbclient-4.10.17-r0
+dbus-libs-1.12.16-r1
 vlc-libs-3.0.8-r1
 vlc-plugins-access-3.0.8-r1
 speex-1.2.0-r0
@@ -313,7 +313,7 @@ lua5.2-libs-5.2.4-r7
 vlc-plugins-lua-3.0.8-r1
 taglib-1.11.1-r2
 vlc-plugins-meta_engine-3.0.8-r1
-libxml2-2.9.9-r3
+libxml2-2.9.9-r4
 vlc-plugins-misc-3.0.8-r1
 vlc-plugins-mux-3.0.8-r1
 vlc-plugins-notify-3.0.8-r1
