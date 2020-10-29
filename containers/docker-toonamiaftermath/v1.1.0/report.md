@@ -142,15 +142,25 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Sep 17 23:34 /app
-drwxr-xr-x 4 user user 4096 Sep 17 23:36 /config
-drwxr-xr-x 1 user user 4096 Sep 17 23:34 /defaults
+drwxr-xr-x 1 user user 4096 Oct 29 22:18 /app
+drwxr-xr-x 4 user user 4096 Oct 29 22:20 /config
+drwxr-xr-x 1 user user 4096 Oct 29 22:18 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
 [cont-init.d] 40-fix-toonami-attrs: exited 0.
 [cont-init.d] 50-first-run: executing... 
-[cont-init.d] 50-first-run: exited 0.
+Traceback (most recent call last):
+  File "/app/ToonamiAftermath/ToonamiAftermath/__init__.py", line 64, in <module>
+    main()
+  File "/app/ToonamiAftermath/ToonamiAftermath/__init__.py", line 43, in main
+    episode_helper(scraper, sn_url_episodes, est_offset, sn_est_channel_name, sn_url_icon) + \
+  File "/app/ToonamiAftermath/ToonamiAftermath/__init__.py", line 58, in episode_helper
+    this_episode_list = scraper.get_episodes(guide_url, time_offset, channel_name)
+  File "/app/ToonamiAftermath/ToonamiAftermath/toonami_aftermath.py", line 58, in get_episodes
+    obj = ProgramObject(name, image, starttime, timeoffset, "", channelnumber, episode, date, blockname)
+UnboundLocalError: local variable 'image' referenced before assignment
+[cont-init.d] 50-first-run: exited 1.
 [cont-init.d] 60-fix-xeteve-attrs: executing... 
 Archive:  /defaults/xteve_default.zip
   inflating: /config/authentication.json  
@@ -167,8 +177,8 @@ If you wish to reset to the default parameters passed then remove the files in y
 [cont-init.d] 60-fix-xeteve-attrs: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apk
 [services.d] done.
+[run]: The Package Manager is apk
 Starting xteve . . .
 
 ```
@@ -180,8 +190,6 @@ Starting xteve . . .
 <details><summary>Expand</summary><p>
 
 ```
-WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
-WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
 musl-1.1.22-r3
 busybox-1.30.1-r4
 alpine-baselayout-3.1.2-r0
@@ -382,7 +390,9 @@ gtk+3.0-3.24.8-r0
 libnotify-0.7.8-r0
 libcroco-0.6.13-r1
 librsvg-2.40.21-r0
-xcb-util-keysyms-0.4.0-r1
+xcb-util-keysyms-0.4.0-r1WARNING: Ignoring APKINDEX.00740ba1.tar.gz: No such file or directory
+WARNING: Ignoring APKINDEX.d8b2a6f4.tar.gz: No such file or directory
+
 vlc-xorg-3.0.8-r1
 vlc-3.0.8-r1
 gdbm-1.13-r1
