@@ -1,10 +1,9 @@
 ## Test Results docker-toonamiaftermath
 
-## Test's: 4/5 Passed
+## Test's: 4/4 Passed
 
 | Test | Result |
 | ----------------------- | --- |
-| Selenium ubuntu-18-v2.0.0 | FAIL DRIVER ERROR |
 | Screenshot ubuntu-18-v2.0.0 | PASSED |
 | Test Init Scripts for: ubuntu-18-v2.0.0 | PASSED |
 | Test Service Scripts for: ubuntu-18-v2.0.0 | PASSED |
@@ -152,6 +151,16 @@ drwxr-xr-x 1 user user 4096 Feb 18 22:07 /defaults
 [cont-init.d] 40-fix-toonami-attrs: executing... 
 [cont-init.d] 40-fix-toonami-attrs: exited 0.
 [cont-init.d] 50-first-run: executing... 
+[cont-init.d] 50-first-run: exited 0.
+[cont-init.d] 60-fix-nginx-config: executing... 
+Ensuring proper NGINX configuration.
+[cont-init.d] 60-fix-nginx-config: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+[run]: The Package Manager is apt-get
+[services.d] done.
+[nginx]: Starting . . .
+nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
 ```
 
