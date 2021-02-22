@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 22 14:11 /app
-drwxr-xr-x 4 user user 4096 Feb 22 14:15 /config
-drwxr-xr-x 1 user user 4096 Feb 22 14:11 /defaults
+drwxr-xr-x 1 user user 4096 Feb 22 16:19 /app
+drwxr-xr-x 4 user user 4096 Feb 22 16:23 /config
+drwxr-xr-x 1 user user 4096 Feb 22 16:19 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -157,8 +157,8 @@ Ensuring proper NGINX configuration.
 [cont-init.d] 60-fix-nginx-config: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 [nginx]: Starting . . .
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
