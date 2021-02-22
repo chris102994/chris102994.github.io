@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 22 16:19 /app
-drwxr-xr-x 4 user user 4096 Feb 22 16:23 /config
-drwxr-xr-x 1 user user 4096 Feb 22 16:19 /defaults
+drwxr-xr-x 1 user user 4096 Feb 22 18:35 /app
+drwxr-xr-x 4 user user 4096 Feb 22 18:38 /config
+drwxr-xr-x 1 user user 4096 Feb 22 18:35 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
