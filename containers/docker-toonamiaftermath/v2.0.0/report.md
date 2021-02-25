@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 22 18:35 /app
-drwxr-xr-x 4 user user 4096 Feb 22 18:38 /config
-drwxr-xr-x 1 user user 4096 Feb 22 18:35 /defaults
+drwxr-xr-x 1 user user 4096 Feb 25 22:14 /app
+drwxr-xr-x 4 user user 4096 Feb 25 22:18 /config
+drwxr-xr-x 1 user user 4096 Feb 25 22:14 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
@@ -157,8 +157,8 @@ Ensuring proper NGINX configuration.
 [cont-init.d] 60-fix-nginx-config: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [nginx]: Starting . . .
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
@@ -304,9 +304,9 @@ libpng16-16/now 1.6.34-1ubuntu0.18.04.2 amd64 [installed,local]
 libprocps6/now 2:3.3.12-3ubuntu1.2 amd64 [installed,local]
 libpsl5/now 0.19.1-5build1 amd64 [installed,local]
 libpython3-stdlib/now 3.6.7-1~18.04 amd64 [installed,local]
-libpython3.6/now 3.6.9-1~18.04ubuntu1.3 amd64 [installed,local]
-libpython3.6-minimal/now 3.6.9-1~18.04ubuntu1.3 amd64 [installed,local]
-libpython3.6-stdlib/now 3.6.9-1~18.04ubuntu1.3 amd64 [installed,local]
+libpython3.6/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
+libpython3.6-minimal/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
+libpython3.6-stdlib/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
 libquadmath0/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libreadline7/now 7.0-3 amd64 [installed,local]
 libseccomp2/now 2.4.3-1ubuntu3.18.04.3 amd64 [installed,local]
@@ -322,7 +322,7 @@ libstdc++-6-dev/now 6.5.0-2ubuntu1~18.04 amd64 [installed,local]
 libstdc++6/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libsystemd0/now 237-3ubuntu10.42 amd64 [installed,local]
 libtasn1-6/now 4.13-2 amd64 [installed,local]
-libtiff5/now 4.0.9-5ubuntu0.3 amd64 [installed,local]
+libtiff5/now 4.0.9-5ubuntu0.4 amd64 [installed,local]
 libtinfo5/now 6.1-1ubuntu1.18.04 amd64 [installed,local]
 libtsan0/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libubsan0/now 7.5.0-3ubuntu1~18.04 amd64 [installed,local]
@@ -341,7 +341,7 @@ libxpm4/now 1:3.5.12-1 amd64 [installed,local]
 libxslt1-dev/now 1.1.29-5ubuntu0.2 amd64 [installed,local]
 libxslt1.1/now 1.1.29-5ubuntu0.2 amd64 [installed,local]
 libzstd1/now 1.3.3+dfsg-2ubuntu1.1 amd64 [installed,local]
-linux-libc-dev/now 4.15.0-135.139 amd64 [installed,local]
+linux-libc-dev/now 4.15.0-136.140 amd64 [installed,local]
 login/now 1:4.5-1ubuntu2 amd64 [installed,local]
 lsb-base/now 9.20170808ubuntu1 all [installed,local]
 make/now 4.1-9.1ubuntu1 amd64 [installed,local]
@@ -368,8 +368,8 @@ python3-distutils/now 3.6.9-1~18.04 all [installed,local]
 python3-lib2to3/now 3.6.9-1~18.04 all [installed,local]
 python3-minimal/now 3.6.7-1~18.04 amd64 [installed,local]
 python3-pip/now 9.0.1-2.3~ubuntu1.18.04.4 all [installed,local]
-python3.6/now 3.6.9-1~18.04ubuntu1.3 amd64 [installed,local]
-python3.6-minimal/now 3.6.9-1~18.04ubuntu1.3 amd64 [installed,local]
+python3.6/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
+python3.6-minimal/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
 readline-common/now 7.0-3 all [installed,local]
 sed/now 4.4-2 amd64 [installed,local]
 sensible-utils/now 0.0.12 all [installed,local]
