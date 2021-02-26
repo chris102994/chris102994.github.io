@@ -113,8 +113,8 @@ For more information:
 [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
 [s6-init] ensuring user provided files have correct perms...exited 0.
 [fix-attrs.d] applying ownership & permissions fixes...
-[fix-attrs.d] 50-toonami-attrs: applying... 
-[fix-attrs.d] 50-toonami-attrs: exited 0.
+[fix-attrs.d] 50-plutotv-attrs: applying... 
+[fix-attrs.d] 50-plutotv-attrs: exited 0.
 [fix-attrs.d] done.
 [cont-init.d] executing container initialization scripts...
 [cont-init.d] 01-users-and-groups: executing... 
@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 26 17:59 /app
-drwxr-xr-x 4 user user 4096 Feb 26 18:04 /config
-drwxr-xr-x 1 user user 4096 Feb 26 17:59 /defaults
+drwxr-xr-x 1 user user 4096 Feb 26 21:44 /app
+drwxr-xr-x 4 user user 4096 Feb 26 21:48 /config
+drwxr-xr-x 1 user user 4096 Feb 26 21:44 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-plutotv-attrs: executing... 
@@ -158,8 +158,8 @@ Ensuring proper NGINX configuration.
 [cont-init.d] 60-fix-nginx-config: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [nginx]: Starting . . .
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
