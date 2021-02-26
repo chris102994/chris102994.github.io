@@ -1,9 +1,10 @@
 ## Test Results docker-toonamiaftermath
 
-## Test's: 4/4 Passed
+## Test's: 4/5 Passed
 
 | Test | Result |
 | ----------------------- | --- |
+| Selenium ubuntu-18-v2.0.0 | FAIL DRIVER ERROR |
 | Screenshot ubuntu-18-v2.0.0 | PASSED |
 | Test Init Scripts for: ubuntu-18-v2.0.0 | PASSED |
 | Test Service Scripts for: ubuntu-18-v2.0.0 | PASSED |
@@ -143,24 +144,14 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 25 22:14 /app
-drwxr-xr-x 4 user user 4096 Feb 25 22:18 /config
-drwxr-xr-x 1 user user 4096 Feb 25 22:14 /defaults
+drwxr-xr-x 1 user user 4096 Feb 25 23:58 /app
+drwxr-xr-x 4 user user 4096 Feb 26 00:03 /config
+drwxr-xr-x 1 user user 4096 Feb 25 23:58 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
 [cont-init.d] 40-fix-toonami-attrs: exited 0.
 [cont-init.d] 50-first-run: executing... 
-[cont-init.d] 50-first-run: exited 0.
-[cont-init.d] 60-fix-nginx-config: executing... 
-Ensuring proper NGINX configuration.
-[cont-init.d] 60-fix-nginx-config: exited 0.
-[cont-init.d] done.
-[services.d] starting services
-[run]: The Package Manager is apt-get
-[services.d] done.
-[nginx]: Starting . . .
-nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
 ```
 
@@ -256,7 +247,6 @@ libgmp10/now 2:6.1.2+dfsg-2 amd64 [installed,local]
 libgnutls30/now 3.5.18-1ubuntu1.4 amd64 [installed,local]
 libgomp1/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libgpg-error0/now 1.27-6 amd64 [installed,local]
-libgpm2/now 1.20.7-5 amd64 [installed,local]
 libgraphite2-3/now 1.3.11-2 amd64 [installed,local]
 libgraphite2-dev/now 1.3.11-2 amd64 [installed,local]
 libharfbuzz-dev/now 1.7.2-1ubuntu1 amd64 [installed,local]
@@ -302,9 +292,7 @@ libpcrecpp0v5/now 2:8.39-9 amd64 [installed,local]
 libperl5.26/now 5.26.1-6ubuntu0.5 amd64 [installed,local]
 libpng16-16/now 1.6.34-1ubuntu0.18.04.2 amd64 [installed,local]
 libprocps6/now 2:3.3.12-3ubuntu1.2 amd64 [installed,local]
-libpsl5/now 0.19.1-5build1 amd64 [installed,local]
 libpython3-stdlib/now 3.6.7-1~18.04 amd64 [installed,local]
-libpython3.6/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
 libpython3.6-minimal/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
 libpython3.6-stdlib/now 3.6.9-1~18.04ubuntu1.4 amd64 [installed,local]
 libquadmath0/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
@@ -378,13 +366,7 @@ tar/now 1.29b-2ubuntu0.1 amd64 [installed,local]
 tzdata/now 2020a-0ubuntu0.18.04 all [installed,local]
 ubuntu-keyring/now 2018.09.18.1~18.04.0 all [installed,local]
 ucf/now 3.0038 all [installed,local]
-unzip/now 6.0-21ubuntu1.1 amd64 [installed,local]
 util-linux/now 2.31.1-0.4ubuntu3.6 amd64 [installed,local]
-vim/now 2:8.0.1453-1ubuntu1.4 amd64 [installed,local]
-vim-common/now 2:8.0.1453-1ubuntu1.4 all [installed,local]
-vim-runtime/now 2:8.0.1453-1ubuntu1.4 all [installed,local]
-wget/now 1.19.4-1ubuntu2.2 amd64 [installed,local]
-xxd/now 2:8.0.1453-1ubuntu1.4 amd64 [installed,local]
 xz-utils/now 5.2.2-1.3 amd64 [installed,local]
 zip/now 3.0-11build1 amd64 [installed,local]
 zlib1g/now 1:1.2.11.dfsg-0ubuntu2 amd64 [installed,local]
