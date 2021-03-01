@@ -158,8 +158,8 @@ Ensuring proper NGINX configuration.
 [cont-init.d] 60-fix-nginx-config: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[run]: The Package Manager is apt-get
 [services.d] done.
+[run]: The Package Manager is apt-get
 [nginx]: Starting . . .
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
