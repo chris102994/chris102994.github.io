@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 26 21:44 /app
-drwxr-xr-x 4 user user 4096 Feb 26 21:48 /config
-drwxr-xr-x 1 user user 4096 Feb 26 21:44 /defaults
+drwxr-xr-x 1 user user 4096 Mar  1 14:32 /app
+drwxr-xr-x 4 user user 4096 Mar  1 14:36 /config
+drwxr-xr-x 1 user user 4096 Mar  1 14:32 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-plutotv-attrs: executing... 
@@ -181,9 +181,9 @@ apt/now 1.6.12ubuntu0.1 amd64 [installed,local]
 base-files/now 10.1ubuntu2.9 amd64 [installed,local]
 base-passwd/now 3.5.44 amd64 [installed,local]
 bash/now 4.4.18-2ubuntu1.2 amd64 [installed,local]
-binutils/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
-binutils-common/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
-binutils-x86-64-linux-gnu/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
+binutils/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
+binutils-common/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
+binutils-x86-64-linux-gnu/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
 bsdutils/now 1:2.31.1-0.4ubuntu3.6 amd64 [installed,local]
 bzip2/now 1.0.6-8.1ubuntu0.2 amd64 [installed,local]
 ca-certificates/now 20190110~18.04.1 all [installed,local]
@@ -211,7 +211,7 @@ gzip/now 1.6-5ubuntu1 amd64 [installed,local]
 hostname/now 3.20 amd64 [installed,local]
 icu-devtools/now 60.2-3ubuntu3.1 amd64 [installed,local]
 init-system-helpers/now 1.51 all [installed,local]
-iproute2/now 4.15.0-2ubuntu1.2 amd64 [installed,local]
+iproute2/now 4.15.0-2ubuntu1.3 amd64 [installed,local]
 libacl1/now 2.2.52-3build1 amd64 [installed,local]
 libapt-pkg5.0/now 1.6.12ubuntu0.1 amd64 [installed,local]
 libasan3/now 6.5.0-2ubuntu1~18.04 amd64 [installed,local]
@@ -219,7 +219,7 @@ libatomic1/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libattr1/now 1:2.4.47-2build1 amd64 [installed,local]
 libaudit-common/now 1:2.8.2-1ubuntu1 all [installed,local]
 libaudit1/now 1:2.8.2-1ubuntu1 amd64 [installed,local]
-libbinutils/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
+libbinutils/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
 libblkid1/now 2.31.1-0.4ubuntu3.6 amd64 [installed,local]
 libbsd0/now 0.8.7-1ubuntu0.1 amd64 [installed,local]
 libbz2-1.0/now 1.0.6-8.1ubuntu0.2 amd64 [installed,local]
