@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  4 17:45 /app
-drwxr-xr-x 4 user user 4096 Apr  4 17:47 /config
-drwxr-xr-x 1 user user 4096 Apr  4 17:45 /defaults
+drwxr-xr-x 1 user user 4096 Apr  4 18:31 /app
+drwxr-xr-x 4 user user 4096 Apr  4 18:34 /config
+drwxr-xr-x 1 user user 4096 Apr  4 18:31 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-plutotv-attrs: executing... 
