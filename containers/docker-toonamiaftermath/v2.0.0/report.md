@@ -1,10 +1,9 @@
 ## Test Results docker-toonamiaftermath
 
-## Test's: 4/5 Passed
+## Test's: 4/4 Passed
 
 | Test | Result |
 | ----------------------- | --- |
-| Selenium ubuntu-18-v2.0.0 | FAIL DRIVER ERROR |
 | Screenshot ubuntu-18-v2.0.0 | PASSED |
 | Test Init Scripts for: ubuntu-18-v2.0.0 | PASSED |
 | Test Service Scripts for: ubuntu-18-v2.0.0 | PASSED |
@@ -144,14 +143,24 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Feb 25 23:58 /app
-drwxr-xr-x 4 user user 4096 Feb 26 00:03 /config
-drwxr-xr-x 1 user user 4096 Feb 25 23:58 /defaults
+drwxr-xr-x 1 user user 4096 Apr  4 18:52 /app
+drwxr-xr-x 4 user user 4096 Apr  4 18:55 /config
+drwxr-xr-x 1 user user 4096 Apr  4 18:52 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
 [cont-init.d] 40-fix-toonami-attrs: exited 0.
 [cont-init.d] 50-first-run: executing... 
+[cont-init.d] 50-first-run: exited 0.
+[cont-init.d] 60-fix-nginx-config: executing... 
+Ensuring proper NGINX configuration.
+[cont-init.d] 60-fix-nginx-config: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+[run]: The Package Manager is apt-get
+[nginx]: Starting . . .
+nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
 ```
 
@@ -171,9 +180,9 @@ apt/now 1.6.12ubuntu0.1 amd64 [installed,local]
 base-files/now 10.1ubuntu2.9 amd64 [installed,local]
 base-passwd/now 3.5.44 amd64 [installed,local]
 bash/now 4.4.18-2ubuntu1.2 amd64 [installed,local]
-binutils/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
-binutils-common/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
-binutils-x86-64-linux-gnu/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
+binutils/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
+binutils-common/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
+binutils-x86-64-linux-gnu/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
 bsdutils/now 1:2.31.1-0.4ubuntu3.6 amd64 [installed,local]
 bzip2/now 1.0.6-8.1ubuntu0.2 amd64 [installed,local]
 ca-certificates/now 20190110~18.04.1 all [installed,local]
@@ -201,7 +210,7 @@ gzip/now 1.6-5ubuntu1 amd64 [installed,local]
 hostname/now 3.20 amd64 [installed,local]
 icu-devtools/now 60.2-3ubuntu3.1 amd64 [installed,local]
 init-system-helpers/now 1.51 all [installed,local]
-iproute2/now 4.15.0-2ubuntu1.2 amd64 [installed,local]
+iproute2/now 4.15.0-2ubuntu1.3 amd64 [installed,local]
 libacl1/now 2.2.52-3build1 amd64 [installed,local]
 libapt-pkg5.0/now 1.6.12ubuntu0.1 amd64 [installed,local]
 libasan3/now 6.5.0-2ubuntu1~18.04 amd64 [installed,local]
@@ -209,7 +218,7 @@ libatomic1/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
 libattr1/now 1:2.4.47-2build1 amd64 [installed,local]
 libaudit-common/now 1:2.8.2-1ubuntu1 all [installed,local]
 libaudit1/now 1:2.8.2-1ubuntu1 amd64 [installed,local]
-libbinutils/now 2.30-21ubuntu1~18.04.4 amd64 [installed,local]
+libbinutils/now 2.30-21ubuntu1~18.04.5 amd64 [installed,local]
 libblkid1/now 2.31.1-0.4ubuntu3.6 amd64 [installed,local]
 libbsd0/now 0.8.7-1ubuntu0.1 amd64 [installed,local]
 libbz2-1.0/now 1.0.6-8.1ubuntu0.2 amd64 [installed,local]
@@ -238,11 +247,11 @@ libgdbm-compat4/now 1.14.1-6 amd64 [installed,local]
 libgdbm5/now 1.14.1-6 amd64 [installed,local]
 libgeoip1/now 1.6.12-1 amd64 [installed,local]
 libgirepository-1.0-1/now 1.56.1-1 amd64 [installed,local]
-libglib2.0-0/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
-libglib2.0-bin/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
-libglib2.0-data/now 2.56.4-0ubuntu0.18.04.6 all [installed,local]
-libglib2.0-dev/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
-libglib2.0-dev-bin/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
+libglib2.0-0/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
+libglib2.0-bin/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
+libglib2.0-data/now 2.56.4-0ubuntu0.18.04.8 all [installed,local]
+libglib2.0-dev/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
+libglib2.0-dev-bin/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
 libgmp10/now 2:6.1.2+dfsg-2 amd64 [installed,local]
 libgnutls30/now 3.5.18-1ubuntu1.4 amd64 [installed,local]
 libgomp1/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
@@ -329,7 +338,7 @@ libxpm4/now 1:3.5.12-1 amd64 [installed,local]
 libxslt1-dev/now 1.1.29-5ubuntu0.2 amd64 [installed,local]
 libxslt1.1/now 1.1.29-5ubuntu0.2 amd64 [installed,local]
 libzstd1/now 1.3.3+dfsg-2ubuntu1.1 amd64 [installed,local]
-linux-libc-dev/now 4.15.0-136.140 amd64 [installed,local]
+linux-libc-dev/now 4.15.0-140.144 amd64 [installed,local]
 login/now 1:4.5-1ubuntu2 amd64 [installed,local]
 lsb-base/now 9.20170808ubuntu1 all [installed,local]
 make/now 4.1-9.1ubuntu1 amd64 [installed,local]
