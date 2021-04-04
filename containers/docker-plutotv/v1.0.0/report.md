@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Mar  1 14:32 /app
-drwxr-xr-x 4 user user 4096 Mar  1 14:36 /config
-drwxr-xr-x 1 user user 4096 Mar  1 14:32 /defaults
+drwxr-xr-x 1 user user 4096 Apr  4 17:43 /app
+drwxr-xr-x 4 user user 4096 Apr  4 17:46 /config
+drwxr-xr-x 1 user user 4096 Apr  4 17:43 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-plutotv-attrs: executing... 
@@ -248,11 +248,11 @@ libgdbm-compat4/now 1.14.1-6 amd64 [installed,local]
 libgdbm5/now 1.14.1-6 amd64 [installed,local]
 libgeoip1/now 1.6.12-1 amd64 [installed,local]
 libgirepository-1.0-1/now 1.56.1-1 amd64 [installed,local]
-libglib2.0-0/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
-libglib2.0-bin/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
-libglib2.0-data/now 2.56.4-0ubuntu0.18.04.6 all [installed,local]
-libglib2.0-dev/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
-libglib2.0-dev-bin/now 2.56.4-0ubuntu0.18.04.6 amd64 [installed,local]
+libglib2.0-0/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
+libglib2.0-bin/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
+libglib2.0-data/now 2.56.4-0ubuntu0.18.04.8 all [installed,local]
+libglib2.0-dev/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
+libglib2.0-dev-bin/now 2.56.4-0ubuntu0.18.04.8 amd64 [installed,local]
 libgmp10/now 2:6.1.2+dfsg-2 amd64 [installed,local]
 libgnutls30/now 3.5.18-1ubuntu1.4 amd64 [installed,local]
 libgomp1/now 8.4.0-1ubuntu1~18.04 amd64 [installed,local]
@@ -339,7 +339,7 @@ libxpm4/now 1:3.5.12-1 amd64 [installed,local]
 libxslt1-dev/now 1.1.29-5ubuntu0.2 amd64 [installed,local]
 libxslt1.1/now 1.1.29-5ubuntu0.2 amd64 [installed,local]
 libzstd1/now 1.3.3+dfsg-2ubuntu1.1 amd64 [installed,local]
-linux-libc-dev/now 4.15.0-136.140 amd64 [installed,local]
+linux-libc-dev/now 4.15.0-140.144 amd64 [installed,local]
 login/now 1:4.5-1ubuntu2 amd64 [installed,local]
 lsb-base/now 9.20170808ubuntu1 all [installed,local]
 make/now 4.1-9.1ubuntu1 amd64 [installed,local]
