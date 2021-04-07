@@ -143,22 +143,28 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  4 18:52 /app
-drwxr-xr-x 4 user user 4096 Apr  4 18:55 /config
-drwxr-xr-x 1 user user 4096 Apr  4 18:52 /defaults
+drwxr-xr-x 1 user user 4096 Apr  7 02:19 /app
+drwxr-xr-x 4 user user 4096 Apr  7 02:25 /config
+drwxr-xr-x 1 user user 4096 Apr  7 02:19 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-toonami-attrs: executing... 
 [cont-init.d] 40-fix-toonami-attrs: exited 0.
 [cont-init.d] 50-first-run: executing... 
-[cont-init.d] 50-first-run: exited 0.
+Traceback (most recent call last):
+  File "/app/ToonamiAftermath/ToonamiAftermath/toonami_aftermath.py", line 15, in <module>
+    from xmltv import xmltv_helpers
+  File "/usr/local/lib/python3.6/dist-packages/xmltv/xmltv_helpers.py", line 10, in <module>
+    import pkg_resources
+ModuleNotFoundError: No module named 'pkg_resources'
+[cont-init.d] 50-first-run: exited 1.
 [cont-init.d] 60-fix-nginx-config: executing... 
 Ensuring proper NGINX configuration.
 [cont-init.d] 60-fix-nginx-config: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [nginx]: Starting . . .
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
