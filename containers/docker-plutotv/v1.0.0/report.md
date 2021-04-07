@@ -143,9 +143,9 @@ GID: 900
 -------------------------
 # FOLDER PERMISSIONS:
 -------------------------
-drwxr-xr-x 1 user user 4096 Apr  7 02:08 /app
-drwxr-xr-x 4 user user 4096 Apr  7 02:10 /config
-drwxr-xr-x 1 user user 4096 Apr  7 02:08 /defaults
+drwxr-xr-x 1 user user 4096 Apr  7 02:09 /app
+drwxr-xr-x 4 user user 4096 Apr  7 02:13 /config
+drwxr-xr-x 1 user user 4096 Apr  7 02:09 /defaults
 -------------------------
 [cont-init.d] 10-display-container-info: exited 0.
 [cont-init.d] 40-fix-plutotv-attrs: executing... 
@@ -164,8 +164,8 @@ Ensuring proper NGINX configuration.
 [cont-init.d] 60-fix-nginx-config: exited 0.
 [cont-init.d] done.
 [services.d] starting services
-[services.d] done.
 [run]: The Package Manager is apt-get
+[services.d] done.
 [nginx]: Starting . . .
 nginx: [alert] could not open error log file: open() "/var/log/nginx/error.log" failed (2: No such file or directory)
 
